@@ -26,17 +26,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'pnpm'
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 9
-
-      - run: pnpm install --frozen-lockfile
+      - run: npm install --legacy-peer-deps
 
       - name: Build site
-        run: pnpm run build
+        run: npm run build
 
       - name: Setup Pages
         id: pages
@@ -65,22 +59,16 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'pnpm'
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 9
-
-      - run: pnpm install --frozen-lockfile
+      - run: npm install --legacy-peer-deps
 
       - name: Collect and deduplicate resources
         run: |
-          pnpm run collect
-          pnpm run dedupe
+          npm run collect
+          npm run dedupe
 
       - name: Build site
-        run: pnpm run build
+        run: npm run build
 
       - name: Commit changes
         run: |
@@ -104,15 +92,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'pnpm'
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 9
-
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm run build
+      - run: npm install --legacy-peer-deps
+      - run: npm run build
 
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
