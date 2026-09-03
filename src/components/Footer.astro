@@ -1,0 +1,19 @@
+---
+const currentYear = new Date().getFullYear();
+---
+<footer class="border-t border-border bg-surface mt-20">
+  <div class="container mx-auto px-4 py-12">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="flex items-center gap-4 text-sm text-muted-foreground">
+        <span>© {currentYear} FreeNav</span>
+        <a href="/about" class="hover:text-foreground transition-colors">About</a>
+        <a href="/categories" class="hover:text-foreground transition-colors">Categories</a>
+        <a href="/submit" class="hover:text-foreground transition-colors">Submit</a>
+        <a href="https://github.com/freenav/freenav" class="hover:text-foreground transition-colors">GitHub</a>
+      </div>
+      <p class="text-sm text-muted-foreground">
+        All resources are curated and verified.
+      </p>
+    </div>
+  </div>
+</footer>

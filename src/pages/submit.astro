@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+<BaseLayout title="Submit a Resource — FreeNav">
+  <Navbar />
+
+  <section class="py-12">
+    <div class="container mx-auto px-4 max-w-2xl">
+      <h1 class="text-4xl font-bold mb-4">Submit a Resource</h1>
+      <p class="text-muted-foreground mb-6">
+        Want to suggest a free resource? Fill out the form below or open a GitHub issue.
+      </p>
+      <form
+        action="https://github.com/freenav/freenav/issues/new"
+        method="GET"
+        class="space-y-4"
+      >
+        <div>
+          <label class="block text-sm font-medium mb-1">Your GitHub Issue</label>
+          <p class="text-sm text-muted-foreground">
+            Click below to open a pre-filled GitHub issue for your suggestion.
+          </p>
+        </div>
+        <button
+          type="submit"
+          class="inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors font-medium"
+        >
+          Open GitHub Issue
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <Footer />
+</BaseLayout>

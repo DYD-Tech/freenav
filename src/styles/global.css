@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  /* Dark mode color overrides */
+  .dark .bg-background { background-color: #111111; }
+  .dark .bg-surface { background-color: #1a1a1a; }
+  .dark .border-border { border-color: #333333; }
+  .dark .bg-muted { background-color: #222222; }
+  .dark \.text-muted-foreground { color: #a3a3a3; }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto max-w-7xl;
+  }
+  .prose :where(.prose) {
+    @apply text-base leading-relaxed;
+  }
+  .prose h1, .prose h2, .prose h3 {
+    @apply text-foreground;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-border rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-muted;
+}

@@ -1,0 +1,65 @@
+---
+export interface Props {
+  href: string;
+  title: string;
+  description: string;
+  logo?: string;
+  official?: boolean;
+  tags?: string[];
+  category?: string;
+  pricing?: string;
+  className?: string;
+}
+---
+
+<a
+  href={Astro.props.href}
+  class:list={[
+    'block group transition-all',
+    Astro.props.className
+  ]}
+>
+  <div class="rounded-xl border border-border bg-surface p-4 hover:border-primary-300 dark:hover:border-primary-700 hover:shadow-md">
+    <div class="flex items-start gap-3">
+      {Astro.props.logo && (
+        <img
+          src={Astro.props.logo}
+          alt={Astro.props.title}
+          class="w-10 h-10 rounded-lg object-contain"
+          loading="lazy"
+          width={40}
+          height={40}
+        />
+      )}
+      {!Astro.props.logo && (
+        <div class="w-10 h-10 rounded-lg bg-muted flex items-center justify-center text-lg">
+          📦
+        </div>
+      )}
+      <div class="flex-1 min-w-0">
+        <div class="flex items-center gap-2 mb-1">
+          <h3 class="font-semibold text-sm text-foreground group-hover:text-primary-600 dark:group-hover:text-primary-400">
+            {Astro.props.title}
+          </h3>
+          {Astro.props.official && (
+            <span class="text-xs bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 px-1.5 py-0.25 rounded">
+              Official
+            </span>
+          )}
+        </div>
+        <p class="text-sm text-muted-foreground line-clamp-2">
+          {Astro.props.description}
+        </p>
+        {Astro.props.tags && (
+          <div class="flex items-center gap-1 mt-2 flex-wrap">
+            {Astro.props.tags.slice(0, 3).map((tag) => (
+              <span class="text-xs px-2 py-0.5 bg-muted rounded-full">
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  </div>
+</a>

@@ -1,0 +1,56 @@
+name: Daily Resource Collection
+
+on:
+  schedule:
+    - cron: '0 6 * * *'  # 06:00 UTC daily
+  workflow_dispatch:
+    inputs:
+      full_run:
+        description: 'Run full collection pipeline'
+        type: boolean
+        default: false
+
+jobs:
+  collect-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - run: npm ci
+
+      - name: Collect resources
+        run: npm run collect
+
+      - name: Deduplicate
+        run: npm run dedupe
+
+      - name: Build site
+        run: npm run build
+
+      - name: Commit data changes
+        run: |
+          git config user.name 'freenav-bot[bot]'
+          git config user.email '41896+freenav-bot[bot]@users.noreply.github.com'
+          git add src/data/
+          git diff --staged --quiet || git commit -m "content: daily resource update ($(date +%Y-%m-%d))"
+          git push
+
+      - name: Deploy to GitHub Pages
+        uses: actions/configure-pages@v5
+        with:
+          pages-path: 'dist'
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+      - uses: actions/deploy-pages@v4

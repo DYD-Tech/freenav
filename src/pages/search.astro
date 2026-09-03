@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import { categories } from '../data/categories';
+---
+<BaseLayout title="Search — Free Resources | FreeNav">
+  <Navbar />
+
+  <section class="py-12">
+    <div class="container mx-auto px-4 max-w-2xl">
+      <h1 class="text-3xl font-bold mb-6">Search Resources</h1>
+
+      <form method="GET" class="mb-6">
+        <div class="relative">
+          <input
+            type="search"
+            name="q"
+            placeholder="Enter keywords, tags, or categories..."
+            class="w-full pl-12 pr-4 py-3 text-sm rounded-xl border border-border bg-surface focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+          />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground"
+          >
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="21" y2="21" />
+          </svg>
+        </div>
+      </form>
+
+      <div class="mb-6">
+        <h2 class="text-sm font-semibold mb-3 text-foreground">Or browse by category</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
+          {categories.map((cat) => (
+            <a
+              href={`/category/${cat.slug}`}
+              class="flex items-center gap-2 p-3 rounded-lg border border-border bg-surface hover:border-primary-300 dark:hover:border-primary-700 hover:bg-muted transition-all text-sm"
+            >
+              <span>{cat.icon}</span>
+              <span>{cat.name}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <div class="text-center py-8">
+        <p class="text-sm text-muted-foreground">
+          Search results will appear here.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</BaseLayout>
