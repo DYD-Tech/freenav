@@ -8,7 +8,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { v4 as uuidv4 } from 'uuid';
+import { randomUUID } from 'node:crypto';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = path.join(__dirname, '..', 'src', 'data');
@@ -45,7 +45,7 @@ function main() {
   }
 
   const resource = {
-    id: uuidv4(),
+    id: randomUUID(),
     title: args.title,
     description: args.description || '',
     url: args.url,
