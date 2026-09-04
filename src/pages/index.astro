@@ -35,10 +35,10 @@ for (const r of resources) {
   <section class="py-12">
     <div class="container mx-auto px-4">
       <div class="text-center mb-12">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4" data-i18n="hero.title">
           Free Resources. Curated Daily.
         </h1>
-        <p class="text-lg text-muted-foreground max-w-xl mx-auto">
+        <p class="text-lg text-muted-foreground max-w-xl mx-auto" data-i18n="hero.subtitle">
           Discover the best free resources — AI tools, design assets, dev tools,
           courses, and more. All free, all high-quality.
         </p>
@@ -52,7 +52,7 @@ for (const r of resources) {
               name="q"
               placeholder="Search free resources..."
               class="w-full pl-12 pr-4 py-3 text-sm rounded-xl border border-border bg-surface focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-            />
+              data-i18n="search.placeholder" />
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -73,7 +73,7 @@ for (const r of resources) {
       </div>
 
       <div class="mb-12">
-        <h2 class="text-2xl font-semibold mb-6">Categories</h2>
+        <h2 class="text-2xl font-semibold mb-6" data-i18n="sections.categories">Categories</h2>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-4">
           {categories.map((cat) => (
             <a
@@ -85,7 +85,7 @@ for (const r of resources) {
                 {cat.name}
               </span>
               <span class="text-xs text-muted-foreground mt-1">
-                {categoryCounts[cat.slug] || cat.count || 0} resources
+                {categoryCounts[cat.slug] || cat.count || 0} <span data-i18n="common.resources">resources</span>
               </span>
             </a>
           ))}
@@ -94,7 +94,7 @@ for (const r of resources) {
 
       {trending.length > 0 && (
         <div class="mb-12">
-          <h2 class="text-2xl font-semibold mb-6">Trending This Week</h2>
+          <h2 class="text-2xl font-semibold mb-6" data-i18n="sections.trending">Trending This Week</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {trending.map((resource) => (
               <ResourceCard resource={resource} />
@@ -105,7 +105,7 @@ for (const r of resources) {
 
       {recent.length > 0 && (
         <div class="mb-12">
-          <h2 class="text-2xl font-semibold mb-6">Recently Added</h2>
+          <h2 class="text-2xl font-semibold mb-6" data-i18n="sections.recent">Recently Added</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {recent.map((resource) => (
               <ResourceCard resource={resource} />
@@ -115,8 +115,8 @@ for (const r of resources) {
       )}
 
       {trending.length === 0 && recent.length === 0 && (
-        <div class="text-center py-12 text-muted-foreground">
-          No resources yet. We're curating the best — check back daily!
+        <div class="text-center py-12 text-muted-foreground" data-i18n="noResources">
+        No resources yet. We're curating the best — check back daily!
         </div>
       )}
     </div>

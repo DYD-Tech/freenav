@@ -3,7 +3,7 @@ import { locales } from '../i18n/index';
 ---
 <nav class="border-b border-border bg-surface/80 backdrop-blur-sm sticky top-0 z-50">
   <div class="container mx-auto px-4 h-16 flex items-center justify-between">
-    <a href="/freenav/" class="text-xl font-semibold text-primary-600 dark:text-primary-400">FreeNav</a>
+    <a href="/freenav/" class="text-xl font-semibold text-primary-600 dark:text-primary-400" data-i18n="nav.home">FreeNav</a>
     <div class="flex items-center gap-4">
       <div class="relative" id="lang-switcher-container">
         <button id="lang-switch" class="p-2 rounded-lg hover:bg-muted flex items-center justify-center w-10 h-10 text-xl">
@@ -37,7 +37,7 @@ import { locales } from '../i18n/index';
           <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
         </svg>
       </button>
-      <a href="/freenav/search" class="hidden sm:inline-flex items-center gap-2 px-3 py-2 text-sm rounded-lg border border-border hover:bg-muted">
+      <a href="/freenav/search" class="hidden sm:inline-flex items-center gap-2 px-3 py-2 text-sm rounded-lg border border-border hover:bg-muted" data-i18n="search">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="11" cy="11" r="8" />
           <line x1="21" y1="21" x2="16.65" y2="16.65" />
@@ -48,6 +48,17 @@ import { locales } from '../i18n/index';
   </div>
 </nav>
 <script>
+  // Translation data for UI elements
+  const translations = {
+    en: { search: "Search", "nav.home": "FreeNav", "search.placeholder": "Search free resources...", "hero.title": "Free Resources. Curated Daily.", "hero.subtitle": "Discover the best free resources — AI tools, design assets, dev tools, courses, and more. All free, all high-quality.", "sections.categories": "Categories", "sections.trending": "Trending This Week", "sections.recent": "Recently Added", "common.resources": "resources", noResources: "No resources found.", "backToHome": "← Back to home", "backToCategories": "← Back to all categories", noTrending: "No trending resources yet. Check back soon!", noRecent: "No resources yet. We're curating the best — check back daily!" },
+    zh: { search: "搜索", "nav.home": "FreeNav", "search.placeholder": "搜索免费资源...", "hero.title": "免费资源。每日精选。", "hero.subtitle": "发现最佳免费资源 — AI 工具、设计素材、开发工具、课程等。全部免费，品质保证。", "sections.categories": "分类", "sections.trending": "本周热门", "sections.recent": "最近添加", "common.resources": "个资源", noResources: "暂无资源。", "backToHome": "← 返回首页", "backToCategories": "← 返回所有分类", noTrending: "暂无热门资源，敬请期待！", noRecent: "暂无资源，我们正在努力筛选中 — 每天回来看看！" },
+    ja: { search: "検索", "nav.home": "FreeNav", "search.placeholder": "無料リソースを検索...", "hero.title": "無料リソース。毎日厳選。", "hero.subtitle": "最高の無料リソースを発見 — AIツール、デザインアセット、開発ツール、コースなど。すべて無料で、すべて高品質。", "sections.categories": "カテゴリ", "sections.trending": "今週のトレンド", "sections.recent": "最近追加", "common.resources": "リソース", noResources: "リソースはありません。", "backToHome": "← ホームへ戻る", "backToCategories": "← 全カテゴリへ戻る", noTrending: "今週のトレンドリソースはまだありません。", noRecent: "リソースはまだありません。" },
+    ko: { search: "검색", "nav.home": "FreeNav", "search.placeholder": "무료 리소스 검색...", "hero.title": "무료 리소스. 매일 엄선.", "hero.subtitle": "최고의 무료 리소스를 발견하세요 — AI 도구, 디자인 에셋, 개발 도구, 강좌 등. 모두 무료, 모두 고품질.", "sections.categories": "카테고리", "sections.trending": "이번 주 트렌드", "sections.recent": "최근 추가", "common.resources": "리소스", noResources: "리소스가 없습니다.", "backToHome": "← 홈으로 돌아가기", "backToCategories": "← 모든 카테고리로 돌아가기", noTrending: "아직 트렌딩 리소스가 없습니다.", noRecent: "아직 리소스가 없습니다." },
+    es: { search: "Buscar", "nav.home": "FreeNav", "search.placeholder": "Buscar recursos gratuitos...", "hero.title": "Recursos gratuitos. Curados diariamente.", "hero.subtitle": "Descubre los mejores recursos gratuitos — herramientas de IA, recursos de diseño, herramientas de desarrollo, cursos y más. Todo gratis, todo de alta calidad.", "sections.categories": "Categorías", "sections.trending": "Tendencia de esta semana", "sections.recent": "Añadidos recientemente", "common.resources": "recursos", noResources: "No se encontraron recursos.", "backToHome": "← Volver a inicio", "backToCategories": "← Volver a todas las categorías", noTrending: "Aún no hay recursos destacados.", noRecent: "Aún no hay recursos." },
+    fr: { search: "Rechercher", "nav.home": "FreeNav", "search.placeholder": "Rechercher des ressources gratuites...", "hero.title": "Ressources gratuites. Sélectionnées quotidiennement.", "hero.subtitle": "Découvrez les meilleures ressources gratuites — outils d'IA, actifs de design, outils de développement, cours et plus. Tout est gratuit, tout est de haute qualité.", "sections.categories": "Catégories", "sections.trending": "Tendance de la semaine", "sections.recent": "Ajoutés récemment", "common.resources": "ressources", noResources: "Aucune ressource trouvée.", "backToHome": "← Retour à l'accueil", "backToCategories": "← Retour à toutes les catégories", noTrending: "Aucune ressource tendance pour le moment.", noRecent: "Aucune ressource pour le moment." }
+  };
+
+  // Theme toggle
   const toggle = document.getElementById('theme-toggle');
   if (toggle) {
     toggle.addEventListener('click', () => {
@@ -60,11 +71,40 @@ import { locales } from '../i18n/index';
   const langDropdown = document.getElementById('lang-dropdown');
   const langContainer = document.getElementById('lang-switcher-container');
 
+  function applyLanguage(lang) {
+    // Update button flag
+    const flagMap = { en: '🇺🇸', zh: '🇨🇳', ja: '🇯🇵', ko: '🇰🇷', es: '🇪🇸', fr: '🇫🇷' };
+    langBtn.innerHTML = flagMap[lang] || '🇺🇸';
+    // Save preference
+    localStorage.setItem('freenav-lang', lang);
+    // Apply translations to all elements with data-i18n attribute
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      const keys = key.split('.');
+      let value = translations[lang];
+      for (const k of keys) {
+        if (value && typeof value === 'object' && k in value) {
+          value = value[k];
+        } else {
+          value = null;
+          break;
+        }
+      }
+      if (value) {
+        if (el.placeholder !== undefined) {
+          el.placeholder = value;
+        } else {
+          el.textContent = value;
+        }
+      }
+    });
+  }
+
   if (langBtn && langDropdown) {
     // Set initial flag based on saved language
     const savedLang = localStorage.getItem('freenav-lang') || 'en';
     const flagMap = { en: '🇺🇸', zh: '🇨🇳', ja: '🇯🇵', ko: '🇰🇷', es: '🇪🇸', fr: '🇫🇷' };
-    langBtn.innerHTML = flagMap[savedLang] || '🇺🇸';
+    applyLanguage(savedLang);
 
     langBtn.addEventListener('click', (e) => {
       e.stopPropagation();
@@ -76,8 +116,7 @@ import { locales } from '../i18n/index';
     langOptions.forEach(btn => {
       btn.addEventListener('click', () => {
         const lang = btn.dataset.lang;
-        localStorage.setItem('freenav-lang', lang);
-        langBtn.innerHTML = flagMap[lang] || '🇺🇸';
+        applyLanguage(lang);
         langDropdown.classList.add('hidden');
         // Show toast notification
         const toast = document.createElement('div');
