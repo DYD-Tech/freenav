@@ -79,8 +79,12 @@ import { locales } from '../i18n/index';
         localStorage.setItem('freenav-lang', lang);
         langBtn.innerHTML = flagMap[lang] || '🇺🇸';
         langDropdown.classList.add('hidden');
-        // Redirect to homepage with the selected language
-        window.location.href = '/freenav/';
+        // Show toast notification
+        const toast = document.createElement('div');
+        toast.className = 'fixed bottom-4 right-4 bg-surface border border-border rounded-lg px-4 py-2 shadow-lg text-sm z-50';
+        toast.textContent = 'Language: ' + btn.textContent.trim();
+        document.body.appendChild(toast);
+        setTimeout(() => toast.remove(), 3000);
       });
     });
 
