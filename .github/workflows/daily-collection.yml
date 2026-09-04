@@ -28,9 +28,11 @@ jobs:
 
       - name: Collect resources
         run: npm run collect
+        continue-on-error: true
 
       - name: Deduplicate
         run: npm run dedupe
+        continue-on-error: true
 
       - name: Build site
         run: npm run build

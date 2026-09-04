@@ -15,6 +15,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { randomUUID } from 'node:crypto';
+import { execSync } from 'node:child_process';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
@@ -122,18 +123,17 @@ async function collectFromSources() {
 }
 
 async function collectGitHubTrending() {
-  const response = await fetch('https://api.github.com/search/repositories', {
+  const response = await fetch('https://api.github.com/search/repositories?q=created:>2024-01-01&sort=stars&order=desc&per_page=15', {
     headers: { 'Accept': 'application/vnd.github.v3+json', 'User-Agent': 'freenav-agent' }
   });
   if (!response.ok) throw new Error(`HTTP ${response.status}`);
   const data = await response.json();
-  
+
   return data.items
-    .filter(item => 
+    .filter(item =>
       item.license &&
       ['mit', 'apache-2.0', 'bsd-3-clause', 'bsd-2-clause', '0bsd', 'isc'].includes(item.license.spdx_id?.toLowerCase())
     )
-    .slice(0, 15)
     .map(item => ({
       title: item.name,
       url: item.html_url,
@@ -157,7 +157,6 @@ async function collectProductHunt() {
 
   return data.posts
     .filter(post => post.pricing && post.pricing[0]?.id === 'free' || post.pricing?.length === 0)
-    .slice(0, 15)
     .map(post => ({
       title: post.name,
       url: post.url,
@@ -170,7 +169,7 @@ async function collectProductHunt() {
 async function collectHN() {
   const topResponse = await fetch('https://hacker-news.firebaseio.com/v0/showstories.json');
   const storyIds = await topResponse.json();
-  
+
   const stories = [];
   for (const id of storyIds.slice(0, 30)) {
     const resp = await fetch(`https://hacker-news.firebaseio.com/v0/item/${id}.json`);
@@ -182,7 +181,6 @@ async function collectHN() {
 
   return stories
     .filter(s => s.title.toLowerCase().includes('free') || s.title.toLowerCase().includes('open'))
-    .slice(0, 15)
     .map(story => ({
       title: story.title.split('|')[0].trim(),
       url: story.url,
@@ -193,7 +191,7 @@ async function collectHN() {
 }
 
 async function collectReddit() {
-  // /r/InternetIsBeautiful, /r/tooazures, /r/tool, etc.
+  // /r/InternetIsBeautiful, /r/tool, /r/freebies, etc.
   const subreddits = ['InternetIsBeautiful', 'tool', 'freebies', 'open-source', 'FreeMediaHackers'];
   const allPosts = [];
 
@@ -226,7 +224,7 @@ async function collectReddit() {
 }
 
 async function collectAITools() {
-  // Fetch from a JSON-based AI tools directory (awesome-ai-tools style)
+  // Fetch from Hugging Face model directory
   try {
     const response = await fetch('https://huggingface.co/api/models?search=free&limit=20');
     const data = await response.json();
@@ -248,10 +246,8 @@ async function collectAITools() {
 // --- AI judgment ---
 
 async function aiJudge(candidates) {
-  // If OPENAI_API_KEY is set, use OpenAI for classification
-  // Otherwise, use heuristic rules
   const hasAI = !!process.env.OPENAI_API_KEY;
-  
+
   if (hasAI) {
     return await aiJudgeWithOpenAI(candidates);
   }
@@ -259,25 +255,13 @@ async function aiJudge(candidates) {
 }
 
 async function aiJudgeWithOpenAI(candidates) {
-  const OpenAI = (await import('openai')).default;
+  const { OpenAI } = await import('openai');
   const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-  
+
   const results = [];
   for (const candidate of candidates) {
     try {
-      const prompt = `Evaluate this resource for inclusion in a free resources directory:
-Title: ${candidate.title}
-URL: ${candidate.url}
-Description: ${candidate.description}
-
-Determine:
-1. Is it genuinely free? (yes/no)
-2. Is it official? (yes/no)
-3. Category (ai, development, design, images, icons, video, fonts, music, pdf, data, learning, templates, productivity, software, open-source)
-4. Tags (3-8 comma-separated, lowercase)
-5. Short description (40-120 chars)
-
-Output as JSON only.`;
+      const prompt = `Evaluate this resource for inclusion in a free resources directory:\nTitle: ${candidate.title}\nURL: ${candidate.url}\nDescription: ${candidate.description}\n\nDetermine:\n1. Is it genuinely free? (yes/no)\n2. Is it official? (yes/no)\n3. Category (ai, development, design, images, icons, video, fonts, music, pdf, data, learning, templates, productivity, software, open-source)\n4. Tags (3-8 comma-separated, lowercase)\n5. Short description (40-120 chars)\n\nOutput as JSON only.`;
 
       const resp = await client.chat.completions.create({
         model: 'gpt-4o-mini',
@@ -303,11 +287,9 @@ Output as JSON only.`;
 }
 
 function heuristicJudge(candidates) {
-  // Simple heuristic-based filtering
   return candidates
     .filter(c => {
       const title = c.title.toLowerCase();
-      // Filter out obviously non-free or spam
       const skipPatterns = ['cracked', 'warez', 'torrent', 'porn', 'casino', 'piracy', 'hack'];
       return !skipPatterns.some(p => title.includes(p));
     })
@@ -317,7 +299,7 @@ function heuristicJudge(candidates) {
       tags: c.tags || [],
       description: c.description || `${c.title} — free resource`,
       slug: slugify(c.title),
-      pricing: 'free'
+      pricing: c.pricing || 'free'
     }));
 }
 
@@ -398,7 +380,6 @@ function mergeResources(existing, incoming) {
     }
   }
   return Array.from(map.values()).sort((a, b) => {
-    // Featured first, then by added date
     if (a.featured && !b.featured) return -1;
     if (!a.featured && b.featured) return 1;
     return new Date(b.addedAt) - new Date(a.addedAt);
