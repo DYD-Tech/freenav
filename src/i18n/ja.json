@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "search": "検索",
+    "toggleDarkMode": "ダークモード切替"
+  },
+  "hero": {
+    "title": "無料リソース。毎日厳選。",
+    "subtitle": "AIツール、デザイン素材、開発ツール、学習コースなど、最高の無料リソースを発見しましょう。全て無料、厳選済み。"
+  },
+  "sections": {
+    "categories": "カテゴリ",
+    "trending": "今週のトレンド",
+    "recent": "最近追加",
+    "noTrending": "今週のトレンドリソースはまだありません。近くチェックしてください！",
+    "noRecent": "リソースはまだありません。私たちは最高のリソースを厳選中です — 毎日チェックしてください！",
+    "noResourcesInCategory": "このカテゴリにはまだリソースがありません。近くチェックしてください！"
+  },
+  "search": {
+    "title": "リソース検索",
+    "placeholder": "無料リソースを検索...",
+    "byCategory": "またはカテゴリ別に閲覧",
+    "resultsPlaceholder": "検索結果はここに表示されます。"
+  },
+  "common": {
+    "backToHome": "← ホームへ戻る",
+    "backToCategories": "← 全カテゴリへ戻る",
+    "resourcesCount": "{count} リソース"
+  },
+  "footer": {
+    "about": "About",
+    "categories": "カテゴリ",
+    "submit": "提出",
+    "github": "GitHub",
+    "copyright": "© {year} FreeNav",
+    "allRightsReserved": "すべてのリソースは厳選されて検証されています。"
+  },
+  "about": {
+    "title": "About FreeNav",
+    "p1": "FreeNavはインターネット上の最高の無料リソースをまとめたカービディレクトリです。無料ツール、素材、コースなどを収集・厳選・整理し、毎日更新しています。",
+    "p2": "私たちの使命：本当に役立つ無料リソースを見つけてあなたの時間を節約し、創造と構築に集中できるようにすることです。",
+    "principles": {
+      "title": "原則",
+      "freeFirst": "無料優先 — 本当に無料のリソースのみ",
+      "official": "公式ソースを優先",
+      "noGarbage": "ゴミ、詐欺、期限切れリンクは排除",
+      "curated": "厳選済み、単なる集積ではない"
+    }
+  },
+  "categories": {
+    "title": "すべてのカテゴリ",
+    "subtitle": "カテゴリ別に無料リソースを閲覧"
+  },
+  "submit": {
+    "title": "リソースを提出",
+    "subtitle": "無料リソースを提案したいですか？下のフォームまたはGitHub issueを開いてください。",
+    "button": "GitHub Issueを開く",
+    "label": "あなたのGitHub Issue",
+    "hint": "提案用の事前入力済みGitHub issueを開くには、下のボタンをクリックしてください。"
+  },
+  "category": {
+    "backLink": "← 全カテゴリへ戻る"
+  }
+}

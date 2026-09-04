@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "search": "Search",
+    "toggleDarkMode": "Toggle dark mode"
+  },
+  "hero": {
+    "title": "Free Resources. Curated Daily.",
+    "subtitle": "Discover the best free resources — AI tools, design assets, dev tools, courses, and more. All free, all high-quality."
+  },
+  "sections": {
+    "categories": "Categories",
+    "trending": "Trending This Week",
+    "recent": "Recently Added",
+    "noTrending": "No trending resources yet. Check back soon!",
+    "noRecent": "No resources yet. We're curating the best — check back daily!",
+    "noResourcesInCategory": "No resources in this category yet. Check back soon!"
+  },
+  "search": {
+    "title": "Search Resources",
+    "placeholder": "Search free resources...",
+    "byCategory": "Or browse by category",
+    "resultsPlaceholder": "Search results will appear here."
+  },
+  "common": {
+    "backToHome": "← Back to home",
+    "backToCategories": "← Back to all categories",
+    "resourcesCount": "{count} resources"
+  },
+  "footer": {
+    "about": "About",
+    "categories": "Categories",
+    "submit": "Submit",
+    "github": "GitHub",
+    "copyright": "© {year} FreeNav",
+    "allRightsReserved": "All resources are curated and verified."
+  },
+  "about": {
+    "title": "About FreeNav",
+    "p1": "FreeNav is a curated directory of the best free resources on the internet. We collect, vet, and organize free tools, assets, courses, and more — updated daily.",
+    "p2": "Our mission: save you time by finding genuinely useful free resources, so you can focus on building and creating.",
+    "principles": {
+      "title": "Principles",
+      "freeFirst": "Free first — only genuinely free resources",
+      "official": "Official sources preferred",
+      "noGarbage": "No garbage, no scams, no expired links",
+      "curated": "Curated, not just aggregated"
+    }
+  },
+  "categories": {
+    "title": "All Categories",
+    "subtitle": "Browse free resources organized by category"
+  },
+  "submit": {
+    "title": "Submit a Resource",
+    "subtitle": "Want to suggest a free resource? Fill out the form below or open a GitHub issue.",
+    "button": "Open GitHub Issue",
+    "label": "Your GitHub Issue",
+    "hint": "Click below to open a pre-filled GitHub issue for your suggestion."
+  },
+  "category": {
+    "backLink": "← Back to all categories"
+  }
+}

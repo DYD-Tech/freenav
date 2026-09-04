@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "search": "Rechercher",
+    "toggleDarkMode": "Basculer en mode sombre"
+  },
+  "hero": {
+    "title": "Ressources gratuites. Sélectionnées quotidiennement.",
+    "subtitle": "Découvrez les meilleures ressources gratuites — outils d'IA, éléments de design, outils de développement, cours et plus encore. Tout est gratuit, tout est de haute qualité."
+  },
+  "sections": {
+    "categories": "Catégories",
+    "trending": "Tendances de cette semaine",
+    "recent": "Récemment ajouté",
+    "noTrending": "Aucune ressource tendance pour le moment. Revenez bientôt !",
+    "noRecent": "Aucune ressource pour le moment. Nous sélectionnons le meilleur — revenez quotidiennement !",
+    "noResourcesInCategory": "Aucune ressource dans cette catégorie pour le moment. Revenez bientôt !"
+  },
+  "search": {
+    "title": "Rechercher des ressources",
+    "placeholder": "Rechercher des ressources gratuites...",
+    "byCategory": "Ou parcourir par catégorie",
+    "resultsPlaceholder": "Les résultats de recherche apparaîtront ici."
+  },
+  "common": {
+    "backToHome": "← Retour à l'accueil",
+    "backToCategories": "← Retour à toutes les catégories",
+    "resourcesCount": "{count} ressources"
+  },
+  "footer": {
+    "about": "À propos",
+    "categories": "Catégories",
+    "submit": "Soumettre",
+    "github": "GitHub",
+    "copyright": "© {year} FreeNav",
+    "allRightsReserved": "Toutes les ressources sont sélectionnées et vérifiées."
+  },
+  "about": {
+    "title": "À propos de FreeNav",
+    "p1": "FreeNav est un annuaire sélectionné des meilleures ressources gratuites sur internet. Nous collectons, évaluons et organisons quotidiennement des outils, ressources et cours gratuits.",
+    "p2": "Notre mission : vous faire gagner du temps en trouvant des ressources gratuites véritablement utiles, afin que vous puissiez vous concentrer sur la création et la construction.",
+    "principles": {
+      "title": "Principes",
+      "freeFirst": "Gratuit en premier — seulement des ressources véritablement gratuites",
+      "official": "Sources officielles privilégiées",
+      "noGarbage": "Pas de déchets, arnaques ou liens expirés",
+      "curated": "Sélectionné, non pas simplement agrégé"
+    }
+  },
+  "categories": {
+    "title": "Toutes les catégories",
+    "subtitle": "Parcourir les ressources gratuites par catégorie"
+  },
+  "submit": {
+    "title": "Soumettre une ressource",
+    "subtitle": "Vous souhaitez suggérer une ressource gratuite ? Remplissez le formulaire ci-dessous ou ouvrez un issue GitHub.",
+    "button": "Ouvrir un issue GitHub",
+    "label": "Votre issue GitHub",
+    "hint": "Cliquez ci-dessous pour ouvrir un issue pré-rempli pour votre suggestion."
+  },
+  "category": {
+    "backLink": "← Retour à toutes les catégories"
+  }
+}

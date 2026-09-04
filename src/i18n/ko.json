@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "search": "검색",
+    "toggleDarkMode": "다크 모드 전환"
+  },
+  "hero": {
+    "title": "무료 리소스. 매일 엄선.",
+    "subtitle": "AI 도구, 디자인 에셋, 개발 도구, 학습 과정 등 최고의 무료 리소스를 발견하세요. 전부 무료, 엄선 완료."
+  },
+  "sections": {
+    "categories": "카테고리",
+    "trending": "이번 주 트렌딩",
+    "recent": "최근 추가",
+    "noTrending": "아직 트렌딩 리소스가 없습니다. 곧 확인해 보세요!",
+    "noRecent": "아직 리소스가 없습니다. 최고의 리소스를 엄선 중입니다 — 매일 방문해 주세요!",
+    "noResourcesInCategory": "이 카테고리에는 아직 리소스가 없습니다. 곧 확인해 보세요!"
+  },
+  "search": {
+    "title": "리소스 검색",
+    "placeholder": "무료 리소스 검색...",
+    "byCategory": "또는 카테고리별로 브라우징",
+    "resultsPlaceholder": "검색 결과가 여기에 표시됩니다."
+  },
+  "common": {
+    "backToHome": "← 홈으로 돌아가기",
+    "backToCategories": "← 모든 카테고리로 돌아가기",
+    "resourcesCount": "{count} 리소스"
+  },
+  "footer": {
+    "about": "About",
+    "categories": "카테고리",
+    "submit": "제출",
+    "github": "GitHub",
+    "copyright": "© {year} FreeNav",
+    "allRightsReserved": "모든 리소스는 엄선되어 검증되었습니다."
+  },
+  "about": {
+    "title": "About FreeNav",
+    "p1": "FreeNav는 인터넷에서 가장 우수한 무료 리소스를 모은 커리레이션 디렉토리입니다. 무료 도구, 에셋, 강좌 등을 매일 수집·검토·정리합니다.",
+    "p2": "우리의 사명: 진정으로 유용한 무료 리소스를 찾아 your 시간을 절약하고, 창조와 빌드에 집중할 수 있도록 합니다.",
+    "principles": {
+      "title": "원칙",
+      "freeFirst": "무료 우선 — 진정으로 무료인 리소스만",
+      "official": "공식 소스 우선",
+      "noGarbage": "쓰레기, 사기, 만료된 링크 제외",
+      "curated": "엄선 완료, 단순 집계가 아님"
+    }
+  },
+  "categories": {
+    "title": "모든 카테고리",
+    "subtitle": "카테고리별로 무료 리소스 브라우징"
+  },
+  "submit": {
+    "title": "리소스 제출",
+    "subtitle": "무료 리소스를 제안하시겠어요? 아래 양식 또는 GitHub issue를 열어주세요.",
+    "button": "GitHub Issue 열기",
+    "label": "귀하의 GitHub Issue",
+    "hint": "제안을 위한 미리 작성된 GitHub issue를 열려면 아래 버튼을 클릭하세요."
+  },
+  "category": {
+    "backLink": "← 모든 카테고리로 돌아가기"
+  }
+}

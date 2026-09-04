@@ -4,12 +4,16 @@ import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
 import resourcesData from '../../data/resources.json';
 
+// Normalize: resourcesData may be a plain array or { resources: [...] }
+const resources = Array.isArray(resourcesData) ? resourcesData : (resourcesData.resources || []);
+
 // Generate static paths from resource slugs
 export async function getStaticPaths() {
-  return resourcesData.resources
-    .filter((r) => r.slug)
+  const allResources = Array.isArray(resourcesData) ? resourcesData : (resourcesData.resources || []);
+  return allResources
+    .filter((r) => r.slug || r.id)
     .map((r) => ({
-      params: { slug: r.slug }
+      params: { slug: r.slug || r.id }
     }));
 }
 

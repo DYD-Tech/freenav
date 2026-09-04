@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "search": "搜索",
+    "toggleDarkMode": "切换深色模式"
+  },
+  "hero": {
+    "title": "免费资源，每日精选",
+    "subtitle": "发现互联网上最优质的免费资源 — AI 工具、设计素材、开发工具、学习课程等。全免费，精品筛选。"
+  },
+  "sections": {
+    "categories": "分类",
+    "trending": "本周热门",
+    "recent": "最近添加",
+    "noTrending": "暂无热门资源，敬请期待！",
+    "noRecent": "暂无资源，我们正在努力筛选中 — 每天回来看看！",
+    "noResourcesInCategory": "该分类暂无资源，敬请期待！"
+  },
+  "search": {
+    "title": "搜索资源",
+    "placeholder": "搜索免费资源...",
+    "byCategory": "或按分类浏览",
+    "resultsPlaceholder": "搜索结果将显示在这里。"
+  },
+  "common": {
+    "backToHome": "← 返回首页",
+    "backToCategories": "← 返回所有分类",
+    "resourcesCount": "{count} 个资源"
+  },
+  "footer": {
+    "about": "关于",
+    "categories": "分类",
+    "submit": "提交",
+    "github": "GitHub",
+    "copyright": "© {year} FreeNav",
+    "allRightsReserved": "所有资源均经筛选，致力于验证。"
+  },
+  "about": {
+    "title": "关于 FreeNav",
+    "p1": "FreeNav 是一个免费资源目录，汇集互联网上最优质的免费资源。我们每日收集、筛选和组织免费工具、素材、课程等。",
+    "p2": "我们的使命：为你节省时间，发现真正有用的免费资源，让你可以专注于创造与构建。",
+    "principles": {
+      "title": "原则",
+      "freeFirst": "免费优先 — 仅收录真正免费的资源",
+      "official": "优先官方来源",
+      "noGarbage": "拒绝垃圾、诈骗、过期链接",
+      "curated": "精选整理，非简单聚合"
+    }
+  },
+  "categories": {
+    "title": "所有分类",
+    "subtitle": "按分类浏览免费资源"
+  },
+  "submit": {
+    "title": "提交资源",
+    "subtitle": "想推荐免费资源？填写表单或打开 GitHub issue。",
+    "button": "打开 GitHub Issue",
+    "label": "你的 GitHub Issue",
+    "hint": "点击下方按钮打开预填充的 GitHub issue。"
+  },
+  "category": {
+    "backLink": "← 返回所有分类"
+  }
+}

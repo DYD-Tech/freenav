@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "search": "Buscar",
+    "toggleDarkMode": "Alternar modo oscuro"
+  },
+  "hero": {
+    "title": "Recursos gratuitos. Curados diariamente.",
+    "subtitle": "Descubre los mejores recursos gratuitos: herramientas de IA, activos de diseño, herramientas de desarrollo, cursos y más. Todo gratis, todo de alta calidad."
+  },
+  "sections": {
+    "categories": "Categorías",
+    "trending": "Tendencias de esta semana",
+    "recent": "Añadido recientemente",
+    "noTrending": "Aún no hay recursos destacados. ¡Vuelve pronto!",
+    "noRecent": "Aún no hay recursos. Estamos curando lo mejor — ¡vuelve diario!",
+    "noResourcesInCategory": "Aún no hay recursos en esta categoría. ¡Vuelve pronto!"
+  },
+  "search": {
+    "title": "Buscar recursos",
+    "placeholder": "Buscar recursos gratuitos...",
+    "byCategory": "Oexplora por categoría",
+    "resultsPlaceholder": "Los resultados de búsqueda aparecerán aquí."
+  },
+  "common": {
+    "backToHome": "← Volver a inicio",
+    "backToCategories": "← Volver a todas las categorías",
+    "resourcesCount": "{count} recursos"
+  },
+  "footer": {
+    "about": "Acerca de",
+    "categories": "Categorías",
+    "submit": "Enviar",
+    "github": "GitHub",
+    "copyright": "© {year} FreeNav",
+    "allRightsReserved": "Todos los recursos están curados y verificados."
+  },
+  "about": {
+    "title": "Acerca de FreeNav",
+    "p1": "FreeNav es un directorio curado de los mejores recursos gratuitos en internet. Recopilamos, evaluamos y organizamos herramientas, recursos y cursos gratuitos, actualizados diariamente.",
+    "p2": "Nuestra misión: ahorrarte tiempo encontrando recursos gratuitos realmente útiles, para que puedas enfocarte en crear y construir.",
+    "principles": {
+      "title": "Principios",
+      "freeFirst": "Gratis primero — solo recursos verdaderamente gratis",
+      "official": "Fuentes oficiales preferidas",
+      "noGarbage": "Sin basura, estafas ni enlaces caducados",
+      "curated": "Curado, no solo agregado"
+    }
+  },
+  "categories": {
+    "title": "Todas las categorías",
+    "subtitle": "Explora recursos gratuitos organizados por categoría"
+  },
+  "submit": {
+    "title": "Enviar un recurso",
+    "subtitle": "¿Quieres sugerir un recurso gratuito? Completa el formulario o abre un issue de GitHub.",
+    "button": "Abrir issue de GitHub",
+    "label": "Tu issue de GitHub",
+    "hint": "Haz clic abajo para abrir un issue preformateado para tu sugerencia."
+  },
+  "category": {
+    "backLink": "← Volver a todas las categorías"
+  }
+}

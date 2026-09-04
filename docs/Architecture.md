@@ -44,9 +44,17 @@ freenav/
 │   │   └── global.css
 │   ├── types/
 │   │   └── index.ts
-│   └── data/                       # Static data
-│       ├── resources.json
-│       └── categories.json
+│   ├── data/                       # Static data
+│   │   ├── resources.json
+│   │   ├── categories.json
+│   └── i18n/                       # Internationalization
+│       ├── index.ts                # i18n helper (t function, locale detection)
+│       ├── en.json                 # English (default)
+│       ├── zh.json                 # Chinese (Simplified)
+│       ├── ja.json                 # Japanese
+│       ├── ko.json                 # Korean
+│       ├── es.json                 # Spanish
+│       └── fr.json                 # French
 ├── content/                        # Auto-generated content
 ├── docs/                           # Documentation
 │   ├── Architecture.md

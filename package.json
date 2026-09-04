@@ -12,7 +12,6 @@
     "format": "prettier --write \"src/**/*.{ts,tsx,astro}\" \"scripts/**/*.{ts,js,mjs}\""
   },
   "devDependencies": {
-    "@astrojs/mdx": "^4.0.0",
     "@astrojs/sitemap": "^3.2.0",
     "@astrojs/tailwind": "^5.1.0",
     "astro": "^5.18.2",
