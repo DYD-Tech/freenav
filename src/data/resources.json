@@ -6,7 +6,12 @@
     "url": "https://chat.openai.com",
     "official": true,
     "category": "ai",
-    "tags": ["ai", "chatbot", "gpt", "openai"],
+    "tags": [
+      "ai",
+      "chatbot",
+      "gpt",
+      "openai"
+    ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -18,7 +23,12 @@
     "url": "https://claude.ai",
     "official": true,
     "category": "ai",
-    "tags": ["ai", "chatbot", "claude", "anthropic"],
+    "tags": [
+      "ai",
+      "chatbot",
+      "claude",
+      "anthropic"
+    ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -30,7 +40,12 @@
     "url": "https://gemini.google.com",
     "official": true,
     "category": "ai",
-    "tags": ["ai", "chatbot", "gemini", "google"],
+    "tags": [
+      "ai",
+      "chatbot",
+      "gemini",
+      "google"
+    ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -42,7 +57,12 @@
     "url": "https://www.deepseek.com",
     "official": true,
     "category": "ai",
-    "tags": ["ai", "chatbot", "deepseek", "chinese"],
+    "tags": [
+      "ai",
+      "chatbot",
+      "deepseek",
+      "chinese"
+    ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -54,7 +74,13 @@
     "url": "https://huggingface.co",
     "official": true,
     "category": "ai",
-    "tags": ["ai", "ml", "models", "api", "datasets"],
+    "tags": [
+      "ai",
+      "ml",
+      "models",
+      "api",
+      "datasets"
+    ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -66,7 +92,12 @@
     "url": "https://api.together.xyz",
     "official": true,
     "category": "ai",
-    "tags": ["ai", "api", "llm", "developer"],
+    "tags": [
+      "ai",
+      "api",
+      "llm",
+      "developer"
+    ],
     "pricing": "freemium",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -78,7 +109,13 @@
     "url": "https://console.groq.com",
     "official": true,
     "category": "ai",
-    "tags": ["ai", "api", "llm", "llama", "gemma"],
+    "tags": [
+      "ai",
+      "api",
+      "llm",
+      "llama",
+      "gemma"
+    ],
     "pricing": "freemium",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -90,7 +127,12 @@
     "url": "https://replicate.com",
     "official": true,
     "category": "ai",
-    "tags": ["ai", "api", "ml", "models"],
+    "tags": [
+      "ai",
+      "api",
+      "ml",
+      "models"
+    ],
     "pricing": "freemium",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -102,7 +144,12 @@
     "url": "https://ollama.com",
     "official": true,
     "category": "ai",
-    "tags": ["ai", "llm", "local", "open-source"],
+    "tags": [
+      "ai",
+      "llm",
+      "local",
+      "open-source"
+    ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -114,7 +161,12 @@
     "url": "https://lmstudio.ai",
     "official": true,
     "category": "ai",
-    "tags": ["ai", "llm", "local", "desktop"],
+    "tags": [
+      "ai",
+      "llm",
+      "local",
+      "desktop"
+    ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -126,7 +178,12 @@
     "url": "https://github.com",
     "official": true,
     "category": "development",
-    "tags": ["development", "git", "hosting", "collaboration"],
+    "tags": [
+      "development",
+      "git",
+      "hosting",
+      "collaboration"
+    ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -138,7 +195,12 @@
     "url": "https://netlify.com",
     "official": true,
     "category": "development",
-    "tags": ["development", "hosting", "static-site", "cdn"],
+    "tags": [
+      "development",
+      "hosting",
+      "static-site",
+      "cdn"
+    ],
     "pricing": "freemium",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -150,7 +212,12 @@
     "url": "https://vercel.com",
     "official": true,
     "category": "development",
-    "tags": ["development", "hosting", "react", "nextjs"],
+    "tags": [
+      "development",
+      "hosting",
+      "react",
+      "nextjs"
+    ],
     "pricing": "freemium",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -162,7 +229,13 @@
     "url": "https://supabase.com",
     "official": true,
     "category": "development",
-    "tags": ["development", "database", "backend", "auth", "firebase"],
+    "tags": [
+      "development",
+      "database",
+      "backend",
+      "auth",
+      "firebase"
+    ],
     "pricing": "freemium",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -174,7 +247,12 @@
     "url": "https://planetscale.com",
     "official": true,
     "category": "development",
-    "tags": ["development", "database", "mysql", "serverless"],
+    "tags": [
+      "development",
+      "database",
+      "mysql",
+      "serverless"
+    ],
     "pricing": "freemium",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -186,7 +264,12 @@
     "url": "https://pages.cloudflare.com",
     "official": true,
     "category": "development",
-    "tags": ["development", "hosting", "static-site", "cdn"],
+    "tags": [
+      "development",
+      "hosting",
+      "static-site",
+      "cdn"
+    ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -198,7 +281,12 @@
     "url": "https://railway.app",
     "official": true,
     "category": "development",
-    "tags": ["development", "hosting", "deployment", "backend"],
+    "tags": [
+      "development",
+      "hosting",
+      "deployment",
+      "backend"
+    ],
     "pricing": "freemium",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -210,7 +298,13 @@
     "url": "https://figma.com",
     "official": true,
     "category": "design",
-    "tags": ["design", "ui", "ux", "figma", "prototyping"],
+    "tags": [
+      "design",
+      "ui",
+      "ux",
+      "figma",
+      "prototyping"
+    ],
     "pricing": "freemium",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -222,7 +316,12 @@
     "url": "https://canva.com",
     "official": true,
     "category": "design",
-    "tags": ["design", "templates", "social-media", "graphics"],
+    "tags": [
+      "design",
+      "templates",
+      "social-media",
+      "graphics"
+    ],
     "pricing": "freemium",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -234,7 +333,12 @@
     "url": "https://unsplash.com",
     "official": true,
     "category": "images",
-    "tags": ["design", "photos", "images", "free Stock"],
+    "tags": [
+      "design",
+      "photos",
+      "images",
+      "free Stock"
+    ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -246,7 +350,12 @@
     "url": "https://pexels.com",
     "official": true,
     "category": "images",
-    "tags": ["design", "photos", "videos", "free Stock"],
+    "tags": [
+      "design",
+      "photos",
+      "videos",
+      "free Stock"
+    ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -258,7 +367,12 @@
     "url": "https://pixabay.com",
     "official": true,
     "category": "images",
-    "tags": ["design", "photos", "vectors", "free Stock"],
+    "tags": [
+      "design",
+      "photos",
+      "vectors",
+      "free Stock"
+    ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -270,7 +384,12 @@
     "url": "https://undraw.co/illustrations",
     "official": true,
     "category": "images",
-    "tags": ["design", "illustrations", "open Source", "free"],
+    "tags": [
+      "design",
+      "illustrations",
+      "open Source",
+      "free"
+    ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -282,7 +401,12 @@
     "url": "https://heroicons.com",
     "official": true,
     "category": "icons",
-    "tags": ["design", "icons", "svg", "open Source"],
+    "tags": [
+      "design",
+      "icons",
+      "svg",
+      "open Source"
+    ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -294,7 +418,12 @@
     "url": "https://lucide.dev",
     "official": true,
     "category": "icons",
-    "tags": ["design", "icons", "svg", "open Source"],
+    "tags": [
+      "design",
+      "icons",
+      "svg",
+      "open Source"
+    ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -306,7 +435,12 @@
     "url": "https://tabler-icons.io",
     "official": true,
     "category": "icons",
-    "tags": ["design", "icons", "svg", "open Source"],
+    "tags": [
+      "design",
+      "icons",
+      "svg",
+      "open Source"
+    ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -318,7 +452,12 @@
     "url": "https://fontawesome.com",
     "official": true,
     "category": "icons",
-    "tags": ["design", "icons", "font", "free"],
+    "tags": [
+      "design",
+      "icons",
+      "font",
+      "free"
+    ],
     "pricing": "freemium",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -330,7 +469,12 @@
     "url": "https://remixicon.com",
     "official": true,
     "category": "icons",
-    "tags": ["design", "icons", "svg", "open Source"],
+    "tags": [
+      "design",
+      "icons",
+      "svg",
+      "open Source"
+    ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -342,7 +486,12 @@
     "url": "https://pexels.com/video",
     "official": true,
     "category": "video",
-    "tags": ["video", "stock", "4k", "free"],
+    "tags": [
+      "video",
+      "stock",
+      "4k",
+      "free"
+    ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -354,7 +503,12 @@
     "url": "https://pixabay.com/videos",
     "official": true,
     "category": "video",
-    "tags": ["video", "stock", "4k", "free"],
+    "tags": [
+      "video",
+      "stock",
+      "4k",
+      "free"
+    ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -366,7 +520,13 @@
     "url": "https://mixkit.co",
     "official": true,
     "category": "video",
-    "tags": ["video", "stock", "music", "templates", "free"],
+    "tags": [
+      "video",
+      "stock",
+      "music",
+      "templates",
+      "free"
+    ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -378,7 +538,12 @@
     "url": "https://coverr.co",
     "official": true,
     "category": "video",
-    "tags": ["video", "stock", "commercial", "free"],
+    "tags": [
+      "video",
+      "stock",
+      "commercial",
+      "free"
+    ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -390,7 +555,12 @@
     "url": "https://fonts.google.com",
     "official": true,
     "category": "fonts",
-    "tags": ["design", "fonts", "typography", "free"],
+    "tags": [
+      "design",
+      "fonts",
+      "typography",
+      "free"
+    ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -402,7 +572,12 @@
     "url": "https://fontsource.org",
     "official": true,
     "category": "fonts",
-    "tags": ["design", "fonts", "self-host", "open Source"],
+    "tags": [
+      "design",
+      "fonts",
+      "self-host",
+      "open Source"
+    ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -414,7 +589,11 @@
     "url": "https://icons8.com",
     "official": true,
     "category": "fonts",
-    "tags": ["design", "icons", "free"],
+    "tags": [
+      "design",
+      "icons",
+      "free"
+    ],
     "pricing": "freemium",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -426,7 +605,12 @@
     "url": "https://freesound.org",
     "official": true,
     "category": "music",
-    "tags": ["audio", "sounds", "samples", "creative-Commons"],
+    "tags": [
+      "audio",
+      "sounds",
+      "samples",
+      "creative-Commons"
+    ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -438,7 +622,12 @@
     "url": "https://www.zapsplat.com",
     "official": true,
     "category": "music",
-    "tags": ["audio", "sounds", "effects", "free"],
+    "tags": [
+      "audio",
+      "sounds",
+      "effects",
+      "free"
+    ],
     "pricing": "freemium",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -450,7 +639,12 @@
     "url": "https://www.youtube.com/audiolibrary",
     "official": true,
     "category": "music",
-    "tags": ["audio", "music", "youtube", "free"],
+    "tags": [
+      "audio",
+      "music",
+      "youtube",
+      "free"
+    ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -462,7 +656,12 @@
     "url": "https://www.freepdf.info",
     "official": false,
     "category": "pdf",
-    "tags": ["books", "pdf", "education", "free"],
+    "tags": [
+      "books",
+      "pdf",
+      "education",
+      "free"
+    ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -474,7 +673,12 @@
     "url": "https://gutenberg.org",
     "official": true,
     "category": "pdf",
-    "tags": ["books", "ebooks", "education", "free"],
+    "tags": [
+      "books",
+      "ebooks",
+      "education",
+      "free"
+    ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -486,7 +690,12 @@
     "url": "https://openlibrary.org",
     "official": true,
     "category": "pdf",
-    "tags": ["books", "library", "education", "free"],
+    "tags": [
+      "books",
+      "library",
+      "education",
+      "free"
+    ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -498,7 +707,12 @@
     "url": "https://kaggle.com/datasets",
     "official": true,
     "category": "data",
-    "tags": ["data", "ml", "datasets", "education"],
+    "tags": [
+      "data",
+      "ml",
+      "datasets",
+      "education"
+    ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -510,7 +724,12 @@
     "url": "https://huggingface.co/datasets",
     "official": true,
     "category": "data",
-    "tags": ["data", "ml", "datasets", "open Source"],
+    "tags": [
+      "data",
+      "ml",
+      "datasets",
+      "open Source"
+    ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -522,7 +741,12 @@
     "url": "https://coursera.org",
     "official": true,
     "category": "education",
-    "tags": ["education", "courses", "university", "free"],
+    "tags": [
+      "education",
+      "courses",
+      "university",
+      "free"
+    ],
     "pricing": "freemium",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -534,7 +758,12 @@
     "url": "https://edx.org",
     "official": true,
     "category": "education",
-    "tags": ["education", "courses", "university", "free"],
+    "tags": [
+      "education",
+      "courses",
+      "university",
+      "free"
+    ],
     "pricing": "freemium",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -546,7 +775,13 @@
     "url": "https://khanacademy.org",
     "official": true,
     "category": "education",
-    "tags": ["education", "math", "science", "programming", "free"],
+    "tags": [
+      "education",
+      "math",
+      "science",
+      "programming",
+      "free"
+    ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -558,7 +793,13 @@
     "url": "https://notion.so",
     "official": true,
     "category": "productivity",
-    "tags": ["productivity", "docs", "wiki", "tasks", "free"],
+    "tags": [
+      "productivity",
+      "docs",
+      "wiki",
+      "tasks",
+      "free"
+    ],
     "pricing": "freemium",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -570,7 +811,13 @@
     "url": "https://obsidian.md",
     "official": true,
     "category": "productivity",
-    "tags": ["productivity", "notes", "wiki", "markdown", "free"],
+    "tags": [
+      "productivity",
+      "notes",
+      "wiki",
+      "markdown",
+      "free"
+    ],
     "pricing": "freemium",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -582,7 +829,12 @@
     "url": "https://trello.com",
     "official": true,
     "category": "productivity",
-    "tags": ["productivity", "project-management", "kanban", "free"],
+    "tags": [
+      "productivity",
+      "project-management",
+      "kanban",
+      "free"
+    ],
     "pricing": "freemium",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -594,7 +846,13 @@
     "url": "https://clickup.com",
     "official": true,
     "category": "productivity",
-    "tags": ["productivity", "tasks", "docs", "goals", "free"],
+    "tags": [
+      "productivity",
+      "tasks",
+      "docs",
+      "goals",
+      "free"
+    ],
     "pricing": "freemium",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -606,7 +864,12 @@
     "url": "https://workers.cloudflare.com",
     "official": true,
     "category": "tools",
-    "tags": ["tools", "serverless", "cloudflare", "free"],
+    "tags": [
+      "tools",
+      "serverless",
+      "cloudflare",
+      "free"
+    ],
     "pricing": "freemium",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -618,7 +881,12 @@
     "url": "https://ngrok.com",
     "official": true,
     "category": "tools",
-    "tags": ["tools", "tunneling", "local-dev", "free"],
+    "tags": [
+      "tools",
+      "tunneling",
+      "local-dev",
+      "free"
+    ],
     "pricing": "freemium",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -630,7 +898,12 @@
     "url": "https://postman.com",
     "official": true,
     "category": "tools",
-    "tags": ["tools", "api", "testing", "free"],
+    "tags": [
+      "tools",
+      "api",
+      "testing",
+      "free"
+    ],
     "pricing": "freemium",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -642,7 +915,12 @@
     "url": "https://code.visualstudio.com",
     "official": true,
     "category": "tools",
-    "tags": ["tools", "editor", "vscode", "free"],
+    "tags": [
+      "tools",
+      "editor",
+      "vscode",
+      "free"
+    ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -654,7 +932,11 @@
     "url": "https://1password.com/families",
     "official": true,
     "category": "security",
-    "tags": ["security", "password-manager", "free"],
+    "tags": [
+      "security",
+      "password-manager",
+      "free"
+    ],
     "pricing": "freemium",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -666,7 +948,12 @@
     "url": "https://bitwarden.com",
     "official": true,
     "category": "security",
-    "tags": ["security", "password-manager", "open-source", "free"],
+    "tags": [
+      "security",
+      "password-manager",
+      "open-source",
+      "free"
+    ],
     "pricing": "freemium",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -678,7 +965,12 @@
     "url": "https://haveibeenpwned.com",
     "official": true,
     "category": "security",
-    "tags": ["security", "breach-check", "privacy", "free"],
+    "tags": [
+      "security",
+      "breach-check",
+      "privacy",
+      "free"
+    ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -690,7 +982,12 @@
     "url": "https://tubitv.com",
     "official": true,
     "category": "entertainment",
-    "tags": ["video", "streaming", "movies", "free"],
+    "tags": [
+      "video",
+      "streaming",
+      "movies",
+      "free"
+    ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -702,7 +999,12 @@
     "url": "https://www.crackle.com",
     "official": true,
     "category": "entertainment",
-    "tags": ["video", "streaming", "movies", "free"],
+    "tags": [
+      "video",
+      "streaming",
+      "movies",
+      "free"
+    ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
@@ -714,9 +1016,35 @@
     "url": "https://pluto.tv",
     "official": true,
     "category": "entertainment",
-    "tags": ["video", "streaming", "tv", "free"],
+    "tags": [
+      "video",
+      "streaming",
+      "tv",
+      "free"
+    ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04"
+  },
+  {
+    "title": "Qwen3-24B-A4B-Freedom-Thinking-Abliterated-Heretic-NEO-Imatrix-GGUF",
+    "url": "https://huggingface.co/Higashikawa/Qwen3-24B-A4B-Freedom-Thinking-Abliterated-Heretic-NEO-Imatrix-GGUF",
+    "description": "AI model: Higashikawa/Qwen3-24B-A4B-Freedom-Thinking-Abliterated-Heretic-NEO-Imatrix-GGUF",
+    "source": "huggingface",
+    "tags": [
+      "ai",
+      "ml",
+      "huggingface",
+      "text-generation"
+    ],
+    "category": "ai",
+    "slug": "qwen3-24b-a4b-freedom-thinking-abliterated-heretic-neo-imatrix-gguf",
+    "pricing": "free",
+    "id": "1e6b6402-d924-4583-8e69-2aba76c62a25",
+    "addedAt": "2026-09-04T16:00:10.175Z",
+    "updatedAt": "2026-09-04T16:00:10.175Z",
+    "verifiedAt": "2026-09-04T16:00:10.175Z",
+    "rating": 0,
+    "featured": false
   }
 ]
