@@ -7,6 +7,7 @@ import { categories } from '../data/categories';
 import resourcesData from '../data/resources.json';
 
 const resources = Array.isArray(resourcesData) ? resourcesData : (resourcesData.resources || []);
+const baseURL = '/freenav';
 
 // Get 6 most recent resources for "Recently Added"
 const recent = resources
@@ -44,7 +45,7 @@ for (const r of resources) {
       </div>
 
       <div class="mb-8">
-        <form action="/search" method="GET" class="max-w-2xl mx-auto">
+        <form action={`${baseURL}/search`} method="GET" class="max-w-2xl mx-auto">
           <div class="relative">
             <input
               type="search"
@@ -76,7 +77,7 @@ for (const r of resources) {
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-4">
           {categories.map((cat) => (
             <a
-              href={`/category/${cat.slug}`}
+              href={`${baseURL}/category/${cat.slug}`}
               class="group flex flex-col items-center text-center p-4 rounded-xl border border-border bg-surface hover:border-primary-300 dark:hover:border-primary-700 hover:shadow-md transition-all"
             >
               <span class="text-3xl mb-2">{cat.icon}</span>

@@ -23,7 +23,7 @@ interface Props {
 ---
 
 <a
-  href={`${import.meta.env.BASE_URL || ''}/resource/${Astro.props.resource.slug || Astro.props.resource.id}`}
+  href={`/freenav/resource/${Astro.props.resource.slug || Astro.props.resource.id}`}
   class:list={[
     'block group transition-all',
     Astro.props.className

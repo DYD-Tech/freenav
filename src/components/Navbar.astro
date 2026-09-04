@@ -3,13 +3,18 @@ import { locales } from '../i18n/index';
 ---
 <nav class="border-b border-border bg-surface/80 backdrop-blur-sm sticky top-0 z-50">
   <div class="container mx-auto px-4 h-16 flex items-center justify-between">
-    <a href="/" class="text-xl font-semibold text-primary-600 dark:text-primary-400">FreeNav</a>
+    <a href="/freenav/" class="text-xl font-semibold text-primary-600 dark:text-primary-400">FreeNav</a>
     <div class="flex items-center gap-4">
-      <div class="relative group">
-        <button id="lang-switch" class="p-2 rounded-lg hover:bg-muted">🌐</button>
-        <div class="absolute right-0 top-full mt-1 hidden group-hover:block bg-surface border border-border rounded-lg shadow-lg py-1 z-50">
+      <div class="relative" id="lang-switcher-container">
+        <button id="lang-switch" class="p-2 rounded-lg hover:bg-muted flex items-center gap-1">
+          🌐
+        </button>
+        <div id="lang-dropdown" class="absolute right-0 top-full mt-1 hidden bg-surface border border-border rounded-lg shadow-lg py-1 min-w-[120px] z-50">
           {Object.entries(locales).map(([code, name]) => (
-            <a href={`/${code}`} class="block px-3 py-2 text-sm hover:bg-muted">{name}</a>
+            <a href={`/freenav/${code}`} class="flex items-center gap-2 px-3 py-2 text-sm hover:bg-muted">
+              <span>{code === 'en' ? '🇺🇸' : code === 'zh' ? '🇨🇳' : code === 'ja' ? '🇯🇵' : code === 'ko' ? '🇰🇷' : code === 'es' ? '🇪🇸' : '🇫🇷'}</span>
+              {name}
+            </a>
           ))}
         </div>
       </div>
@@ -29,7 +34,7 @@ import { locales } from '../i18n/index';
           <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
         </svg>
       </button>
-      <a href="/search" class="hidden sm:inline-flex items-center gap-2 px-3 py-2 text-sm rounded-lg border border-border hover:bg-muted">
+      <a href="/freenav/search" class="hidden sm:inline-flex items-center gap-2 px-3 py-2 text-sm rounded-lg border border-border hover:bg-muted">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="11" cy="11" r="8" />
           <line x1="21" y1="21" x2="16.65" y2="16.65" />
@@ -45,6 +50,29 @@ import { locales } from '../i18n/index';
     toggle.addEventListener('click', () => {
       document.documentElement.classList.toggle('dark');
       localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+    });
+  }
+
+  const langBtn = document.getElementById('lang-switch');
+  const langDropdown = document.getElementById('lang-dropdown');
+  const langContainer = document.getElementById('lang-switcher-container');
+
+  if (langBtn && langDropdown) {
+    langBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      langDropdown.classList.toggle('hidden');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (langContainer && !langContainer.contains(e.target)) {
+        langDropdown.classList.add('hidden');
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !langDropdown.classList.contains('hidden')) {
+        langDropdown.classList.add('hidden');
+      }
     });
   }
 </script>
