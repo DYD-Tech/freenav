@@ -6,15 +6,18 @@ import { locales } from '../i18n/index';
     <a href="/freenav/" class="text-xl font-semibold text-primary-600 dark:text-primary-400">FreeNav</a>
     <div class="flex items-center gap-4">
       <div class="relative" id="lang-switcher-container">
-        <button id="lang-switch" class="p-2 rounded-lg hover:bg-muted flex items-center gap-1">
-          🌐
+        <button id="lang-switch" class="p-2 rounded-lg hover:bg-muted flex items-center justify-center w-10 h-10 text-xl">
+          🇺🇸
         </button>
         <div id="lang-dropdown" class="absolute right-0 top-full mt-1 hidden bg-surface border border-border rounded-lg shadow-lg py-1 min-w-[120px] z-50">
           {Object.entries(locales).map(([code, name]) => (
-            <a href={`/freenav/${code}`} class="flex items-center gap-2 px-3 py-2 text-sm hover:bg-muted">
+            <button
+              class="lang-option flex items-center gap-2 px-3 py-2 text-sm hover:bg-muted w-full text-left"
+              data-lang={code}
+            >
               <span>{code === 'en' ? '🇺🇸' : code === 'zh' ? '🇨🇳' : code === 'ja' ? '🇯🇵' : code === 'ko' ? '🇰🇷' : code === 'es' ? '🇪🇸' : '🇫🇷'}</span>
               {name}
-            </a>
+            </button>
           ))}
         </div>
       </div>
@@ -58,9 +61,27 @@ import { locales } from '../i18n/index';
   const langContainer = document.getElementById('lang-switcher-container');
 
   if (langBtn && langDropdown) {
+    // Set initial flag based on saved language
+    const savedLang = localStorage.getItem('freenav-lang') || 'en';
+    const flagMap = { en: '🇺🇸', zh: '🇨🇳', ja: '🇯🇵', ko: '🇰🇷', es: '🇪🇸', fr: '🇫🇷' };
+    langBtn.innerHTML = flagMap[savedLang] || '🇺🇸';
+
     langBtn.addEventListener('click', (e) => {
       e.stopPropagation();
       langDropdown.classList.toggle('hidden');
+    });
+
+    // Handle language selection
+    const langOptions = document.querySelectorAll('.lang-option');
+    langOptions.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.dataset.lang;
+        localStorage.setItem('freenav-lang', lang);
+        langBtn.innerHTML = flagMap[lang] || '🇺🇸';
+        langDropdown.classList.add('hidden');
+        // Redirect to homepage with the selected language
+        window.location.href = '/freenav/';
+      });
     });
 
     document.addEventListener('click', (e) => {
