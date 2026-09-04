@@ -2,9 +2,14 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
+import ResourceCard from '../../components/ResourceCard.astro';
 import { categories, categoryInfo } from '../../data/categories';
+import resourcesData from '../../data/resources.json';
+
+const resources = Array.isArray(resourcesData) ? resourcesData : (resourcesData.resources || []);
 
 export async function getStaticPaths() {
+  const allResources = Array.isArray(resourcesData) ? resourcesData : (resourcesData.resources || []);
   return categories.map((cat) => ({
     params: { category: cat.slug }
   }));
@@ -12,6 +17,7 @@ export async function getStaticPaths() {
 
 const { category } = Astro.params;
 const cat = categoryInfo[category || ''];
+const categoryResources = resources.filter((r) => r.category === category);
 ---
 <BaseLayout title={`${cat?.name || 'Category'} — Free Resources | FreeNav`}>
   <Navbar />
@@ -32,12 +38,21 @@ const cat = categoryInfo[category || ''];
         <p class="text-muted-foreground">
           {cat?.description}
         </p>
+        <p class="text-sm text-muted-foreground mt-2">
+          {categoryResources.length} resources
+        </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <p class="text-muted-foreground text-center py-12 col-span-full">
-          No resources in this category yet. Check back soon!
-        </p>
+        {categoryResources.length > 0 ? (
+          categoryResources.map((resource) => (
+            <ResourceCard resource={resource} />
+          ))
+        ) : (
+          <p class="text-muted-foreground text-center py-12 col-span-full">
+            No resources in this category yet. Check back soon!
+          </p>
+        )}
       </div>
     </div>
   </section>

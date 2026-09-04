@@ -365,6 +365,7 @@ function deduplicate(resources) {
 function loadExistingResources() {
   try {
     const data = JSON.parse(fs.readFileSync(RESOURCES_PATH, 'utf-8'));
+    if (Array.isArray(data)) return data;
     return data.resources || [];
   } catch {
     return [];
@@ -372,15 +373,7 @@ function loadExistingResources() {
 }
 
 function saveResources(resources) {
-  const data = {
-    meta: {
-      total: resources.length,
-      lastUpdated: new Date().toISOString(),
-      version: '1.0'
-    },
-    resources
-  };
-  fs.writeFileSync(RESOURCES_PATH, JSON.stringify(data, null, 2) + '\n');
+  fs.writeFileSync(RESOURCES_PATH, JSON.stringify(resources, null, 2) + '\n');
 }
 
 function mergeResources(existing, incoming) {
@@ -419,7 +412,7 @@ async function generateSitemap(resources) {
     `${SITE_URL}categories`
   ];
   for (const r of resources) {
-    if (r.slug) urls.push(`${SITE_URL}resource/${r.slug}`);
+    if (r.slug || r.id) urls.push(`${SITE_URL}resource/${r.slug || r.id}`);
   }
   const categoriesPath = path.join(DATA_DIR, 'categories.json');
   const categoriesData = JSON.parse(fs.readFileSync(categoriesPath, 'utf-8'));
@@ -449,7 +442,7 @@ async function generateRSS(resources) {
   for (const r of latest) {
     rss += `<entry>\n`;
     rss += `  <title>${r.title}</title>\n`;
-    rss += `  <link href="${SITE_URL}resource/${r.slug}"/>\n`;
+    rss += `  <link href="${SITE_URL}resource/${r.slug || r.id}"/>\n`;
     rss += `  <id>${r.id}</id>\n`;
     rss += `  <updated>${r.updatedAt}</updated>\n`;
     rss += `  <content>${r.description}</content>\n`;
@@ -469,7 +462,7 @@ async function generateSearchIndex(resources) {
     tags: r.tags,
     category: r.category,
     pricing: r.pricing,
-    slug: r.slug
+    slug: r.slug || r.id
   }));
   const distDir = path.join(root, 'dist');
   if (!fs.existsSync(distDir)) fs.mkdirSync(distDir, { recursive: true });

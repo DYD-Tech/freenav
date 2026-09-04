@@ -2,22 +2,34 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
+import ResourceCard from '../components/ResourceCard.astro';
 import { categories } from '../data/categories';
+import resourcesData from '../data/resources.json';
+
+const resources = Array.isArray(resourcesData) ? resourcesData : (resourcesData.resources || []);
 ---
-<BaseLayout title="Search — Free Resources | FreeNav">
+<BaseLayout title="Search Resources — FreeNav">
   <Navbar />
 
   <section class="py-12">
-    <div class="container mx-auto px-4 max-w-2xl">
-      <h1 class="text-3xl font-bold mb-6">Search Resources</h1>
+    <div class="container mx-auto px-4">
+      <div class="mb-8">
+        <a
+          href="/"
+          class="text-sm text-muted-foreground hover:text-foreground transition-colors"
+        >
+          ← Back to home
+        </a>
+        <h1 class="text-3xl font-bold mt-4 mb-2">Search Resources</h1>
+      </div>
 
-      <form method="GET" class="mb-6">
-        <div class="relative">
+      <div class="mb-8">
+        <div class="relative max-w-2xl">
           <input
             type="search"
-            name="q"
-            placeholder="Enter keywords, tags, or categories..."
-            class="w-full pl-12 pr-4 py-3 text-sm rounded-xl border border-border bg-surface focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+            id="search-input"
+            placeholder="Search free resources..."
+            class="w-full pl-12 pr-4 py-3 text-sm rounded-xl border border-border bg-surface focus:outline-none focus:ring-2 focus:ring-primary-500"
           />
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -32,33 +44,86 @@ import { categories } from '../data/categories';
             class="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground"
           >
             <circle cx="11" cy="11" r="8" />
-            <line x1="21" y1="21" x2="21" y2="21" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
           </svg>
         </div>
-      </form>
 
-      <div class="mb-6">
-        <h2 class="text-sm font-semibold mb-3 text-foreground">Or browse by category</h2>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
+        <div class="flex flex-wrap gap-2 mt-4" id="category-filters">
+          <button
+            class="category-filter text-xs px-3 py-1 rounded-full bg-primary text-primary-foreground"
+            data-category=""
+          >
+            All Categories
+          </button>
           {categories.map((cat) => (
-            <a
-              href={`/category/${cat.slug}`}
-              class="flex items-center gap-2 p-3 rounded-lg border border-border bg-surface hover:border-primary-300 dark:hover:border-primary-700 hover:bg-muted transition-all text-sm"
+            <button
+              class="category-filter text-xs px-3 py-1 rounded-full bg-muted hover:bg-muted/80"
+              data-category={cat.slug}
             >
-              <span>{cat.icon}</span>
-              <span>{cat.name}</span>
-            </a>
+              {cat.icon} {cat.name}
+            </button>
           ))}
         </div>
       </div>
 
-      <div class="text-center py-8">
-        <p class="text-sm text-muted-foreground">
-          Search results will appear here.
-        </p>
+      <p class="text-sm text-muted-foreground mb-4">
+        <span id="results-count">{resources.length}</span> resources found
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="results-grid">
+        {resources.map((resource) => (
+          <div class="resource-card" data-resource={resource.category || 'other'} data-title={(resource.title + ' ' + (resource.description || '') + ' ' + (resource.tags || []).join(' ')).toLowerCase()}>
+            <ResourceCard resource={resource} />
+          </div>
+        ))}
       </div>
+
+      <p id="no-results" class="text-center py-12 text-muted-foreground hidden">
+        No resources found. Try a different search term.
+      </p>
     </div>
   </section>
 
   <Footer />
+
+  <script>
+    const input = document.getElementById('search-input');
+    const grid = document.getElementById('results-grid');
+    const noResults = document.getElementById('no-results');
+    const resultsCount = document.getElementById('results-count');
+    const cards = document.querySelectorAll('.resource-card');
+    const filters = document.querySelectorAll('.category-filter');
+
+    let activeCategory = '';
+
+    function filter() {
+      const query = input.value.toLowerCase().trim();
+      let visible = 0;
+
+      cards.forEach(card => {
+        const title = card.dataset.title;
+        const category = card.dataset.resource;
+        const matchesSearch = query === '' || title.includes(query);
+        const matchesCategory = activeCategory === '' || category === activeCategory;
+        const isVisible = matchesSearch && matchesCategory;
+        card.style.display = isVisible ? '' : 'none';
+        if (isVisible) visible++;
+      });
+
+      resultsCount.textContent = visible;
+      noResults.classList.toggle('hidden', visible > 0);
+      grid.classList.toggle('hidden', visible === 0);
+    }
+
+    input.addEventListener('input', filter);
+
+    filters.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filters.forEach(f => f.classList.remove('bg-primary', 'text-primary-foreground'));
+        btn.classList.add('bg-primary', 'text-primary-foreground');
+        activeCategory = btn.dataset.category;
+        filter();
+      });
+    });
+  </script>
 </BaseLayout>
