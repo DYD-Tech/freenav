@@ -148,15 +148,15 @@ function mergeResources(existing, incoming) {
 
 async function generateSitemap(resources) {
   const urls = [
-    'https://freenav.dev/',
-    'https://freenav.dev/search'
+    'https://dyd-tech.github.io/freenav/',
+    'https://dyd-tech.github.io/freenav/search'
   ];
   for (const r of resources) {
-    urls.push(`https://freenav.dev/resource/${r.slug}`);
+    urls.push(`https://dyd-tech.github.io/freenav/resource/${r.slug}`);
   }
   const categories = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'categories.json'), 'utf-8'));
   for (const c of categories.categories) {
-    urls.push(`https://freenav.dev/category/${c.slug}`);
+    urls.push(`https://dyd-tech.github.io/freenav/category/${c.slug}`);
   }
 
   let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
@@ -174,13 +174,13 @@ async function generateRSS(resources) {
   let rss = `<?xml version="1.0" encoding="UTF-8"?>\n`;
   rss += `<feed xmlns="http://www.w3.org/2005/Atom">\n`;
   rss += `<title>FreeNav — New Resources</title>\n`;
-  rss += `<link href="https://freenav.dev/rss.xml" rel="self"/>\n`;
-  rss += `<link href="https://freenav.dev/"/>\n`;
+  rss += `<link href="https://dyd-tech.github.io/freenav/rss.xml" rel="self"/>\n`;
+  rss += `<link href="https://dyd-tech.github.io/freenav/"/>\n`;
   rss += `<updated>${new Date().toISOString()}</updated>\n`;
   for (const r of latest) {
     rss += `<entry>\n`;
     rss += `  <title>${r.title}</title>\n`;
-    rss += `  <link href="https://freenav.dev/resource/${r.slug}"/>\n`;
+    rss += `  <link href="https://dyd-tech.github.io/freenav/resource/${r.slug}"/>\n`;
     rss += `  <id>${r.id}</id>\n`;
     rss += `  <updated>${r.updatedAt}</updated>\n`;
     rss += `  <content>${r.description}</content>\n`;

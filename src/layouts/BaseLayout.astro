@@ -7,16 +7,19 @@ export interface Props {
 }
 
 const {
-  title = 'FreeNav — The Internet\'s Best Curated Free Resources',
+  title = "FreeNav — The Internet's Best Curated Free Resources",
   description = 'Discover the best free resources curated daily. AI tools, design assets, dev tools, courses, and more — all free, all high-quality.'
 } = Astro.props;
+
+const site = new URL(Astro.site || 'https://dyd-tech.github.io/freenav/');
+const baseUrl = '/freenav';
 ---
 <!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href={`${baseUrl}/favicon.svg`} />
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="theme-color" content="#ffffff" />
@@ -25,8 +28,8 @@ const {
     <!-- Open Graph -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content="https://freenav.dev/og-image.png" />
-    <meta property="og:url" content="https://freenav.dev" />
+    <meta property="og:image" content={`${site.origin}/og-image.png`} />
+    <meta property="og:url" content={site.origin} />
     <meta property="og:type" content="website" />
 
     <!-- Twitter -->
