@@ -6,12 +6,12 @@ const currentYear = new Date().getFullYear();
     <div class="flex flex-col md:flex-row justify-between items-center gap-6">
       <div class="flex items-center gap-4 text-sm text-muted-foreground">
         <span>© {currentYear} FreeNav</span>
-        <a href="/freenav/about" class="hover:text-foreground transition-colors">About</a>
-        <a href="/freenav/categories" class="hover:text-foreground transition-colors">Categories</a>
-        <a href="/freenav/submit" class="hover:text-foreground transition-colors">Submit</a>
-        <a href="https://github.com/dyd-tech/freenav" class="hover:text-foreground transition-colors">GitHub</a>
+        <a href="/freenav/about" class="hover:text-foreground transition-colors" data-i18n="nav.about">About</a>
+        <a href="/freenav/categories" class="hover:text-foreground transition-colors" data-i18n="nav.categories">Categories</a>
+        <a href="/freenav/submit" class="hover:text-foreground transition-colors" data-i18n="nav.submit">Submit</a>
+        <a href="https://github.com/dyd-tech/freenav" class="hover:text-foreground transition-colors" data-i18n="nav.github">GitHub</a>
       </div>
-      <p class="text-sm text-muted-foreground">
+      <p class="text-sm text-muted-foreground" data-i18n="footer.tagline">
         All resources are curated and verified.
       </p>
     </div>
