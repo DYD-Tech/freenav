@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import { categories } from '../data/categories';
 import { searchEngines, defaultSearchEngine } from '../data/search-engines';
+import ResourceCard from '../components/ResourceCard.astro';
 import resourcesData from '../data/resources.json';
 
 const resources = Array.isArray(resourcesData) ? resourcesData : (resourcesData.resources || []);
@@ -14,23 +15,37 @@ const categoryCounts = {};
 for (const r of resources) {
   categoryCounts[r.category] = (categoryCounts[r.category] || 0) + 1;
 }
+
+// Get 6 most recent resources
+const recent = resources
+  .sort((a, b) => new Date(b.dateAdded || b.addedAt || 0) - new Date(a.dateAdded || a.addedAt || 0))
+  .slice(0, 6);
+
+// Get 6 most popular
+const trending = resources
+  .sort((a, b) => {
+    if (a.featured && !b.featured) return -1;
+    if (!a.featured && b.featured) return 1;
+    return (b.rating || 0) - (a.rating || 0);
+  })
+  .slice(0, 6);
 ---
 <BaseLayout title="FreeNav — Free Resource Hub">
   <Navbar />
 
   <main class="flex-1">
-    <!-- Hero Section -->
-    <section class="py-12">
+    <!-- Full-Screen Hero Section -->
+    <section class="min-h-screen flex items-center justify-center pt-16">
       <div class="container mx-auto px-4 text-center">
-        <h1 class="text-2xl md:text-3xl font-semibold mb-2">
+        <h1 class="text-3xl md:text-4xl font-bold mb-3">
           Free Resources Daily
         </h1>
-        <p class="text-sm text-muted-foreground mb-8">
+        <p class="text-sm text-muted-foreground mb-10 max-w-xl mx-auto">
           Your browser homepage for discovering the best free resources
         </p>
 
         <!-- Multi Search Engine Bar -->
-        <div class="max-w-2xl mx-auto" data-search-engines={JSON.stringify(searchEngines)} data-default-engine={defaultSearchEngine}>
+        <div class="max-w-2xl mx-auto mb-12" data-search-engines={JSON.stringify(searchEngines)} data-default-engine={defaultSearchEngine}>
           <form id="multi-search-form" class="flex gap-2">
             <select
               id="search-engine-select"
@@ -74,35 +89,83 @@ for (const r of resources) {
               Search
             </button>
           </form>
-          <p class="text-xs text-muted-foreground mt-2">
-            Press <kbd class="px-1 py-0.5 text-xs bg-muted rounded">Enter</kbd> to search
-          </p>
+        </div>
+
+        <!-- Category Grid -->
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-xl font-semibold mb-6">Categories</h2>
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-4">
+            {categories.map((cat) => (
+              <a
+                href={`${baseURL}/category/${cat.slug}`}
+                class="group flex flex-col items-center text-center p-5 rounded-xl border border-border bg-surface hover:border-primary-300 dark:hover:border-primary-700 hover:shadow-md transition-all"
+              >
+                <div class="w-14 h-14 flex items-center justify-center text-3xl mb-2 bg-primary-50 dark:bg-primary-900/20 rounded-full group-hover:bg-primary-100 dark:group-hover:bg-primary-900/30 transition-colors">
+                  {cat.icon}
+                </div>
+                <span class="font-medium text-sm text-foreground group-hover:text-primary-600 dark:group-hover:text-primary-400">
+                  {cat.name}
+                </span>
+                <span class="text-xs text-muted-foreground mt-1">
+                  {categoryCounts[cat.slug] || cat.count || 0} resources
+                </span>
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="mt-12 animate-bounce">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="mx-auto text-muted-foreground"
+          >
+            <line x1="12" y1="5" x2="12" y2="19" />
+            <line x1="19" y1="12" x2="12" x2="12" />
+          </svg>
+          <p class="text-xs text-muted-foreground mt-2">Scroll for more</p>
         </div>
       </div>
     </section>
 
-    <!-- Category Grid -->
-    <section class="pb-16">
+    <!-- Below-the-fold Content -->
+    <section class="py-16">
       <div class="container mx-auto px-4">
-        <h2 class="text-xl font-semibold mb-6">Categories</h2>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
-          {categories.map((cat) => (
-            <a
-              href={`${baseURL}/category/${cat.slug}`}
-              class="group flex flex-col items-center text-center p-6 rounded-xl border border-border bg-surface hover:border-primary-300 dark:hover:border-primary-700 hover:shadow-lg hover:-translate-y-1 transition-all"
-            >
-              <div class="w-16 h-16 flex items-center justify-center text-4xl mb-3 bg-primary-50 dark:bg-primary-900/20 rounded-full group-hover:bg-primary-100 dark:group-hover:bg-primary-900/30 transition-colors">
-                {cat.icon}
-              </div>
-              <span class="font-semibold text-sm text-foreground group-hover:text-primary-600 dark:group-hover:text-primary-400">
-                {cat.name}
-              </span>
-              <span class="text-xs text-muted-foreground mt-1">
-                {categoryCounts[cat.slug] || cat.count || 0} resources
-              </span>
-            </a>
-          ))}
-        </div>
+        {trending.length > 0 && (
+          <div class="mb-12">
+            <h2 class="text-2xl font-semibold mb-6">Trending This Week</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {trending.map((resource) => (
+                <ResourceCard resource={resource} />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {recent.length > 0 && (
+          <div class="mb-12">
+            <h2 class="text-2xl font-semibold mb-6">Recently Added</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {recent.map((resource) => (
+                <ResourceCard resource={resource} />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {trending.length === 0 && recent.length === 0 && (
+          <div class="text-center py-12 text-muted-foreground">
+            No resources yet. We're curating the best — check back daily!
+          </div>
+        )}
       </div>
     </section>
   </main>
@@ -117,33 +180,32 @@ for (const r of resources) {
 
     // @ts-ignore - engines are embedded via data attributes
     const enginesContainer = document.querySelector('[data-search-engines]');
-    const engines = JSON.parse(enginesContainer.getAttribute('data-search-engines'));
-    const defaultEngine = enginesContainer.getAttribute('data-default-engine');
+    if (enginesContainer) {
+      const engines = JSON.parse(enginesContainer.getAttribute('data-search-engines'));
+      const engineMap = {};
+      engines.forEach(e => engineMap[e.id] = e);
 
-    // Build lookup map
-    const engineMap = {};
-    engines.forEach(e => engineMap[e.id] = e);
-
-    if (form) {
-      form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const query = input.value.trim();
-        if (!query) return;
-        const engineId = select.value;
-        const engine = engineMap[engineId];
-        if (engine) {
-          window.open(engine.url.replace('{query}', encodeURIComponent(query)), '_blank');
-        }
-      });
-
-      // Handle Enter key for quick search
-      if (input) {
-        input.addEventListener('keydown', (e) => {
-          if (e.key === 'Enter') {
-            e.preventDefault();
-            form.dispatchEvent(new Event('submit'));
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const query = input.value.trim();
+          if (!query) return;
+          const engineId = select.value;
+          const engine = engineMap[engineId];
+          if (engine) {
+            window.open(engine.url.replace('{query}', encodeURIComponent(query)), '_blank');
           }
         });
+
+        // Handle Enter key for quick search
+        if (input) {
+          input.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+              e.preventDefault();
+              form.dispatchEvent(new Event('submit'));
+            }
+          });
+        }
       }
     }
   </script>
