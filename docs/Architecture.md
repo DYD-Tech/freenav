@@ -87,7 +87,29 @@ freenav/
 6. GitHub Actions → Deploy to GitHub Pages
 ```
 
-## Performance Targets
+## Multi-Language Support
+
+**Supported Languages (required for all future updates):**
+- English (EN) — default
+- Chinese, Simplified (ZH)
+- Japanese (JA)
+- Korean (KO)
+- Spanish (ES)
+- French (FR)
+
+**Implementation:**
+- Translations stored in `src/i18n/{locale}.json`
+- Language switcher in Navbar component
+- `i18n/index.ts` provides `t()` helper, locale detection, and path utilities
+- New resources added to `collect-resources.mjs` must include multi-language fields
+- All UI strings extracted to locale JSON files
+
+**Adding new content after the MVP:**
+When adding new UI elements or features, always:
+1. Add the English string in `src/i18n/en.json`
+2. Add translations in all 5 other locale files (zh, ja, ko, es, fr)
+3. Use the `t()` function in components: `t('key', locale)`
+
 
 - **Lighthouse**: ≥95
 - **FCP**: <2 seconds
