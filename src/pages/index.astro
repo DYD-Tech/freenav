@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import { categories } from '../data/categories';
+import { searchEngines, defaultSearchEngine } from '../data/search-engines';
 import resourcesData from '../data/resources.json';
 
 const resources = Array.isArray(resourcesData) ? resourcesData : (resourcesData.resources || []);
@@ -19,47 +20,71 @@ for (const r of resources) {
 
   <main class="flex-1">
     <!-- Hero Section -->
-    <section class="py-16">
+    <section class="py-12">
       <div class="container mx-auto px-4 text-center">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">
+        <h1 class="text-2xl md:text-3xl font-semibold mb-2">
           Free Resources Daily
         </h1>
-        <p class="text-lg text-muted-foreground max-w-xl mx-auto mb-8">
-          Your browser homepage for discovering the best free resources — AI tools, design assets, dev tools, courses, and more.
+        <p class="text-sm text-muted-foreground mb-8">
+          Your browser homepage for discovering the best free resources
         </p>
 
-        <form action={`${baseURL}/search`} method="GET" class="max-w-2xl mx-auto">
-          <div class="relative">
-            <input
-              type="search"
-              name="q"
-              placeholder="Search free resources..."
-              class="w-full pl-12 pr-4 py-3 text-sm rounded-xl border border-border bg-surface focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-            />
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground"
+        <!-- Multi Search Engine Bar -->
+        <div class="max-w-2xl mx-auto" data-search-engines={JSON.stringify(searchEngines)} data-default-engine={defaultSearchEngine}>
+          <form id="multi-search-form" class="flex gap-2">
+            <select
+              id="search-engine-select"
+              class="px-3 text-sm border border-border rounded-lg bg-surface focus:outline-none focus:ring-2 focus:ring-primary-500"
             >
-              <circle cx="11" cy="11" r="8" />
-              <line x1="21" y1="21" x2="16.65" y2="16.65" />
-            </svg>
-          </div>
-        </form>
+              {searchEngines.map((engine) => (
+                <option value={engine.id} selected={engine.id === defaultSearchEngine}>
+                  {engine.icon} {engine.name}
+                </option>
+              ))}
+            </select>
+            <div class="relative flex-1">
+              <input
+                type="search"
+                id="search-query"
+                name="q"
+                placeholder="Search the web..."
+                class="w-full pl-12 pr-4 py-3 text-sm rounded-xl border border-border bg-surface focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                autocomplete="off"
+              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground"
+              >
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+              </svg>
+            </div>
+            <button
+              type="submit"
+              class="px-4 py-2 text-sm font-medium text-white bg-primary-600 rounded-lg hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 transition-colors"
+            >
+              Search
+            </button>
+          </form>
+          <p class="text-xs text-muted-foreground mt-2">
+            Press <kbd class="px-1 py-0.5 text-xs bg-muted rounded">Enter</kbd> to search
+          </p>
+        </div>
       </div>
     </section>
 
-    <!-- Category Grid - Browser Homepage Style -->
+    <!-- Category Grid -->
     <section class="pb-16">
       <div class="container mx-auto px-4">
-        <h2 class="text-2xl font-semibold mb-8">Browse by Category</h2>
+        <h2 class="text-xl font-semibold mb-6">Categories</h2>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
           {categories.map((cat) => (
             <a
@@ -83,4 +108,43 @@ for (const r of resources) {
   </main>
 
   <Footer />
+
+  <script>
+    // Multi-search engine handler
+    const form = document.getElementById('multi-search-form');
+    const select = document.getElementById('search-engine-select');
+    const input = document.getElementById('search-query');
+
+    // @ts-ignore - engines are embedded via data attributes
+    const enginesContainer = document.querySelector('[data-search-engines]');
+    const engines = JSON.parse(enginesContainer.getAttribute('data-search-engines'));
+    const defaultEngine = enginesContainer.getAttribute('data-default-engine');
+
+    // Build lookup map
+    const engineMap = {};
+    engines.forEach(e => engineMap[e.id] = e);
+
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const query = input.value.trim();
+        if (!query) return;
+        const engineId = select.value;
+        const engine = engineMap[engineId];
+        if (engine) {
+          window.open(engine.url.replace('{query}', encodeURIComponent(query)), '_blank');
+        }
+      });
+
+      // Handle Enter key for quick search
+      if (input) {
+        input.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter') {
+            e.preventDefault();
+            form.dispatchEvent(new Event('submit'));
+          }
+        });
+      }
+    }
+  </script>
 </BaseLayout>
