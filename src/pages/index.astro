@@ -1,212 +1,158 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Navbar from '../components/Navbar.astro';
-import Footer from '../components/Footer.astro';
 import { categories } from '../data/categories';
-import { searchEngines, defaultSearchEngine } from '../data/search-engines';
-import ResourceCard from '../components/ResourceCard.astro';
 import resourcesData from '../data/resources.json';
 
 const resources = Array.isArray(resourcesData) ? resourcesData : (resourcesData.resources || []);
 const baseURL = '/freenav';
 
-// Count resources per category
-const categoryCounts = {};
-for (const r of resources) {
-  categoryCounts[r.category] = (categoryCounts[r.category] || 0) + 1;
-}
+// Get all resources as direct quick links
+const quickLinks = resources.map(r => ({
+  id: r.id || r.slug,
+  title: r.title,
+  url: r.url,
+  category: r.category,
+  icon: r.logo || '🔗',
+  pricing: r.pricing,
+  official: r.official
+}));
 
-// Get 6 most recent resources
-const recent = resources
-  .sort((a, b) => new Date(b.dateAdded || b.addedAt || 0) - new Date(a.dateAdded || a.addedAt || 0))
-  .slice(0, 6);
+// Group by category
+const categoryMap = {};
+categories.forEach(cat => {
+  categoryMap[cat.slug] = { ...cat, items: [] };
+});
 
-// Get 6 most popular
-const trending = resources
-  .sort((a, b) => {
-    if (a.featured && !b.featured) return -1;
-    if (!a.featured && b.featured) return 1;
-    return (b.rating || 0) - (a.rating || 0);
-  })
-  .slice(0, 6);
+quickLinks.forEach(link => {
+  const catSlug = link.category;
+  if (categoryMap[catSlug]) {
+    categoryMap[catSlug].items.push(link);
+  } else {
+    // Create uncategorized bucket
+    if (!categoryMap['uncategorized']) {
+      categoryMap['uncategorized'] = { id: 'uncategorized', name: 'Other', slug: 'uncategorized', icon: '📦', items: [] };
+    }
+    categoryMap['uncategorized'].items.push(link);
+  }
+});
+
+const navCategories = Object.values(categoryMap).filter(c => c.items.length > 0);
 ---
 <BaseLayout title="FreeNav — Free Resource Hub">
   <Navbar />
 
-  <main class="flex-1">
-    <!-- Full-Screen Hero Section -->
-    <section class="min-h-screen flex items-center justify-center pt-16">
-      <div class="container mx-auto px-4 text-center">
-        <h1 class="text-3xl md:text-4xl font-bold mb-3">
-          Free Resources Daily
+  <main class="min-h-screen flex items-center justify-center">
+    <div class="container mx-auto px-4 text-center py-12">
+      <!-- Logo + Tagline -->
+      <div class="mb-10">
+        <h1 class="text-2xl md:text-3xl font-bold mb-2">
+          FreeNav
         </h1>
-        <p class="text-sm text-muted-foreground mb-10 max-w-xl mx-auto">
-          Your browser homepage for discovering the best free resources
+        <p class="text-sm text-muted-foreground">
+          Free resources • Browser homepage
         </p>
+      </div>
 
-        <!-- Multi Search Engine Bar -->
-        <div class="max-w-2xl mx-auto mb-12" data-search-engines={JSON.stringify(searchEngines)} data-default-engine={defaultSearchEngine}>
-          <form id="multi-search-form" class="flex gap-2">
-            <select
-              id="search-engine-select"
-              class="px-3 text-sm border border-border rounded-lg bg-surface focus:outline-none focus:ring-2 focus:ring-primary-500"
+      <!-- Search (opens new tab to Google) -->
+      <div class="max-w-2xl mx-auto mb-10">
+        <form id="homepage-search" class="flex gap-2">
+          <div class="relative flex-1">
+            <input
+              type="search"
+              id="homepage-search-input"
+              placeholder="Search the web..."
+              class="w-full pl-12 pr-4 py-3 text-sm rounded-xl border border-border bg-surface focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+              autocomplete="off"
+            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground"
             >
-              {searchEngines.map((engine) => (
-                <option value={engine.id} selected={engine.id === defaultSearchEngine}>
-                  {engine.icon} {engine.name}
-                </option>
-              ))}
-            </select>
-            <div class="relative flex-1">
-              <input
-                type="search"
-                id="search-query"
-                name="q"
-                placeholder="Search the web..."
-                class="w-full pl-12 pr-4 py-3 text-sm rounded-xl border border-border bg-surface focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                autocomplete="off"
-              />
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground"
-              >
-                <circle cx="11" cy="11" r="8" />
-                <line x1="21" y1="21" x2="16.65" y2="16.65" />
-              </svg>
-            </div>
-            <button
-              type="submit"
-              class="px-4 py-2 text-sm font-medium text-white bg-primary-600 rounded-lg hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 transition-colors"
-            >
-              Search
-            </button>
-          </form>
-        </div>
-
-        <!-- Category Grid -->
-        <div class="max-w-4xl mx-auto">
-          <h2 class="text-xl font-semibold mb-6">Categories</h2>
-          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-4">
-            {categories.map((cat) => (
-              <a
-                href={`${baseURL}/category/${cat.slug}`}
-                class="group flex flex-col items-center text-center p-5 rounded-xl border border-border bg-surface hover:border-primary-300 dark:hover:border-primary-700 hover:shadow-md transition-all"
-              >
-                <div class="w-14 h-14 flex items-center justify-center text-3xl mb-2 bg-primary-50 dark:bg-primary-900/20 rounded-full group-hover:bg-primary-100 dark:group-hover:bg-primary-900/30 transition-colors">
-                  {cat.icon}
-                </div>
-                <span class="font-medium text-sm text-foreground group-hover:text-primary-600 dark:group-hover:text-primary-400">
-                  {cat.name}
-                </span>
-                <span class="text-xs text-muted-foreground mt-1">
-                  {categoryCounts[cat.slug] || cat.count || 0} resources
-                </span>
-              </a>
-            ))}
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
           </div>
-        </div>
-
-        <!-- Scroll Indicator -->
-        <div class="mt-12 animate-bounce">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="mx-auto text-muted-foreground"
+          <button
+            type="submit"
+            class="px-4 py-2 text-sm font-medium text-white bg-primary-600 rounded-lg hover:bg-primary-700 focus:outline-none"
           >
-            <line x1="12" y1="5" x2="12" y2="19" />
-            <line x1="19" y1="12" x2="12" x2="12" />
-          </svg>
-          <p class="text-xs text-muted-foreground mt-2">Scroll for more</p>
-        </div>
+            Search
+          </button>
+        </form>
       </div>
-    </section>
 
-    <!-- Below-the-fold Content -->
-    <section class="py-16">
-      <div class="container mx-auto px-4">
-        {trending.length > 0 && (
-          <div class="mb-12">
-            <h2 class="text-2xl font-semibold mb-6">Trending This Week</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {trending.map((resource) => (
-                <ResourceCard resource={resource} />
+      <!-- Direct Resource Links Grid -->
+      <div class="max-w-5xl mx-auto">
+        {navCategories.map((cat) => (
+          <div class="mb-10" key={cat.slug}>
+            <h2 class="text-lg font-semibold mb-4 flex items-center justify-center gap-2">
+              <span>{cat.icon}</span>
+              <span>{cat.name}</span>
+            </h2>
+            <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-3">
+              {cat.items.map((item) => (
+                <a
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="group flex flex-col items-center text-center p-3 rounded-xl border border-border bg-surface hover:border-primary-300 dark:hover:border-primary-700 hover:shadow-md transition-all hover:-translate-y-0.5"
+                  title={item.title}
+                >
+                  <div class="w-12 h-12 flex items-center justify-center text-2xl mb-1 bg-muted/30 rounded-lg overflow-hidden">
+                    {item.icon && item.icon.startsWith('http') ? (
+                      <img src={item.icon} alt={item.title} class="w-full h-full object-contain" />
+                    ) : (
+                      <span>{item.icon}</span>
+                    )}
+                  </div>
+                  <span class="text-xs font-medium text-foreground group-hover:text-primary-600 dark:group-hover:text-primary-400 line-clamp-1">
+                    {item.title}
+                  </span>
+                </a>
               ))}
             </div>
           </div>
-        )}
-
-        {recent.length > 0 && (
-          <div class="mb-12">
-            <h2 class="text-2xl font-semibold mb-6">Recently Added</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {recent.map((resource) => (
-                <ResourceCard resource={resource} />
-              ))}
-            </div>
-          </div>
-        )}
-
-        {trending.length === 0 && recent.length === 0 && (
-          <div class="text-center py-12 text-muted-foreground">
-            No resources yet. We're curating the best — check back daily!
-          </div>
-        )}
+        ))}
       </div>
-    </section>
+    </div>
   </main>
 
-  <Footer />
+  <!-- Minimal Footer -->
+  <footer class="border-t border-border py-4 text-center text-xs text-muted-foreground">
+    <span>© {new Date().getFullYear()} FreeNav</span>
+    <a href="/freenav/about" class="hover:text-foreground">About</a>
+    <a href="/freenav/search" class="hover:text-foreground">Search</a>
+  </footer>
 
   <script>
-    // Multi-search engine handler
-    const form = document.getElementById('multi-search-form');
-    const select = document.getElementById('search-engine-select');
-    const input = document.getElementById('search-query');
+    // Homepage search → opens Google search in new tab
+    const form = document.getElementById('homepage-search');
+    const input = document.getElementById('homepage-search-input');
 
-    // @ts-ignore - engines are embedded via data attributes
-    const enginesContainer = document.querySelector('[data-search-engines]');
-    if (enginesContainer) {
-      const engines = JSON.parse(enginesContainer.getAttribute('data-search-engines'));
-      const engineMap = {};
-      engines.forEach(e => engineMap[e.id] = e);
+    if (form && input) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const query = input.value.trim();
+        if (!query) return;
+        window.open('https://www.google.com/search?q=' + encodeURIComponent(query), '_blank');
+        input.value = '';
+      });
 
-      if (form) {
-        form.addEventListener('submit', (e) => {
+      input.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
           e.preventDefault();
-          const query = input.value.trim();
-          if (!query) return;
-          const engineId = select.value;
-          const engine = engineMap[engineId];
-          if (engine) {
-            window.open(engine.url.replace('{query}', encodeURIComponent(query)), '_blank');
-          }
-        });
-
-        // Handle Enter key for quick search
-        if (input) {
-          input.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter') {
-              e.preventDefault();
-              form.dispatchEvent(new Event('submit'));
-            }
-          });
+          form.dispatchEvent(new Event('submit'));
         }
-      }
+      });
     }
   </script>
 </BaseLayout>
