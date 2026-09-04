@@ -18,8 +18,9 @@ export async function getStaticPaths() {
 }
 
 const { slug } = Astro.params;
+const resource = resources.find((r) => (r.slug || r.id) === slug);
 ---
-<BaseLayout title={`Resource: ${slug} | FreeNav`}>
+<BaseLayout title={`${resource?.title || 'Resource'} — Free Resources | FreeNav`}>
   <Navbar />
 
   <section class="py-12">
@@ -31,11 +32,49 @@ const { slug } = Astro.params;
         ← Back to home
       </a>
 
-      <div class="mt-8 text-center py-12">
-        <p class="text-muted-foreground">
-          Resource "{slug}" — detail page coming soon.
-        </p>
-      </div>
+      {resource ? (
+        <div class="mt-8">
+          <div class="flex items-center gap-3 mb-4">
+            {resource.pricing === 'free' ? (
+              <span class="text-xs font-medium px-2.5 py-0.5 rounded-full bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400">
+                Free
+              </span>
+            ) : (
+              <span class="text-xs font-medium px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400">
+                Free Tier
+              </span>
+            )}
+            {resource.official && (
+              <span class="text-xs font-medium px-2.5 py-0.5 rounded-full bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-400">
+                Official
+              </span>
+            )}
+          </div>
+          <h1 class="text-3xl md:text-4xl font-bold mb-2">{resource.title}</h1>
+          <p class="text-muted-foreground mb-6">{resource.description}</p>
+          <a
+            href={resource.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
+          >
+            Visit Resource →
+          </a>
+          {resource.tags && (
+            <div class="mt-4 flex flex-wrap gap-2">
+              {resource.tags.map((tag) => (
+                <span class="text-xs px-2 py-1 bg-muted rounded-full">#{tag}</span>
+              ))}
+            </div>
+          )}
+        </div>
+      ) : (
+        <div class="mt-8 text-center py-12">
+          <p class="text-muted-foreground">
+            Resource "{slug}" — not found.
+          </p>
+        </div>
+      )}
     </div>
   </section>
 
