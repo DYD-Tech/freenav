@@ -2,26 +2,11 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
-import ResourceCard from '../components/ResourceCard.astro';
 import { categories } from '../data/categories';
 import resourcesData from '../data/resources.json';
 
 const resources = Array.isArray(resourcesData) ? resourcesData : (resourcesData.resources || []);
 const baseURL = '/freenav';
-
-// Get 6 most recent resources for "Recently Added"
-const recent = resources
-  .sort((a, b) => new Date(b.dateAdded || b.addedAt || 0) - new Date(a.dateAdded || a.addedAt || 0))
-  .slice(0, 6);
-
-// Get 6 most popular (featured first, then by rating)
-const trending = resources
-  .sort((a, b) => {
-    if (a.featured && !b.featured) return -1;
-    if (!a.featured && b.featured) return 1;
-    return (b.rating || 0) - (a.rating || 0);
-  })
-  .slice(0, 6);
 
 // Count resources per category
 const categoryCounts = {};
@@ -29,22 +14,20 @@ for (const r of resources) {
   categoryCounts[r.category] = (categoryCounts[r.category] || 0) + 1;
 }
 ---
-<BaseLayout title="FreeNav — The Internet's Best Curated Free Resources">
+<BaseLayout title="FreeNav — Free Resource Hub">
   <Navbar />
 
-  <section class="py-12">
-    <div class="container mx-auto px-4">
-      <div class="text-center mb-12">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4" data-i18n="hero.title">
-          Free Resources. Curated Daily.
+  <main class="flex-1">
+    <!-- Hero Section -->
+    <section class="py-16">
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">
+          Free Resources Daily
         </h1>
-        <p class="text-lg text-muted-foreground max-w-xl mx-auto" data-i18n="hero.subtitle">
-          Discover the best free resources — AI tools, design assets, dev tools,
-          courses, and more. All free, all high-quality.
+        <p class="text-lg text-muted-foreground max-w-xl mx-auto mb-8">
+          Your browser homepage for discovering the best free resources — AI tools, design assets, dev tools, courses, and more.
         </p>
-      </div>
 
-      <div class="mb-8">
         <form action={`${baseURL}/search`} method="GET" class="max-w-2xl mx-auto">
           <div class="relative">
             <input
@@ -52,7 +35,7 @@ for (const r of resources) {
               name="q"
               placeholder="Search free resources..."
               class="w-full pl-12 pr-4 py-3 text-sm rounded-xl border border-border bg-surface focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-              data-i18n="search.placeholder" />
+            />
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -71,56 +54,33 @@ for (const r of resources) {
           </div>
         </form>
       </div>
+    </section>
 
-      <div class="mb-12">
-        <h2 class="text-2xl font-semibold mb-6" data-i18n="sections.categories">Categories</h2>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-4">
+    <!-- Category Grid - Browser Homepage Style -->
+    <section class="pb-16">
+      <div class="container mx-auto px-4">
+        <h2 class="text-2xl font-semibold mb-8">Browse by Category</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
           {categories.map((cat) => (
             <a
               href={`${baseURL}/category/${cat.slug}`}
-              class="group flex flex-col items-center text-center p-4 rounded-xl border border-border bg-surface hover:border-primary-300 dark:hover:border-primary-700 hover:shadow-md transition-all"
+              class="group flex flex-col items-center text-center p-6 rounded-xl border border-border bg-surface hover:border-primary-300 dark:hover:border-primary-700 hover:shadow-lg hover:-translate-y-1 transition-all"
             >
-              <span class="text-3xl mb-2">{cat.icon}</span>
-              <span class="font-medium text-sm group-hover:text-primary-600 dark:group-hover:text-primary-400">
+              <div class="w-16 h-16 flex items-center justify-center text-4xl mb-3 bg-primary-50 dark:bg-primary-900/20 rounded-full group-hover:bg-primary-100 dark:group-hover:bg-primary-900/30 transition-colors">
+                {cat.icon}
+              </div>
+              <span class="font-semibold text-sm text-foreground group-hover:text-primary-600 dark:group-hover:text-primary-400">
                 {cat.name}
               </span>
               <span class="text-xs text-muted-foreground mt-1">
-                {categoryCounts[cat.slug] || cat.count || 0} <span data-i18n="common.resources">resources</span>
+                {categoryCounts[cat.slug] || cat.count || 0} resources
               </span>
             </a>
           ))}
         </div>
       </div>
-
-      {trending.length > 0 && (
-        <div class="mb-12">
-          <h2 class="text-2xl font-semibold mb-6" data-i18n="sections.trending">Trending This Week</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {trending.map((resource) => (
-              <ResourceCard resource={resource} />
-            ))}
-          </div>
-        </div>
-      )}
-
-      {recent.length > 0 && (
-        <div class="mb-12">
-          <h2 class="text-2xl font-semibold mb-6" data-i18n="sections.recent">Recently Added</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {recent.map((resource) => (
-              <ResourceCard resource={resource} />
-            ))}
-          </div>
-        </div>
-      )}
-
-      {trending.length === 0 && recent.length === 0 && (
-        <div class="text-center py-12 text-muted-foreground" data-i18n="noResources">
-        No resources yet. We're curating the best — check back daily!
-        </div>
-      )}
-    </div>
-  </section>
+    </section>
+  </main>
 
   <Footer />
 </BaseLayout>
