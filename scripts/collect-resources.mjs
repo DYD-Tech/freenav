@@ -231,7 +231,7 @@ async function collectAITools() {
     const response = await fetch('https://huggingface.co/api/models?search=free&limit=20');
     const data = await response.json();
     return data
-      .filter(m => m downloads > 1000)
+      .filter(m => m.downloads > 1000)
       .slice(0, 15)
       .map(model => ({
         title: model.id.split('/')[1] || model.id,
