@@ -1040,6 +1040,27 @@
     "category": "ai",
     "slug": "qwen3-24b-a4b-freedom-thinking-abliterated-heretic-neo-imatrix-gguf",
     "pricing": "free",
+    "id": "e16b5583-279f-4544-b875-3cab9ce4a6f6",
+    "addedAt": "2026-09-05T10:45:40.442Z",
+    "updatedAt": "2026-09-05T10:45:40.442Z",
+    "verifiedAt": "2026-09-05T10:45:40.442Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
+    "title": "Qwen3-24B-A4B-Freedom-Thinking-Abliterated-Heretic-NEO-Imatrix-GGUF",
+    "url": "https://huggingface.co/Higashikawa/Qwen3-24B-A4B-Freedom-Thinking-Abliterated-Heretic-NEO-Imatrix-GGUF",
+    "description": "AI model: Higashikawa/Qwen3-24B-A4B-Freedom-Thinking-Abliterated-Heretic-NEO-Imatrix-GGUF",
+    "source": "huggingface",
+    "tags": [
+      "ai",
+      "ml",
+      "huggingface",
+      "text-generation"
+    ],
+    "category": "ai",
+    "slug": "qwen3-24b-a4b-freedom-thinking-abliterated-heretic-neo-imatrix-gguf",
+    "pricing": "free",
     "id": "bcb80863-f51d-4e37-a249-ce5637136f4f",
     "addedAt": "2026-09-05T10:38:21.891Z",
     "updatedAt": "2026-09-05T10:38:21.892Z",
