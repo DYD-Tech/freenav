@@ -22,7 +22,12 @@ function slugify(str) {
 
 async function checkUrl(url) {
   try {
-    const res = await fetch(url, { method: 'HEAD', redirect: 'follow', signal: AbortSignal.timeout(10000) });
+    // Try HEAD first (faster)
+    let res = await fetch(url, { method: 'HEAD', redirect: 'follow', signal: AbortSignal.timeout(10000) });
+    if (res.ok || res.status === 302 || res.status === 301) return true;
+
+    // Fallback: try GET if HEAD fails
+    res = await fetch(url, { method: 'GET', redirect: 'follow', signal: AbortSignal.timeout(10000) });
     return res.ok || res.status === 302 || res.status === 301;
   } catch {
     return false;
