@@ -1,54 +1,24 @@
 [
   {
-    "id": "openai-chatgpt",
-    "title": "ChatGPT",
-    "description": "Conversational AI by OpenAI. Free tier includes access to GPT-3.5, web search, and file uploads.",
-    "url": "https://chat.openai.com",
-    "official": true,
-    "category": "ai",
+    "title": "Qwen3-24B-A4B-Freedom-Thinking-Abliterated-Heretic-NEO-Imatrix-GGUF",
+    "url": "https://huggingface.co/Higashikawa/Qwen3-24B-A4B-Freedom-Thinking-Abliterated-Heretic-NEO-Imatrix-GGUF",
+    "description": "AI model: Higashikawa/Qwen3-24B-A4B-Freedom-Thinking-Abliterated-Heretic-NEO-Imatrix-GGUF",
+    "source": "huggingface",
     "tags": [
       "ai",
-      "chatbot",
-      "gpt",
-      "openai"
+      "ml",
+      "huggingface",
+      "text-generation"
     ],
-    "pricing": "free",
-    "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
-  },
-  {
-    "id": "anthropic-claude",
-    "title": "Claude",
-    "description": "AI assistant by Anthropic. Free tier available with Claude 3 Sonnet, web search, and document analysis.",
-    "url": "https://claude.ai",
-    "official": true,
     "category": "ai",
-    "tags": [
-      "ai",
-      "chatbot",
-      "claude",
-      "anthropic"
-    ],
+    "slug": "qwen3-24b-a4b-freedom-thinking-abliterated-heretic-neo-imatrix-gguf",
     "pricing": "free",
-    "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
-  },
-  {
-    "id": "google-gemini",
-    "title": "Gemini",
-    "description": "Google's multimodal AI assistant. Free tier includes Gemini 2.0 Flash, image generation, and file analysis.",
-    "url": "https://gemini.google.com",
-    "official": true,
-    "category": "ai",
-    "tags": [
-      "ai",
-      "chatbot",
-      "gemini",
-      "google"
-    ],
-    "pricing": "free",
-    "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
+    "id": "148318dc-875d-4406-acdc-f0b106c51c9b",
+    "addedAt": "2026-09-05T10:55:21.843Z",
+    "updatedAt": "2026-09-05T10:55:21.844Z",
+    "verifiedAt": "2026-09-05T10:55:21.843Z",
+    "rating": 0,
+    "featured": false
   },
   {
     "id": "deepseek-ai",
@@ -65,7 +35,8 @@
     ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
+    "lastVerified": "2026-09-04",
+    "slug": "deepseek"
   },
   {
     "id": "huggingface-hub",
@@ -83,7 +54,8 @@
     ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
+    "lastVerified": "2026-09-04",
+    "slug": "hugging-face"
   },
   {
     "id": "together-api",
@@ -100,7 +72,8 @@
     ],
     "pricing": "freemium",
     "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
+    "lastVerified": "2026-09-04",
+    "slug": "together-api"
   },
   {
     "id": "groq-api",
@@ -118,7 +91,8 @@
     ],
     "pricing": "freemium",
     "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
+    "lastVerified": "2026-09-04",
+    "slug": "groq-api"
   },
   {
     "id": "replicate",
@@ -135,7 +109,8 @@
     ],
     "pricing": "freemium",
     "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
+    "lastVerified": "2026-09-04",
+    "slug": "replicate"
   },
   {
     "id": "ollama",
@@ -152,7 +127,8 @@
     ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
+    "lastVerified": "2026-09-04",
+    "slug": "ollama"
   },
   {
     "id": "lmstudio",
@@ -169,7 +145,8 @@
     ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
+    "lastVerified": "2026-09-04",
+    "slug": "lm-studio"
   },
   {
     "id": "github",
@@ -186,7 +163,8 @@
     ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
+    "lastVerified": "2026-09-04",
+    "slug": "github"
   },
   {
     "id": "netlify",
@@ -203,7 +181,8 @@
     ],
     "pricing": "freemium",
     "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
+    "lastVerified": "2026-09-04",
+    "slug": "netlify"
   },
   {
     "id": "vercel",
@@ -220,7 +199,8 @@
     ],
     "pricing": "freemium",
     "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
+    "lastVerified": "2026-09-04",
+    "slug": "vercel"
   },
   {
     "id": "supabase",
@@ -238,7 +218,8 @@
     ],
     "pricing": "freemium",
     "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
+    "lastVerified": "2026-09-04",
+    "slug": "supabase"
   },
   {
     "id": "planetscale",
@@ -255,7 +236,8 @@
     ],
     "pricing": "freemium",
     "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
+    "lastVerified": "2026-09-04",
+    "slug": "planetscale"
   },
   {
     "id": "cloudflare-pages",
@@ -272,7 +254,8 @@
     ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
+    "lastVerified": "2026-09-04",
+    "slug": "cloudflare-pages"
   },
   {
     "id": "railway",
@@ -289,7 +272,8 @@
     ],
     "pricing": "freemium",
     "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
+    "lastVerified": "2026-09-04",
+    "slug": "railway"
   },
   {
     "id": "figma",
@@ -307,75 +291,8 @@
     ],
     "pricing": "freemium",
     "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
-  },
-  {
-    "id": "canva",
-    "title": "Canva",
-    "description": "Easy-to-use design tool with templates. Free tier includes 5GB storage, 1000+ templates, and basic editing.",
-    "url": "https://canva.com",
-    "official": true,
-    "category": "design",
-    "tags": [
-      "design",
-      "templates",
-      "social-media",
-      "graphics"
-    ],
-    "pricing": "freemium",
-    "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
-  },
-  {
-    "id": "unplash",
-    "title": "Unsplash",
-    "description": "Millions of high-resolution photos free to use. No attribution required. API available.",
-    "url": "https://unsplash.com",
-    "official": true,
-    "category": "images",
-    "tags": [
-      "design",
-      "photos",
-      "images",
-      "free Stock"
-    ],
-    "pricing": "free",
-    "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
-  },
-  {
-    "id": "pexels",
-    "title": "Pexels",
-    "description": "Free stock photos and videos. No attribution required. API available for developers.",
-    "url": "https://pexels.com",
-    "official": true,
-    "category": "images",
-    "tags": [
-      "design",
-      "photos",
-      "videos",
-      "free Stock"
-    ],
-    "pricing": "free",
-    "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
-  },
-  {
-    "id": "pixabay",
-    "title": "Pixabay",
-    "description": "Over 2 million free stock photos, vectors, and illustrations. No attribution required.",
-    "url": "https://pixabay.com",
-    "official": true,
-    "category": "images",
-    "tags": [
-      "design",
-      "photos",
-      "vectors",
-      "free Stock"
-    ],
-    "pricing": "free",
-    "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
+    "lastVerified": "2026-09-04",
+    "slug": "figma"
   },
   {
     "id": "undraw",
@@ -392,7 +309,8 @@
     ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
+    "lastVerified": "2026-09-04",
+    "slug": "undraw"
   },
   {
     "id": "heroicons",
@@ -409,7 +327,8 @@
     ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
+    "lastVerified": "2026-09-04",
+    "slug": "heroicons"
   },
   {
     "id": "lucide",
@@ -426,24 +345,8 @@
     ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
-  },
-  {
-    "id": "tabler-icons",
-    "title": "Tabler Icons",
-    "description": "Over 2900 free SVG icons with consistent style. MIT licensed.",
-    "url": "https://tabler-icons.io",
-    "official": true,
-    "category": "icons",
-    "tags": [
-      "design",
-      "icons",
-      "svg",
-      "open Source"
-    ],
-    "pricing": "free",
-    "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
+    "lastVerified": "2026-09-04",
+    "slug": "lucide-icons"
   },
   {
     "id": "fontawesome",
@@ -460,7 +363,8 @@
     ],
     "pricing": "freemium",
     "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
+    "lastVerified": "2026-09-04",
+    "slug": "font-awesome"
   },
   {
     "id": "remix-icons",
@@ -477,41 +381,8 @@
     ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
-  },
-  {
-    "id": "pexels-video",
-    "title": "Pexels Videos",
-    "description": "Free stock videos in HD and 4K. No attribution required. API available.",
-    "url": "https://pexels.com/video",
-    "official": true,
-    "category": "video",
-    "tags": [
-      "video",
-      "stock",
-      "4k",
-      "free"
-    ],
-    "pricing": "free",
-    "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
-  },
-  {
-    "id": "pixabay-video",
-    "title": "Pixabay Videos",
-    "description": "Thousands of free stock videos. No attribution required.",
-    "url": "https://pixabay.com/videos",
-    "official": true,
-    "category": "video",
-    "tags": [
-      "video",
-      "stock",
-      "4k",
-      "free"
-    ],
-    "pricing": "free",
-    "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
+    "lastVerified": "2026-09-04",
+    "slug": "remix-icon"
   },
   {
     "id": "mixkit",
@@ -529,7 +400,8 @@
     ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
+    "lastVerified": "2026-09-04",
+    "slug": "mixkit"
   },
   {
     "id": "coverr",
@@ -546,7 +418,8 @@
     ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
+    "lastVerified": "2026-09-04",
+    "slug": "coverr"
   },
   {
     "id": "google-fonts",
@@ -563,7 +436,8 @@
     ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
+    "lastVerified": "2026-09-04",
+    "slug": "google-fonts"
   },
   {
     "id": "fontsource",
@@ -580,23 +454,8 @@
     ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
-  },
-  {
-    "id": "icons8",
-    "title": "Icons8",
-    "description": "Free icons, photos, and illustrations. Free tier requires attribution. API available.",
-    "url": "https://icons8.com",
-    "official": true,
-    "category": "fonts",
-    "tags": [
-      "design",
-      "icons",
-      "free"
-    ],
-    "pricing": "freemium",
-    "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
+    "lastVerified": "2026-09-04",
+    "slug": "fontsource"
   },
   {
     "id": "freesound",
@@ -613,24 +472,8 @@
     ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
-  },
-  {
-    "id": "zapsplat",
-    "title": "Zapsplat",
-    "description": "Free sound effects library. 100k+ sounds, no attribution required for free account.",
-    "url": "https://www.zapsplat.com",
-    "official": true,
-    "category": "music",
-    "tags": [
-      "audio",
-      "sounds",
-      "effects",
-      "free"
-    ],
-    "pricing": "freemium",
-    "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
+    "lastVerified": "2026-09-04",
+    "slug": "freesound"
   },
   {
     "id": "youtube-audio",
@@ -647,7 +490,8 @@
     ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
+    "lastVerified": "2026-09-04",
+    "slug": "youtube-audio-library"
   },
   {
     "id": "freepdf",
@@ -664,7 +508,8 @@
     ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
+    "lastVerified": "2026-09-04",
+    "slug": "free-pdf-books"
   },
   {
     "id": "project-gutenberg",
@@ -681,7 +526,8 @@
     ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
+    "lastVerified": "2026-09-04",
+    "slug": "project-gutenberg"
   },
   {
     "id": "open-library",
@@ -698,7 +544,8 @@
     ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
+    "lastVerified": "2026-09-04",
+    "slug": "open-library"
   },
   {
     "id": "kaggle-datasets",
@@ -715,7 +562,8 @@
     ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
+    "lastVerified": "2026-09-04",
+    "slug": "kaggle-datasets"
   },
   {
     "id": "huggingface-datasets",
@@ -732,7 +580,8 @@
     ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
+    "lastVerified": "2026-09-04",
+    "slug": "hugging-face-datasets"
   },
   {
     "id": "coursera-audit",
@@ -749,7 +598,8 @@
     ],
     "pricing": "freemium",
     "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
+    "lastVerified": "2026-09-04",
+    "slug": "coursera-audit"
   },
   {
     "id": "edx-audit",
@@ -766,7 +616,8 @@
     ],
     "pricing": "freemium",
     "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
+    "lastVerified": "2026-09-04",
+    "slug": "edx-audit"
   },
   {
     "id": "khan-academy",
@@ -784,25 +635,8 @@
     ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
-  },
-  {
-    "id": "notion",
-    "title": "Notion",
-    "description": "All-in-one workspace for docs, wikis, tasks. Free for individuals and teams up to 10.",
-    "url": "https://notion.so",
-    "official": true,
-    "category": "productivity",
-    "tags": [
-      "productivity",
-      "docs",
-      "wiki",
-      "tasks",
-      "free"
-    ],
-    "pricing": "freemium",
-    "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
+    "lastVerified": "2026-09-04",
+    "slug": "khan-academy"
   },
   {
     "id": "obsidian",
@@ -820,7 +654,8 @@
     ],
     "pricing": "freemium",
     "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
+    "lastVerified": "2026-09-04",
+    "slug": "obsidian"
   },
   {
     "id": "trello",
@@ -837,7 +672,8 @@
     ],
     "pricing": "freemium",
     "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
+    "lastVerified": "2026-09-04",
+    "slug": "trello"
   },
   {
     "id": "click-up",
@@ -855,7 +691,8 @@
     ],
     "pricing": "freemium",
     "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
+    "lastVerified": "2026-09-04",
+    "slug": "clickup"
   },
   {
     "id": "cloudflare-wrangler",
@@ -872,7 +709,8 @@
     ],
     "pricing": "freemium",
     "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
+    "lastVerified": "2026-09-04",
+    "slug": "cloudflare-workers"
   },
   {
     "id": "ngrok",
@@ -889,7 +727,8 @@
     ],
     "pricing": "freemium",
     "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
+    "lastVerified": "2026-09-04",
+    "slug": "ngrok"
   },
   {
     "id": "postman",
@@ -906,24 +745,8 @@
     ],
     "pricing": "freemium",
     "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
-  },
-  {
-    "id": "vscode",
-    "title": "Visual Studio Code",
-    "description": "Free source code editor with support for hundreds of extensions. Available on Windows, Mac, Linux.",
-    "url": "https://code.visualstudio.com",
-    "official": true,
-    "category": "tools",
-    "tags": [
-      "tools",
-      "editor",
-      "vscode",
-      "free"
-    ],
-    "pricing": "free",
-    "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
+    "lastVerified": "2026-09-04",
+    "slug": "postman"
   },
   {
     "id": "1password-free",
@@ -939,7 +762,8 @@
     ],
     "pricing": "freemium",
     "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
+    "lastVerified": "2026-09-04",
+    "slug": "1password"
   },
   {
     "id": "bitwarden",
@@ -956,7 +780,8 @@
     ],
     "pricing": "freemium",
     "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
+    "lastVerified": "2026-09-04",
+    "slug": "bitwarden"
   },
   {
     "id": "haveibeenpwned",
@@ -973,7 +798,8 @@
     ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
+    "lastVerified": "2026-09-04",
+    "slug": "have-i-been-pwned"
   },
   {
     "id": "tubi",
@@ -990,24 +816,8 @@
     ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
-  },
-  {
-    "id": "crackle",
-    "title": "Crackle",
-    "description": "Free streaming service by Sony. Movies and TV shows with ads.",
-    "url": "https://www.crackle.com",
-    "official": true,
-    "category": "entertainment",
-    "tags": [
-      "video",
-      "streaming",
-      "movies",
-      "free"
-    ],
-    "pricing": "free",
-    "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
+    "lastVerified": "2026-09-04",
+    "slug": "tubi"
   },
   {
     "id": "pluto-tv",
@@ -1024,90 +834,7 @@
     ],
     "pricing": "free",
     "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04"
-  },
-  {
-    "title": "Qwen3-24B-A4B-Freedom-Thinking-Abliterated-Heretic-NEO-Imatrix-GGUF",
-    "url": "https://huggingface.co/Higashikawa/Qwen3-24B-A4B-Freedom-Thinking-Abliterated-Heretic-NEO-Imatrix-GGUF",
-    "description": "AI model: Higashikawa/Qwen3-24B-A4B-Freedom-Thinking-Abliterated-Heretic-NEO-Imatrix-GGUF",
-    "source": "huggingface",
-    "tags": [
-      "ai",
-      "ml",
-      "huggingface",
-      "text-generation"
-    ],
-    "category": "ai",
-    "slug": "qwen3-24b-a4b-freedom-thinking-abliterated-heretic-neo-imatrix-gguf",
-    "pricing": "free",
-    "id": "e16b5583-279f-4544-b875-3cab9ce4a6f6",
-    "addedAt": "2026-09-05T10:45:40.442Z",
-    "updatedAt": "2026-09-05T10:45:40.442Z",
-    "verifiedAt": "2026-09-05T10:45:40.442Z",
-    "rating": 0,
-    "featured": false
-  },
-  {
-    "title": "Qwen3-24B-A4B-Freedom-Thinking-Abliterated-Heretic-NEO-Imatrix-GGUF",
-    "url": "https://huggingface.co/Higashikawa/Qwen3-24B-A4B-Freedom-Thinking-Abliterated-Heretic-NEO-Imatrix-GGUF",
-    "description": "AI model: Higashikawa/Qwen3-24B-A4B-Freedom-Thinking-Abliterated-Heretic-NEO-Imatrix-GGUF",
-    "source": "huggingface",
-    "tags": [
-      "ai",
-      "ml",
-      "huggingface",
-      "text-generation"
-    ],
-    "category": "ai",
-    "slug": "qwen3-24b-a4b-freedom-thinking-abliterated-heretic-neo-imatrix-gguf",
-    "pricing": "free",
-    "id": "bcb80863-f51d-4e37-a249-ce5637136f4f",
-    "addedAt": "2026-09-05T10:38:21.891Z",
-    "updatedAt": "2026-09-05T10:38:21.892Z",
-    "verifiedAt": "2026-09-05T10:38:21.892Z",
-    "rating": 0,
-    "featured": false
-  },
-  {
-    "title": "Qwen3-24B-A4B-Freedom-Thinking-Abliterated-Heretic-NEO-Imatrix-GGUF",
-    "url": "https://huggingface.co/Higashikawa/Qwen3-24B-A4B-Freedom-Thinking-Abliterated-Heretic-NEO-Imatrix-GGUF",
-    "description": "AI model: Higashikawa/Qwen3-24B-A4B-Freedom-Thinking-Abliterated-Heretic-NEO-Imatrix-GGUF",
-    "source": "huggingface",
-    "tags": [
-      "ai",
-      "ml",
-      "huggingface",
-      "text-generation"
-    ],
-    "category": "ai",
-    "slug": "qwen3-24b-a4b-freedom-thinking-abliterated-heretic-neo-imatrix-gguf",
-    "pricing": "free",
-    "id": "92c48f21-74ea-491b-95da-b082bfab4d3b",
-    "addedAt": "2026-09-05T10:14:12.147Z",
-    "updatedAt": "2026-09-05T10:14:12.160Z",
-    "verifiedAt": "2026-09-05T10:14:12.160Z",
-    "rating": 0,
-    "featured": false
-  },
-  {
-    "title": "Qwen3-24B-A4B-Freedom-Thinking-Abliterated-Heretic-NEO-Imatrix-GGUF",
-    "url": "https://huggingface.co/Higashikawa/Qwen3-24B-A4B-Freedom-Thinking-Abliterated-Heretic-NEO-Imatrix-GGUF",
-    "description": "AI model: Higashikawa/Qwen3-24B-A4B-Freedom-Thinking-Abliterated-Heretic-NEO-Imatrix-GGUF",
-    "source": "huggingface",
-    "tags": [
-      "ai",
-      "ml",
-      "huggingface",
-      "text-generation"
-    ],
-    "category": "ai",
-    "slug": "qwen3-24b-a4b-freedom-thinking-abliterated-heretic-neo-imatrix-gguf",
-    "pricing": "free",
-    "id": "1e6b6402-d924-4583-8e69-2aba76c62a25",
-    "addedAt": "2026-09-04T16:00:10.175Z",
-    "updatedAt": "2026-09-04T16:00:10.175Z",
-    "verifiedAt": "2026-09-04T16:00:10.175Z",
-    "rating": 0,
-    "featured": false
+    "lastVerified": "2026-09-04",
+    "slug": "pluto-tv"
   }
 ]
