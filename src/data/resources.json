@@ -1,5 +1,365 @@
 [
   {
+    "title": "alchemy-async",
+    "url": "https://github.com/alchemy-run/alchemy-async",
+    "description": "Infrastructure as TypeScript",
+    "source": "github-trending",
+    "tags": [
+      "typescript"
+    ],
+    "category": "productivity",
+    "slug": "alchemy-async",
+    "pricing": "free",
+    "id": "05985fec-5dc1-4c4f-89af-c9c6ffa85ef2",
+    "addedAt": "2026-09-05T11:03:46.855Z",
+    "updatedAt": "2026-09-05T11:03:46.855Z",
+    "verifiedAt": "2026-09-05T11:03:46.855Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
+    "title": "rinha-de-backend-2024-q1",
+    "url": "https://github.com/zanfranceschi/rinha-de-backend-2024-q1",
+    "description": "Repositório da 2ª edição da Rinha de Backend",
+    "source": "github-trending",
+    "tags": [
+      "html"
+    ],
+    "category": "productivity",
+    "slug": "rinha-de-backend-2024-q1",
+    "pricing": "free",
+    "id": "f11af809-76ec-4449-8f21-2410b4f85368",
+    "addedAt": "2026-09-05T11:03:46.855Z",
+    "updatedAt": "2026-09-05T11:03:46.855Z",
+    "verifiedAt": "2026-09-05T11:03:46.855Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
+    "title": "shiki-magic-move",
+    "url": "https://github.com/shikijs/shiki-magic-move",
+    "description": "Smoothly animated code blocks with Shiki",
+    "source": "github-trending",
+    "tags": [
+      "typescript"
+    ],
+    "category": "development",
+    "slug": "shiki-magic-move",
+    "pricing": "free",
+    "id": "66736e5f-94de-43b5-a062-477192f440a8",
+    "addedAt": "2026-09-05T11:03:46.855Z",
+    "updatedAt": "2026-09-05T11:03:46.855Z",
+    "verifiedAt": "2026-09-05T11:03:46.855Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
+    "title": "masa",
+    "url": "https://github.com/siyuanliii/masa",
+    "description": "Official Implementation of CVPR24 highlight paper: Matching Anything by Segmenting Anything",
+    "source": "github-trending",
+    "tags": [
+      "python"
+    ],
+    "category": "productivity",
+    "slug": "masa",
+    "pricing": "free",
+    "id": "71a6eee0-a2bb-44ba-8506-d0646f5385f3",
+    "addedAt": "2026-09-05T11:03:46.855Z",
+    "updatedAt": "2026-09-05T11:03:46.855Z",
+    "verifiedAt": "2026-09-05T11:03:46.855Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
+    "title": "Mengzi3",
+    "url": "https://github.com/Langboat/Mengzi3",
+    "description": "Mengzi3 — free resource",
+    "source": "github-trending",
+    "tags": [
+      "python"
+    ],
+    "category": "productivity",
+    "slug": "mengzi3",
+    "pricing": "free",
+    "id": "acfac36d-1b2a-45e9-ae3e-1d1cb680923b",
+    "addedAt": "2026-09-05T11:03:46.855Z",
+    "updatedAt": "2026-09-05T11:03:46.855Z",
+    "verifiedAt": "2026-09-05T11:03:46.855Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
+    "title": "Open-O1",
+    "url": "https://github.com/Open-Source-O1/Open-O1",
+    "description": "Open-O1 — free resource",
+    "source": "github-trending",
+    "tags": [
+      "python"
+    ],
+    "category": "productivity",
+    "slug": "open-o1",
+    "pricing": "free",
+    "id": "8a10411f-934f-47b2-aef5-9aeb0188eb09",
+    "addedAt": "2026-09-05T11:03:46.855Z",
+    "updatedAt": "2026-09-05T11:03:46.855Z",
+    "verifiedAt": "2026-09-05T11:03:46.855Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
+    "title": "sage",
+    "url": "https://github.com/Storia-AI/sage",
+    "description": "Chat with any codebase in under two minutes | Fully local or via third-party APIs",
+    "source": "github-trending",
+    "tags": [
+      "python"
+    ],
+    "category": "ai",
+    "slug": "sage",
+    "pricing": "free",
+    "id": "4a844861-5f11-4478-9952-e5537b497ebe",
+    "addedAt": "2026-09-05T11:03:46.855Z",
+    "updatedAt": "2026-09-05T11:03:46.855Z",
+    "verifiedAt": "2026-09-05T11:03:46.855Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
+    "title": "Show HN: Open-Source eInk Bike Computer",
+    "url": "https://opentrailpaper.com",
+    "description": "HN Show: Show HN: Open-Source eInk Bike Computer",
+    "source": "hacker-news",
+    "tags": [
+      "show-hn"
+    ],
+    "category": "open-source",
+    "slug": "show-hn-open-source-eink-bike-computer",
+    "pricing": "free",
+    "id": "e9b5d3ca-8470-492c-a0f3-551381922c2a",
+    "addedAt": "2026-09-05T11:03:46.855Z",
+    "updatedAt": "2026-09-05T11:03:46.855Z",
+    "verifiedAt": "2026-09-05T11:03:46.855Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
+    "title": "Show HN: NationalDex • minimal open-source Pokédex",
+    "url": "https://www.nationaldex.app",
+    "description": "HN Show: Show HN: NationalDex • minimal open-source Pokédex",
+    "source": "hacker-news",
+    "tags": [
+      "show-hn"
+    ],
+    "category": "open-source",
+    "slug": "show-hn-nationaldex-minimal-open-source-pokdex",
+    "pricing": "free",
+    "id": "87edfcd2-8d1f-42d6-b4e6-b81fc7b10ed8",
+    "addedAt": "2026-09-05T11:03:46.855Z",
+    "updatedAt": "2026-09-05T11:03:46.855Z",
+    "verifiedAt": "2026-09-05T11:03:46.855Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
+    "title": "Show HN: Clustta – Open-source version control for creative work",
+    "url": "https://clustta.com/",
+    "description": "HN Show: Show HN: Clustta – Open-source version control for creative work",
+    "source": "hacker-news",
+    "tags": [
+      "show-hn"
+    ],
+    "category": "open-source",
+    "slug": "show-hn-clustta-open-source-version-control-for-creative-work",
+    "pricing": "free",
+    "id": "b848908a-c9c2-4865-8bdc-92ee660757d3",
+    "addedAt": "2026-09-05T11:03:46.855Z",
+    "updatedAt": "2026-09-05T11:03:46.855Z",
+    "verifiedAt": "2026-09-05T11:03:46.855Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
+    "title": "Show HN: Declick – Turn an OpenAPI Spec, MCP Server or SQLite DB into a CLI",
+    "url": "https://github.com/ucsandman/declick",
+    "description": "HN Show: Show HN: Declick – Turn an OpenAPI Spec, MCP Server or SQLite DB into a CLI",
+    "source": "hacker-news",
+    "tags": [
+      "show-hn"
+    ],
+    "category": "development",
+    "slug": "show-hn-declick-turn-an-openapi-spec-mcp-server-or-sqlite-db-into-a-cli",
+    "pricing": "free",
+    "id": "f4b0cb84-42e8-447f-9af0-fc5d056e4533",
+    "addedAt": "2026-09-05T11:03:46.855Z",
+    "updatedAt": "2026-09-05T11:03:46.855Z",
+    "verifiedAt": "2026-09-05T11:03:46.855Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
+    "title": "Show HN: OpenStint – lap timing using RTL-SDR and near-field transponders",
+    "url": "https://openstint.org/",
+    "description": "HN Show: Show HN: OpenStint – lap timing using RTL-SDR and near-field transponders",
+    "source": "hacker-news",
+    "tags": [
+      "show-hn"
+    ],
+    "category": "productivity",
+    "slug": "show-hn-openstint-lap-timing-using-rtl-sdr-and-near-field-transponders",
+    "pricing": "free",
+    "id": "be49d82b-b8b2-4c92-9a26-6a42e04da53a",
+    "addedAt": "2026-09-05T11:03:46.855Z",
+    "updatedAt": "2026-09-05T11:03:46.855Z",
+    "verifiedAt": "2026-09-05T11:03:46.855Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
+    "title": "Gemma-4-12B-it-NVFP4-GGUF",
+    "url": "https://huggingface.co/FreedomAISVR/Gemma-4-12B-it-NVFP4-GGUF",
+    "description": "AI model: FreedomAISVR/Gemma-4-12B-it-NVFP4-GGUF",
+    "source": "huggingface",
+    "tags": [
+      "ai",
+      "ml",
+      "huggingface",
+      "text-generation"
+    ],
+    "category": "ai",
+    "slug": "gemma-4-12b-it-nvfp4-gguf",
+    "pricing": "free",
+    "id": "e02d6653-948e-4e02-987c-05a597522214",
+    "addedAt": "2026-09-05T11:03:46.855Z",
+    "updatedAt": "2026-09-05T11:03:46.855Z",
+    "verifiedAt": "2026-09-05T11:03:46.855Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
+    "title": "Qwen-Image-Edit-Rapid-AIO-NSFW-v23-NVFP4-GGUF",
+    "url": "https://huggingface.co/FreedomAISVR/Qwen-Image-Edit-Rapid-AIO-NSFW-v23-NVFP4-GGUF",
+    "description": "AI model: FreedomAISVR/Qwen-Image-Edit-Rapid-AIO-NSFW-v23-NVFP4-GGUF",
+    "source": "huggingface",
+    "tags": [
+      "ai",
+      "ml",
+      "huggingface",
+      "model"
+    ],
+    "category": "ai",
+    "slug": "qwen-image-edit-rapid-aio-nsfw-v23-nvfp4-gguf",
+    "pricing": "free",
+    "id": "9a864d0f-6fef-4353-9394-daec7304c719",
+    "addedAt": "2026-09-05T11:03:46.855Z",
+    "updatedAt": "2026-09-05T11:03:46.855Z",
+    "verifiedAt": "2026-09-05T11:03:46.855Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
+    "title": "Qwen3-24B-A4B-Freedom-Thinking-Abliterated-Heretic-NEO-Imatrix-GGUF",
+    "url": "https://huggingface.co/DavidAU/Qwen3-24B-A4B-Freedom-Thinking-Abliterated-Heretic-NEO-Imatrix-GGUF",
+    "description": "AI model: DavidAU/Qwen3-24B-A4B-Freedom-Thinking-Abliterated-Heretic-NEO-Imatrix-GGUF",
+    "source": "huggingface",
+    "tags": [
+      "ai",
+      "ml",
+      "huggingface",
+      "text-generation"
+    ],
+    "category": "ai",
+    "slug": "qwen3-24b-a4b-freedom-thinking-abliterated-heretic-neo-imatrix-gguf",
+    "pricing": "free",
+    "id": "be2dffe3-a160-47a5-a240-49fff4cfcf0e",
+    "addedAt": "2026-09-05T11:03:46.855Z",
+    "updatedAt": "2026-09-05T11:03:46.855Z",
+    "verifiedAt": "2026-09-05T11:03:46.855Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
+    "title": "Qwen3-24B-A4B-Freedom-HQ-Thinking-Abliterated-Heretic-NEOMAX-Imatrix-GGUF",
+    "url": "https://huggingface.co/DavidAU/Qwen3-24B-A4B-Freedom-HQ-Thinking-Abliterated-Heretic-NEOMAX-Imatrix-GGUF",
+    "description": "AI model: DavidAU/Qwen3-24B-A4B-Freedom-HQ-Thinking-Abliterated-Heretic-NEOMAX-Imatrix-GGUF",
+    "source": "huggingface",
+    "tags": [
+      "ai",
+      "ml",
+      "huggingface",
+      "text-generation"
+    ],
+    "category": "ai",
+    "slug": "qwen3-24b-a4b-freedom-hq-thinking-abliterated-heretic-neomax-imatrix-gguf",
+    "pricing": "free",
+    "id": "b3902ad8-63c2-4f58-8b7d-a5db6464bc91",
+    "addedAt": "2026-09-05T11:03:46.855Z",
+    "updatedAt": "2026-09-05T11:03:46.855Z",
+    "verifiedAt": "2026-09-05T11:03:46.855Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
+    "title": "aiXcoder-7B",
+    "url": "https://github.com/aixcoder-plugin/aiXcoder-7B",
+    "description": "official repository of aiXcoder-7B Code Large Language Model",
+    "source": "github-trending",
+    "tags": [
+      "python"
+    ],
+    "category": "ai",
+    "slug": "aixcoder-7b",
+    "pricing": "free",
+    "id": "7f950353-622e-436c-b7dd-f99bee4290cb",
+    "addedAt": "2026-09-05T11:03:46.854Z",
+    "updatedAt": "2026-09-05T11:03:46.855Z",
+    "verifiedAt": "2026-09-05T11:03:46.855Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
+    "title": "Qwen3-24B-A4B-Freedom-Thinking-Abliterated-Heretic-NEO-Imatrix-GGUF",
+    "url": "https://huggingface.co/Higashikawa/Qwen3-24B-A4B-Freedom-Thinking-Abliterated-Heretic-NEO-Imatrix-GGUF",
+    "description": "AI model: Higashikawa/Qwen3-24B-A4B-Freedom-Thinking-Abliterated-Heretic-NEO-Imatrix-GGUF",
+    "source": "huggingface",
+    "tags": [
+      "ai",
+      "ml",
+      "huggingface",
+      "text-generation"
+    ],
+    "category": "ai",
+    "slug": "qwen3-24b-a4b-freedom-thinking-abliterated-heretic-neo-imatrix-gguf",
+    "pricing": "free",
+    "id": "04f2f491-9a7e-4314-a070-1f57f708185a",
+    "addedAt": "2026-09-05T11:02:18.512Z",
+    "updatedAt": "2026-09-05T11:02:18.512Z",
+    "verifiedAt": "2026-09-05T11:02:18.512Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
+    "title": "Qwen3-24B-A4B-Freedom-Thinking-Abliterated-Heretic-NEO-Imatrix-GGUF",
+    "url": "https://huggingface.co/Higashikawa/Qwen3-24B-A4B-Freedom-Thinking-Abliterated-Heretic-NEO-Imatrix-GGUF",
+    "description": "AI model: Higashikawa/Qwen3-24B-A4B-Freedom-Thinking-Abliterated-Heretic-NEO-Imatrix-GGUF",
+    "source": "huggingface",
+    "tags": [
+      "ai",
+      "ml",
+      "huggingface",
+      "text-generation"
+    ],
+    "category": "ai",
+    "slug": "qwen3-24b-a4b-freedom-thinking-abliterated-heretic-neo-imatrix-gguf",
+    "pricing": "free",
+    "id": "e943cded-16a4-4237-9838-609c83fa5767",
+    "addedAt": "2026-09-05T11:01:38.412Z",
+    "updatedAt": "2026-09-05T11:03:46.855Z",
+    "verifiedAt": "2026-09-05T11:01:38.412Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
     "title": "Qwen3-24B-A4B-Freedom-Thinking-Abliterated-Heretic-NEO-Imatrix-GGUF",
     "url": "https://huggingface.co/Higashikawa/Qwen3-24B-A4B-Freedom-Thinking-Abliterated-Heretic-NEO-Imatrix-GGUF",
     "description": "AI model: Higashikawa/Qwen3-24B-A4B-Freedom-Thinking-Abliterated-Heretic-NEO-Imatrix-GGUF",

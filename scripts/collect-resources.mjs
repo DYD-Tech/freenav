@@ -360,14 +360,25 @@ function saveResources(resources) {
 
 function mergeResources(existing, incoming) {
   const map = new Map();
+  const urlToId = new Map();
   for (const r of existing) {
-    map.set(r.id, r);
+    const normalizedUrl = (r.url || '').toLowerCase().trim().replace(/\/$/, '');
+    if (r.id) {
+      map.set(r.id, r);
+    }
+    if (normalizedUrl) {
+      urlToId.set(normalizedUrl, r.id || null);
+    }
   }
   for (const r of incoming) {
-    if (map.has(r.id)) {
+    const normalizedUrl = (r.url || '').toLowerCase().trim().replace(/\/$/, '');
+    const existingId = normalizedUrl ? urlToId.get(normalizedUrl) : null;
+    if (existingId) {
+      map.set(existingId, { ...map.get(existingId), ...r, updatedAt: new Date().toISOString() });
+    } else if (map.has(r.id)) {
       map.set(r.id, { ...map.get(r.id), ...r, updatedAt: new Date().toISOString() });
     } else {
-      map.set(r.id, {
+      const newR = {
         ...r,
         id: r.id || randomUUID(),
         slug: r.slug || slugify(r.title),
@@ -376,13 +387,17 @@ function mergeResources(existing, incoming) {
         verifiedAt: new Date().toISOString(),
         rating: r.rating || 0,
         featured: false
-      });
+      };
+      map.set(newR.id, newR);
+      if (normalizedUrl) {
+        urlToId.set(normalizedUrl, newR.id);
+      }
     }
   }
   return Array.from(map.values()).sort((a, b) => {
     if (a.featured && !b.featured) return -1;
     if (!a.featured && b.featured) return 1;
-    return new Date(b.addedAt) - new Date(a.addedAt);
+    return new Date(b.addedAt || b.dateAdded || 0) - new Date(a.addedAt || a.dateAdded || 0);
   });
 }
 
