@@ -33,7 +33,7 @@ async function main() {
   console.log('🔍 Running deduplication and link check...');
 
   let data = JSON.parse(fs.readFileSync(RESOURCES_PATH, 'utf-8'));
-  const resources = data.resources;
+  const resources = Array.isArray(data) ? data : data.resources;
   const originalCount = resources.length;
 
   // Deduplicate by URL
@@ -77,13 +77,10 @@ async function main() {
   console.log(`  ${brokenCount} broken links removed`);
 
   // Sort by addedAt desc
-  valid.sort((a, b) => new Date(b.addedAt) - new Date(a.addedAt));
+  valid.sort((a, b) => new Date(b.addedAt || b.dateAdded || 0) - new Date(a.addedAt || a.dateAdded || 0));
 
-  data.resources = valid;
-  data.meta.total = valid.length;
-  data.meta.lastUpdated = new Date().toISOString();
-
-  fs.writeFileSync(RESOURCES_PATH, JSON.stringify(data, null, 2) + '\n');
+  // Save as plain array (consistent with resources.json format)
+  fs.writeFileSync(RESOURCES_PATH, JSON.stringify(valid, null, 2) + '\n');
   console.log(`✅ Done: ${valid.length} resources, ${dupCount} duplicates removed, ${brokenCount} broken links removed`);
 }
 
