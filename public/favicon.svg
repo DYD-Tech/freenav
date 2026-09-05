@@ -1,5 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <circle cx="12" cy="12" r="10"/>
-  <line x1="2" y1="12" x2="22" y2="12"/>
-  <path d="M12 2a10 10 0 0 1 4 16.3c-.3-.1-.6-.1-1-.1"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="50%" stop-color="#60A5FA"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <linearGradient id="centerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#F97316"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="100" height="100" rx="20" fill="url(#bgGrad)"/>
+
+  <polygon points="50,18 62,40 50,42 38,40" fill="white" fill-opacity="0.95" filter="url(#glow)"/>
+  <polygon points="58,50 80,50 68,62 68,38" fill="white" fill-opacity="0.8"/>
+  <polygon points="50,58 62,80 50,82 38,80" fill="white" fill-opacity="0.8"/>
+  <polygon points="42,38 42,62 20,50 42,50" fill="white" fill-opacity="0.8"/>
+
+  <circle cx="50" cy="50" r="8" fill="url(#centerGrad)"/>
+
+  <text x="50" y="12" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">N</text>
+  <text x="50" y="94" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white">S</text>
+  <text x="50" y="53" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="white">FN</text>
 </svg>
