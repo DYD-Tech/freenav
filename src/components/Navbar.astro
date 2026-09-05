@@ -118,6 +118,9 @@ import { locales } from '../i18n/index';
         const lang = btn.dataset.lang;
         applyLanguage(lang);
         langDropdown.classList.add('hidden');
+        
+        // Dispatch event so other components can react (e.g., homepage quick links)
+        window.dispatchEvent(new CustomEvent('freenav-lang-changed', { detail: { lang } }));
         // Show toast notification
         const toast = document.createElement('div');
         toast.className = 'fixed bottom-4 right-4 bg-surface border border-border rounded-lg px-4 py-2 shadow-lg text-sm z-50';
