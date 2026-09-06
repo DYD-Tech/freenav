@@ -1,63 +1,69 @@
 {
   "nav": {
     "search": "검색",
-    "toggleDarkMode": "다크 모드 전환"
+    "toggleDarkMode": "다크모드 전환"
   },
   "hero": {
     "title": "무료 리소스. 매일 엄선.",
-    "subtitle": "AI 도구, 디자인 에셋, 개발 도구, 학습 과정 등 최고의 무료 리소스를 발견하세요. 전부 무료, 엄선 완료."
+    "subtitle": "최고의 무료 리소스를 발견하세요 — AI 도구, 디자인 에셋, 개발 도구, 강좌 등. 모두 무료, 모두 고품질."
   },
   "sections": {
     "categories": "카테고리",
-    "trending": "이번 주 트렌딩",
+    "trending": "이번 주 트렌드",
     "recent": "최근 추가",
-    "noTrending": "아직 트렌딩 리소스가 없습니다. 곧 확인해 보세요!",
-    "noRecent": "아직 리소스가 없습니다. 최고의 리소스를 엄선 중입니다 — 매일 방문해 주세요!",
-    "noResourcesInCategory": "이 카테고리에는 아직 리소스가 없습니다. 곧 확인해 보세요!"
+    "noTrending": "아직 트렌딩 리소스가 없습니다.",
+    "noRecent": "아직 리소스가 없습니다.",
+    "noResourcesInCategory": "이 카테고리의 리소스가 아직 없습니다."
   },
   "search": {
     "title": "리소스 검색",
     "placeholder": "무료 리소스 검색...",
-    "byCategory": "또는 카테고리별로 브라우징",
-    "resultsPlaceholder": "검색 결과가 여기에 표시됩니다."
+    "byCategory": "또는 카테고리로 찾아보기",
+    "resultsPlaceholder": "검색 결과는 여기에 표시됩니다."
   },
   "common": {
     "backToHome": "← 홈으로 돌아가기",
     "backToCategories": "← 모든 카테고리로 돌아가기",
-    "resourcesCount": "{count} 리소스"
+    "resourcesCount": "리소스 {count}개"
   },
   "footer": {
-    "about": "About",
+    "about": "정보",
     "categories": "카테고리",
     "submit": "제출",
     "github": "GitHub",
     "copyright": "© {year} FreeNav",
-    "allRightsReserved": "모든 리소스는 엄선되어 검증되었습니다."
+    "allRightsReserved": "모든 리소스는 엄선 및 검증되었습니다."
   },
   "about": {
     "title": "About FreeNav",
-    "p1": "FreeNav는 인터넷에서 가장 우수한 무료 리소스를 모은 커리레이션 디렉토리입니다. 무료 도구, 에셋, 강좌 등을 매일 수집·검토·정리합니다.",
-    "p2": "우리의 사명: 진정으로 유용한 무료 리소스를 찾아 your 시간을 절약하고, 창조와 빌드에 집중할 수 있도록 합니다.",
+    "p1": "FreeNav는 인터넷에서 가장 유용한 무료 리소스를 엄선한 디렉토리입니다. 매일 무료 도구, 에셋, 강좌 등을 수집하고 검증하여 정리합니다.",
+    "p2": "우리의 사명: 진정으로 유용한 무료 리소스를 찾아 사용자의 시간을 절약하고, 창조와 빌드에 집중할 수 있도록 합니다.",
     "principles": {
       "title": "원칙",
       "freeFirst": "무료 우선 — 진정으로 무료인 리소스만",
-      "official": "공식 소스 우선",
-      "noGarbage": "쓰레기, 사기, 만료된 링크 제외",
-      "curated": "엄선 완료, 단순 집계가 아님"
+      "official": "공식 출처 우선",
+      "noGarbage": "쓰레기, 사기, 만료된 링크 없음",
+      "curated": "단순 집계가 아닌 엄선"
     }
   },
   "categories": {
     "title": "모든 카테고리",
-    "subtitle": "카테고리별로 무료 리소스 브라우징"
+    "subtitle": "카테고리별로 정리된 무료 리소스 찾아보기"
   },
   "submit": {
     "title": "리소스 제출",
-    "subtitle": "무료 리소스를 제안하시겠어요? 아래 양식 또는 GitHub issue를 열어주세요.",
+    "subtitle": "추천할 무료 리소스가 있나요? 아래 양식을 작성하거나 GitHub issue를 여세요.",
     "button": "GitHub Issue 열기",
-    "label": "귀하의 GitHub Issue",
-    "hint": "제안을 위한 미리 작성된 GitHub issue를 열려면 아래 버튼을 클릭하세요."
+    "label": "당신의 GitHub Issue",
+    "hint": "아래 버튼을 클릭하여 미리 입력된 GitHub issue를 엽니다."
   },
   "category": {
     "backLink": "← 모든 카테고리로 돌아가기"
+  },
+  "quicklinks": {
+    "AI & Search": "AI 및 검색",
+    "Design & Media": "디자인 및 미디어",
+    "Productivity": "생산성",
+    "Learn & Read": "학습 및 독서"
   }
 }

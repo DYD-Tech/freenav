@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import { categories } from '../data/categories';
-import { quickLinks, defaultLinks } from '../data/quick-links';
+import { quickLinkCategories, searchEngines, categoryTranslations } from '../data/quick-links';
 import resourcesData from '../data/resources.json';
 
 const resources = Array.isArray(resourcesData) ? resourcesData : (resourcesData.resources || []);
@@ -22,88 +22,116 @@ const recent = resources
   <Navbar />
 
   <main class="flex-1">
-    <!-- Layer 1: Full-Screen Navigation Homepage -->
-    <section class="h-screen flex items-center justify-center">
-      <div class="container mx-auto px-4 text-center">
-        <div class="mb-8">
-          <h1 class="text-2xl md:text-3xl font-bold mb-2">FreeNav</h1>
-          <p class="text-sm text-muted-foreground">Free resources • Browser homepage</p>
+    <!-- Layer 1: Full-Screen Premium Navigation Homepage -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <!-- Animated gradient background -->
+      <div class="absolute inset-0 bg-gradient-to-br from-purple-900 via-blue-800 to-indigo-900 dark:from-gray-900 dark:via-purple-900 dark:to-blue-900"></div>
+
+      <!-- Subtle animated particles -->
+      <div class="absolute inset-0 overflow-hidden">
+        <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl animate-pulse-slow"></div>
+        <div class="absolute top-3/4 right-1/4 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse-slower"></div>
+        <div class="absolute bottom-1/3 left-1/3 w-48 h-48 bg-indigo-500/10 rounded-full blur-3xl animate-pulse-slow"></div>
+      </div>
+
+      <div class="container mx-auto px-4 text-center relative z-10">
+        <div class="mb-12">
+          <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-100 animate-float">
+            FreeNav
+          </h1>
+          <p class="text-sm md:text-base text-purple-200/80 max-w-2xl mx-auto leading-relaxed" data-i18n="homepage.subtitle">
+            Free resources • Browser homepage • Multi-search hub
+          </p>
         </div>
 
-        <!-- Web Search -->
-        <div class="max-w-xl mx-auto mb-10">
+        <!-- Premium Multi-Search Bar -->
+        <div class="max-w-3xl mx-auto mb-12">
           <form id="homepage-search" class="flex gap-2">
-            <div class="relative flex-1">
+            <div class="relative flex-1 group">
               <input
                 type="search"
                 id="homepage-search-input"
-                placeholder="Search the web..."
-                class="w-full pl-12 pr-4 py-3 text-sm rounded-xl border border-border bg-surface focus:outline-none focus:ring-2 focus:ring-primary-500"
+                placeholder="Search the web, code, images..."
+                data-i18n="homepage.searchPlaceholder"
+                class="w-full pl-14 pr-28 pr-4 py-4 text-base rounded-2xl border-2 border-white/20 glass-card text-white placeholder-white/50 focus:outline-none focus:border-white/40 focus:bg-white/15 transition-all duration-300"
               />
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute left-4 top-1/2 -translate-y-1/2 text-white/50 group-focus:text-white/70 transition-colors">
                 <circle cx="11" cy="11" r="8" />
                 <line x1="21" y1="21" x2="16.65" y2="16.65" />
               </svg>
+              <!-- Search engine selector -->
+              <select
+                id="search-engine"
+                class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/10 border border-white/20 rounded-lg px-2 py-1 text-xs text-white/80 focus:outline-none focus:ring-1 focus:ring-white/30 appearance-none"
+              >
+                {searchEngines.map((engine) => (
+                  <option value={engine.value} class="bg-gray-800 text-white">{engine.name}</option>
+                ))}
+              </select>
             </div>
-            <button type="submit" class="px-4 py-2 text-sm font-medium text-white bg-primary-600 rounded-lg hover:bg-primary-700">
-              Search
+            <button
+              type="submit"
+              class="px-6 py-4 text-sm font-semibold text-white bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl hover:from-purple-600 hover:to-blue-600 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center gap-2"
+            >
+              <span data-i18n="homepage.searchButton">Search</span>
             </button>
           </form>
         </div>
 
         <!-- Language-Specific Quick Links Grid -->
-        <div id="quick-links-grid" class="max-w-4xl mx-auto">
-          <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-4">
-            {defaultLinks.map((link) => (
-              <a
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="group flex flex-col items-center text-center p-3 rounded-xl border border-border bg-surface hover:shadow-md transition-all"
-                title={link.name}
-                data-quicklink="en"
-              >
-                <div class="w-12 h-12 flex items-center justify-center text-2xl mb-1">{link.icon}</div>
-                <span class="text-xs font-medium text-foreground group-hover:text-primary-600">{link.name}</span>
-              </a>
-            ))}
-
-            {Object.entries(quickLinks).filter(([lang]) => lang !== 'en').map(([lang, links]) =>
-              links.map((link) => (
-                <a
-                  key={`${lang}-${link.url}`}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="group flex flex-col items-center text-center p-3 rounded-xl border border-border bg-surface hover:shadow-md transition-all hidden"
-                  title={link.name}
-                  data-quicklink={lang}
-                >
-                  <div class="w-12 h-12 flex items-center justify-center text-2xl mb-1">{link.icon}</div>
-                  <span class="text-xs font-medium text-foreground group-hover:text-primary-600">{link.name}</span>
-                </a>
-              ))
-            )}
-          </div>
+        <div id="quick-links-grid" class="max-w-6xl mx-auto space-y-10">
+          {Object.entries(quickLinkCategories).map(([lang, qlCategories]) => (
+            <div
+              class="space-y-6"
+              data-lang={lang}
+              style={{ display: lang === 'en' ? 'block' : 'none' }}
+            >
+              {qlCategories.map((category) => (
+                <div class="mb-6" data-lang={lang}>
+                  <h3 class="text-sm font-semibold text-purple-300 mb-4 flex items-center justify-center gap-2">
+                    <span class="text-lg">{category.icon}</span>
+                    <span class="category-label">{category.name}</span>
+                  </h3>
+                  <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-3">
+                    {category.links.map((link) => (
+                      <a
+                        key={`${lang}-${link.url}`}
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="group flex flex-col items-center text-center p-3 rounded-xl glass-card hover:bg-white/10 transition-all duration-300 hover:scale-105"
+                        title={link.name}
+                      >
+                        <div class="w-12 h-12 flex items-center justify-center text-2xl mb-1 group-hover:scale-110 transition-transform">{link.icon}</div>
+                        <span class="text-xs font-medium text-purple-100 group-hover:text-white">{link.name}</span>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          ))}
         </div>
 
         <!-- Scroll Hint -->
-        <div class="mt-10 animate-bounce">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-auto text-muted-foreground">
-            <line x1="12" y1="5" x2="12" y2="19" />
-            <line x1="19" y1="12" x2="12" y2="19" />
-            <line x1="5" y1="12" x2="12" y2="19" />
-          </svg>
-          <p class="text-xs text-muted-foreground mt-2">Scroll for more</p>
+        <div class="mt-12 animate-bounce">
+          <div class="flex flex-col items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-300">
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <line x1="19" y1="12" x2="12" y2="19" />
+              <line x1="5" y1="12" x2="12" y2="19" />
+            </svg>
+            <p class="text-xs text-purple-300/70" data-i18n="homepage.scrollHint">Scroll for more resources</p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Layer 2: Resources Directory (Below the Fold) -->
-    <section class="py-16">
+    <section class="py-16 bg-background">
       <div class="container mx-auto px-4">
         <div class="mb-12">
-          <h2 class="text-2xl font-semibold mb-6">Categories</h2>
+          <h2 class="text-2xl font-semibold mb-6 text-foreground">Categories</h2>
           <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-4">
             {categories.map((cat) => (
               <a href={`${baseURL}/category/${cat.slug}`} class="group flex flex-col items-center text-center p-4 rounded-xl border border-border bg-surface hover:shadow-md transition-all">
@@ -117,7 +145,7 @@ const recent = resources
 
         {recent.length > 0 && (
           <div class="mb-12">
-            <h2 class="text-2xl font-semibold mb-6">Recently Added</h2>
+            <h2 class="text-2xl font-semibold mb-6 text-foreground">Recently Added</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {recent.map((resource) => (
                 <a href={resource.url} target="_blank" rel="noopener noreferrer" class="block group transition-all">
@@ -142,15 +170,64 @@ const recent = resources
   <Footer />
 
   <script>
+    // Translation data for quick link category headers
+    const quickLinkCategoryTranslations = {
+      en: {
+        'AI & Search': 'AI & Search',
+        'Design & Media': 'Design & Media',
+        'Productivity': 'Productivity',
+        'Learn & Read': 'Learn & Read'
+      },
+      zh: {
+        'AI & Search': 'AI & 搜索',
+        'Design & Media': '设计与媒体',
+        'Productivity': '效率工具',
+        'Learn & Read': '学习阅读'
+      },
+      ja: {
+        'AI & Search': 'AI・検索',
+        'Design & Media': 'デザイン・メディア',
+        'Productivity': '生産性',
+        'Learn & Read': '学習・読書'
+      },
+      ko: {
+        'AI & Search': 'AI 및 검색',
+        'Design & Media': '디자인 및 미디어',
+        'Productivity': '생산성',
+        'Learn & Read': '학습 및 독서'
+      },
+      es: {
+        'AI & Search': 'IA y Búsqueda',
+        'Design & Media': 'Diseño y Medios',
+        'Productivity': 'Productividad',
+        'Learn & Read': 'Aprender y Leer'
+      },
+      fr: {
+        'AI & Search': 'IA et Recherche',
+        'Design & Media': 'Design et Médias',
+        'Productivity': 'Productivité',
+        'Learn & Read': 'Apprendre et Lire'
+      }
+    };
+
+    // Search form handler with engine selection
     const form = document.getElementById('homepage-search');
     const input = document.getElementById('homepage-search-input');
+    const engineSelect = document.getElementById('search-engine');
 
     if (form && input) {
       form.addEventListener('submit', (e) => {
         e.preventDefault();
         const query = input.value.trim();
         if (!query) return;
-        window.open('https://www.google.com/search?q=' + encodeURIComponent(query), '_blank');
+        const engine = engineSelect ? engineSelect.value : 'google';
+        const baseUrls = {
+          google: 'https://www.google.com/search?q=',
+          bing: 'https://www.bing.com/search?q=',
+          duckduck: 'https://duckduckgo.com/?q=',
+          github: 'https://github.com/search?q=',
+        };
+        window.open(baseUrls[engine] + encodeURIComponent(query), '_blank');
         input.value = '';
       });
       input.addEventListener('keydown', (e) => {
@@ -159,15 +236,30 @@ const recent = resources
     }
 
     // Language-specific quick links
-    const allLinks = document.querySelectorAll('[data-quicklink]');
-    const savedLang = localStorage.getItem('freenav-lang') || 'en';
-    allLinks.forEach(link => {
-      link.classList.toggle('hidden', link.getAttribute('data-quicklink') !== savedLang);
-    });
-    window.addEventListener('freenav-lang-changed', (e) => {
-      allLinks.forEach(link => {
-        link.classList.toggle('hidden', link.getAttribute('data-quicklink') !== e.detail.lang);
+    const allLinkContainers = document.querySelectorAll('#quick-links-grid > div');
+
+    function applyQuickLinksLanguage(lang) {
+      allLinkContainers.forEach(container => {
+        const containerLang = container.getAttribute('data-lang');
+        container.style.display = containerLang === lang ? 'block' : 'none';
       });
+      // Translate category labels
+      document.querySelectorAll('.category-label').forEach(label => {
+        const original = label.textContent.trim();
+        const translations = quickLinkCategoryTranslations[lang];
+        if (translations && translations[original]) {
+          label.textContent = translations[original];
+        } else {
+          label.textContent = original;
+        }
+      });
+    }
+
+    const savedLang = localStorage.getItem('freenav-lang') || 'en';
+    applyQuickLinksLanguage(savedLang);
+
+    window.addEventListener('freenav-lang-changed', (e) => {
+      applyQuickLinksLanguage(e.detail.lang);
     });
   </script>
 </BaseLayout>

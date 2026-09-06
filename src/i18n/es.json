@@ -5,21 +5,21 @@
   },
   "hero": {
     "title": "Recursos gratuitos. Curados diariamente.",
-    "subtitle": "Descubre los mejores recursos gratuitos: herramientas de IA, activos de diseño, herramientas de desarrollo, cursos y más. Todo gratis, todo de alta calidad."
+    "subtitle": "Descubre los mejores recursos gratuitos — herramientas de IA, recursos de diseño, herramientas de desarrollo, cursos y más. Todo gratis, todo de alta calidad."
   },
   "sections": {
     "categories": "Categorías",
-    "trending": "Tendencias de esta semana",
-    "recent": "Añadido recientemente",
-    "noTrending": "Aún no hay recursos destacados. ¡Vuelve pronto!",
-    "noRecent": "Aún no hay recursos. Estamos curando lo mejor — ¡vuelve diario!",
-    "noResourcesInCategory": "Aún no hay recursos en esta categoría. ¡Vuelve pronto!"
+    "trending": "Tendencia de esta semana",
+    "recent": "Añadidos recientemente",
+    "noTrending": "Aún no hay recursos destacados.",
+    "noRecent": "Aún no hay recursos.",
+    "noResourcesInCategory": "No hay recursos en esta categoría aún."
   },
   "search": {
     "title": "Buscar recursos",
     "placeholder": "Buscar recursos gratuitos...",
-    "byCategory": "Oexplora por categoría",
-    "resultsPlaceholder": "Los resultados de búsqueda aparecerán aquí."
+    "byCategory": "O navegar por categoría",
+    "resultsPlaceholder": "Los resultados aparecerán aquí."
   },
   "common": {
     "backToHome": "← Volver a inicio",
@@ -32,17 +32,17 @@
     "submit": "Enviar",
     "github": "GitHub",
     "copyright": "© {year} FreeNav",
-    "allRightsReserved": "Todos los recursos están curados y verificados."
+    "allRightsReserved": "Todos los recursos son curados y verificados."
   },
   "about": {
     "title": "Acerca de FreeNav",
-    "p1": "FreeNav es un directorio curado de los mejores recursos gratuitos en internet. Recopilamos, evaluamos y organizamos herramientas, recursos y cursos gratuitos, actualizados diariamente.",
-    "p2": "Nuestra misión: ahorrarte tiempo encontrando recursos gratuitos realmente útiles, para que puedas enfocarte en crear y construir.",
+    "p1": "FreeNav es un directorio de los mejores recursos gratuitos en internet. Recopilamos, verificamos y organizamos herramientas, recursos, cursos y más — actualizado diariamente.",
+    "p2": "Nuestra misión: ahorrarte tiempo encontrando recursos gratuitos realmente útiles, para que puedas centrarte en crear y construir.",
     "principles": {
       "title": "Principios",
-      "freeFirst": "Gratis primero — solo recursos verdaderamente gratis",
-      "official": "Fuentes oficiales preferidas",
-      "noGarbage": "Sin basura, estafas ni enlaces caducados",
+      "freeFirst": "Gratis primero — solo recursos realmente gratuitos",
+      "official": "Se prefiere fuentes oficiales",
+      "noGarbage": "Sin basura, sin estafas, sin enlaces caducados",
       "curated": "Curado, no solo agregado"
     }
   },
@@ -55,9 +55,15 @@
     "subtitle": "¿Quieres sugerir un recurso gratuito? Completa el formulario o abre un issue de GitHub.",
     "button": "Abrir issue de GitHub",
     "label": "Tu issue de GitHub",
-    "hint": "Haz clic abajo para abrir un issue preformateado para tu sugerencia."
+    "hint": "Haz clic abajo para abrir un issue de GitHub pre-llenado con tu sugerencia."
   },
   "category": {
     "backLink": "← Volver a todas las categorías"
+  },
+  "quicklinks": {
+    "AI & Search": "IA y Búsqueda",
+    "Design & Media": "Diseño y Medios",
+    "Productivity": "Productividad",
+    "Learn & Read": "Aprender y Leer"
   }
 }

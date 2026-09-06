@@ -59,5 +59,11 @@
   },
   "category": {
     "backLink": "← 返回所有分类"
+  },
+  "quicklinks": {
+    "AI & Search": "AI & 搜索",
+    "Design & Media": "设计与媒体",
+    "Productivity": "效率工具",
+    "Learn & Read": "学习阅读"
   }
 }

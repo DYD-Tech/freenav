@@ -59,5 +59,11 @@
   },
   "category": {
     "backLink": "← Back to all categories"
+  },
+  "quicklinks": {
+    "AI & Search": "AI & Search",
+    "Design & Media": "Design & Media",
+    "Productivity": "Productivity",
+    "Learn & Read": "Learn & Read"
   }
 }

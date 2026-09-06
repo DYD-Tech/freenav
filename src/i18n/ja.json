@@ -5,20 +5,20 @@
   },
   "hero": {
     "title": "無料リソース。毎日厳選。",
-    "subtitle": "AIツール、デザイン素材、開発ツール、学習コースなど、最高の無料リソースを発見しましょう。全て無料、厳選済み。"
+    "subtitle": "最高の無料リソースを発見 — AIツール、デザインアセット、開発ツール、コースなど。すべて無料で、すべて高品質。"
   },
   "sections": {
     "categories": "カテゴリ",
     "trending": "今週のトレンド",
     "recent": "最近追加",
-    "noTrending": "今週のトレンドリソースはまだありません。近くチェックしてください！",
-    "noRecent": "リソースはまだありません。私たちは最高のリソースを厳選中です — 毎日チェックしてください！",
-    "noResourcesInCategory": "このカテゴリにはまだリソースがありません。近くチェックしてください！"
+    "noTrending": "今週のトレンドリソースはまだありません。",
+    "noRecent": "リソースはまだありません。",
+    "noResourcesInCategory": "このカテゴリのリソースはまだありません。"
   },
   "search": {
     "title": "リソース検索",
     "placeholder": "無料リソースを検索...",
-    "byCategory": "またはカテゴリ別に閲覧",
+    "byCategory": "またはカテゴリで閲覧",
     "resultsPlaceholder": "検索結果はここに表示されます。"
   },
   "common": {
@@ -27,37 +27,43 @@
     "resourcesCount": "{count} リソース"
   },
   "footer": {
-    "about": "About",
+    "about": "概要",
     "categories": "カテゴリ",
-    "submit": "提出",
+    "submit": "送信",
     "github": "GitHub",
     "copyright": "© {year} FreeNav",
-    "allRightsReserved": "すべてのリソースは厳選されて検証されています。"
+    "allRightsReserved": "すべてのリソースは厳選・検証済みです。"
   },
   "about": {
-    "title": "About FreeNav",
-    "p1": "FreeNavはインターネット上の最高の無料リソースをまとめたカービディレクトリです。無料ツール、素材、コースなどを収集・厳選・整理し、毎日更新しています。",
-    "p2": "私たちの使命：本当に役立つ無料リソースを見つけてあなたの時間を節約し、創造と構築に集中できるようにすることです。",
+    "title": "FreeNav について",
+    "p1": "FreeNav はインターネット上の最高の無料リソースを厳選したディレクトリです。無料ツール、アセット、コースなどを毎日収集・検証・整理しています。",
+    "p2": "私たちの使命：真に有用な無料リソースを見つけてあなたの時間を節約し、作成や構築に集中できるようにすることです。",
     "principles": {
       "title": "原則",
       "freeFirst": "無料優先 — 本当に無料のリソースのみ",
       "official": "公式ソースを優先",
-      "noGarbage": "ゴミ、詐欺、期限切れリンクは排除",
-      "curated": "厳選済み、単なる集積ではない"
+      "noGarbage": "ゴミ・詐欺・期限切れリンクなし",
+      "curated": "単なる集約ではなく厳選"
     }
   },
   "categories": {
     "title": "すべてのカテゴリ",
-    "subtitle": "カテゴリ別に無料リソースを閲覧"
+    "subtitle": "カテゴリ別に整理された無料リソースを閲覧"
   },
   "submit": {
-    "title": "リソースを提出",
-    "subtitle": "無料リソースを提案したいですか？下のフォームまたはGitHub issueを開いてください。",
-    "button": "GitHub Issueを開く",
-    "label": "あなたのGitHub Issue",
-    "hint": "提案用の事前入力済みGitHub issueを開くには、下のボタンをクリックしてください。"
+    "title": "リソースの提出",
+    "subtitle": "無料リソースを提案したいですか？フォームに記入するか、GitHub issue を開いてください。",
+    "button": "GitHub Issue を開く",
+    "label": "あなたの GitHub Issue",
+    "hint": "下のボタンをクリックして、あなたの提案用に事前入力された GitHub issue を開きます。"
   },
   "category": {
     "backLink": "← 全カテゴリへ戻る"
+  },
+  "quicklinks": {
+    "AI & Search": "AI・検索",
+    "Design & Media": "デザイン・メディア",
+    "Productivity": "生産性",
+    "Learn & Read": "学習・読書"
   }
 }

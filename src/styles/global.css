@@ -14,7 +14,7 @@
   .dark .bg-surface { background-color: #1a1a1a; }
   .dark .border-border { border-color: #333333; }
   .dark .bg-muted { background-color: #222222; }
-  .dark \.text-muted-foreground { color: #a3a3a3; }
+  .dark .text-muted-foreground { color: #a3a3a3; }
 }
 
 @layer components {
@@ -27,19 +27,54 @@
   .prose h1, .prose h2, .prose h3 {
     @apply text-foreground;
   }
+
+  /* Glass-morphism card effect for hero quick links */
+  .glass-card {
+    @apply bg-white/5 border border-white/10 backdrop-blur-sm;
+  }
+  .dark .glass-card {
+    @apply bg-white/5 border-white/10;
+  }
+
+  /* Gradient button for hero search */
+  .hero-search-btn {
+    @apply bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold rounded-2xl;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-border rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted;
+  }
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+/* Custom keyframe animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
 }
-::-webkit-scrollbar-track {
-  background: transparent;
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
 }
-::-webkit-scrollbar-thumb {
-  @apply bg-border rounded-full;
+
+/* Custom select dropdown arrow hiding for WebKit */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
-::-webkit-scrollbar-thumb:hover {
-  @apply bg-muted;
+select::-webkit-inner-spin-button,
+select::-webkit-search-cancel-button {
+  -webkit-appearance: none;
 }
