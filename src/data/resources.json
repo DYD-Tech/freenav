@@ -1,5 +1,147 @@
 [
   {
+    "title": "tariff",
+    "url": "https://github.com/hxu296/tariff",
+    "description": "The official repository for tariff",
+    "source": "github-trending",
+    "tags": [
+      "python"
+    ],
+    "category": "open-source",
+    "slug": "tariff",
+    "pricing": "free",
+    "id": "6374faec-8d46-4259-9e0d-1048f8f9b16e",
+    "addedAt": "2026-09-07T06:23:21.850Z",
+    "updatedAt": "2026-09-07T06:23:21.850Z",
+    "verifiedAt": "2026-09-07T06:23:21.850Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
+    "title": "Chain-of-Recursive-Thoughts",
+    "url": "https://github.com/PhialsBasement/Chain-of-Recursive-Thoughts",
+    "description": "I made my AI think harder by making it argue with itself repeatedly. It works stupidly well.",
+    "source": "github-trending",
+    "tags": [
+      "javascript"
+    ],
+    "category": "ai",
+    "slug": "chain-of-recursive-thoughts",
+    "pricing": "free",
+    "id": "fdd509ee-ce7c-4834-96ca-2462eb175552",
+    "addedAt": "2026-09-07T06:23:21.850Z",
+    "updatedAt": "2026-09-07T06:23:21.850Z",
+    "verifiedAt": "2026-09-07T06:23:21.850Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
+    "title": "EasyAnimate",
+    "url": "https://github.com/aigc-apps/EasyAnimate",
+    "description": "📺 An End-to-End Solution for High-Resolution and Long Video Generation Based on Transformer Diffusion",
+    "source": "github-trending",
+    "tags": [
+      "python"
+    ],
+    "category": "video",
+    "slug": "easyanimate",
+    "pricing": "free",
+    "id": "8a54327e-a151-4b71-a89c-0c227643e71e",
+    "addedAt": "2026-09-07T06:23:21.850Z",
+    "updatedAt": "2026-09-07T06:23:21.850Z",
+    "verifiedAt": "2026-09-07T06:23:21.850Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
+    "title": "giga-world-0",
+    "url": "https://github.com/open-gigaai/giga-world-0",
+    "description": "GigaWorld-0: World Models as Data Engine to Empower Embodied AI",
+    "source": "github-trending",
+    "tags": [
+      "python"
+    ],
+    "category": "ai",
+    "slug": "giga-world-0",
+    "pricing": "free",
+    "id": "36ace858-b669-4fbd-b1a1-0840feb081b7",
+    "addedAt": "2026-09-07T06:23:21.850Z",
+    "updatedAt": "2026-09-07T06:23:21.850Z",
+    "verifiedAt": "2026-09-07T06:23:21.850Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
+    "title": "sandbox",
+    "url": "https://github.com/ishaan1013/sandbox",
+    "description": "Code editing environment with an AI copilot and real-time collaboration",
+    "source": "github-trending",
+    "tags": [
+      "typescript"
+    ],
+    "category": "ai",
+    "slug": "sandbox",
+    "pricing": "free",
+    "id": "7eb80892-63ff-4985-ba84-282819b69ef6",
+    "addedAt": "2026-09-07T06:23:21.850Z",
+    "updatedAt": "2026-09-07T06:23:21.850Z",
+    "verifiedAt": "2026-09-07T06:23:21.850Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
+    "title": "LongCat-Flash-Chat",
+    "url": "https://github.com/meituan-longcat/LongCat-Flash-Chat",
+    "description": "LongCat-Flash-Chat — free resource",
+    "source": "github-trending",
+    "tags": [],
+    "category": "productivity",
+    "slug": "longcat-flash-chat",
+    "pricing": "free",
+    "id": "cfb7429b-76d6-4f4c-beb3-3390038684bf",
+    "addedAt": "2026-09-07T06:23:21.850Z",
+    "updatedAt": "2026-09-07T06:23:21.850Z",
+    "verifiedAt": "2026-09-07T06:23:21.850Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
+    "title": "Show HN: Kadō – open-source habit tracker, with non-binary habit score, for iOS",
+    "url": "https://github.com/scastiel/kado",
+    "description": "HN Show: Show HN: Kadō – open-source habit tracker, with non-binary habit score, for iOS",
+    "source": "hacker-news",
+    "tags": [
+      "show-hn"
+    ],
+    "category": "open-source",
+    "slug": "show-hn-kad-open-source-habit-tracker-with-non-binary-habit-score-for-ios",
+    "pricing": "free",
+    "id": "37a3d735-177b-4263-9a39-26d0f92d071d",
+    "addedAt": "2026-09-07T06:23:21.850Z",
+    "updatedAt": "2026-09-07T06:23:21.850Z",
+    "verifiedAt": "2026-09-07T06:23:21.850Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
+    "title": "Show HN: VODForge – a free local desktop UI for YouTube video/playlist downloads",
+    "url": "https://getvodforge.com/",
+    "description": "HN Show: Show HN: VODForge – a free local desktop UI for YouTube video/playlist downloads",
+    "source": "hacker-news",
+    "tags": [
+      "show-hn"
+    ],
+    "category": "video",
+    "slug": "show-hn-vodforge-a-free-local-desktop-ui-for-youtube-videoplaylist-downloads",
+    "pricing": "free",
+    "id": "a88d2ccf-7052-4292-87c8-5d6676c0a76b",
+    "addedAt": "2026-09-07T06:23:21.850Z",
+    "updatedAt": "2026-09-07T06:23:21.850Z",
+    "verifiedAt": "2026-09-07T06:23:21.850Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
     "title": "web-eval-agent",
     "url": "https://github.com/refreshdotdev/web-eval-agent",
     "description": "An MCP server that autonomously evaluates web applications. ",
@@ -12,7 +154,7 @@
     "pricing": "free",
     "id": "42ac079e-9aad-4844-8f7b-0ed0d3d3e16b",
     "addedAt": "2026-09-06T06:19:11.241Z",
-    "updatedAt": "2026-09-06T06:19:11.241Z",
+    "updatedAt": "2026-09-07T06:23:21.850Z",
     "verifiedAt": "2026-09-06T06:19:11.241Z",
     "rating": 0,
     "featured": false
@@ -84,7 +226,7 @@
     "pricing": "free",
     "id": "cd657807-132c-4eb9-9131-6db7a6aff5bd",
     "addedAt": "2026-09-06T06:19:11.241Z",
-    "updatedAt": "2026-09-06T06:19:11.241Z",
+    "updatedAt": "2026-09-07T06:23:21.850Z",
     "verifiedAt": "2026-09-06T06:19:11.241Z",
     "rating": 0,
     "featured": false
@@ -123,7 +265,7 @@
     "pricing": "free",
     "id": "4c1e0efe-734e-4252-8723-efd818e27794",
     "addedAt": "2026-09-06T06:19:11.241Z",
-    "updatedAt": "2026-09-06T06:19:11.241Z",
+    "updatedAt": "2026-09-07T06:23:21.851Z",
     "verifiedAt": "2026-09-06T06:19:11.241Z",
     "rating": 0,
     "featured": false
@@ -177,7 +319,7 @@
     "pricing": "free",
     "id": "66736e5f-94de-43b5-a062-477192f440a8",
     "addedAt": "2026-09-05T11:03:46.855Z",
-    "updatedAt": "2026-09-06T06:19:11.240Z",
+    "updatedAt": "2026-09-07T06:23:21.850Z",
     "verifiedAt": "2026-09-05T11:03:46.855Z",
     "rating": 0,
     "featured": false
@@ -195,7 +337,7 @@
     "pricing": "free",
     "id": "71a6eee0-a2bb-44ba-8506-d0646f5385f3",
     "addedAt": "2026-09-05T11:03:46.855Z",
-    "updatedAt": "2026-09-06T06:19:11.240Z",
+    "updatedAt": "2026-09-07T06:23:21.850Z",
     "verifiedAt": "2026-09-05T11:03:46.855Z",
     "rating": 0,
     "featured": false
@@ -213,7 +355,7 @@
     "pricing": "free",
     "id": "acfac36d-1b2a-45e9-ae3e-1d1cb680923b",
     "addedAt": "2026-09-05T11:03:46.855Z",
-    "updatedAt": "2026-09-06T06:19:11.240Z",
+    "updatedAt": "2026-09-07T06:23:21.850Z",
     "verifiedAt": "2026-09-05T11:03:46.855Z",
     "rating": 0,
     "featured": false
@@ -231,7 +373,7 @@
     "pricing": "free",
     "id": "8a10411f-934f-47b2-aef5-9aeb0188eb09",
     "addedAt": "2026-09-05T11:03:46.855Z",
-    "updatedAt": "2026-09-06T06:19:11.240Z",
+    "updatedAt": "2026-09-07T06:23:21.850Z",
     "verifiedAt": "2026-09-05T11:03:46.855Z",
     "rating": 0,
     "featured": false
@@ -267,7 +409,7 @@
     "pricing": "free",
     "id": "e9b5d3ca-8470-492c-a0f3-551381922c2a",
     "addedAt": "2026-09-05T11:03:46.855Z",
-    "updatedAt": "2026-09-06T06:19:11.241Z",
+    "updatedAt": "2026-09-07T06:23:21.850Z",
     "verifiedAt": "2026-09-05T11:03:46.855Z",
     "rating": 0,
     "featured": false
@@ -360,7 +502,7 @@
     "pricing": "free",
     "id": "e02d6653-948e-4e02-987c-05a597522214",
     "addedAt": "2026-09-05T11:03:46.855Z",
-    "updatedAt": "2026-09-06T06:19:11.241Z",
+    "updatedAt": "2026-09-07T06:23:21.850Z",
     "verifiedAt": "2026-09-05T11:03:46.855Z",
     "rating": 0,
     "featured": false
@@ -381,7 +523,7 @@
     "pricing": "free",
     "id": "9a864d0f-6fef-4353-9394-daec7304c719",
     "addedAt": "2026-09-05T11:03:46.855Z",
-    "updatedAt": "2026-09-06T06:19:11.241Z",
+    "updatedAt": "2026-09-07T06:23:21.851Z",
     "verifiedAt": "2026-09-05T11:03:46.855Z",
     "rating": 0,
     "featured": false
@@ -402,7 +544,7 @@
     "pricing": "free",
     "id": "be2dffe3-a160-47a5-a240-49fff4cfcf0e",
     "addedAt": "2026-09-05T11:03:46.855Z",
-    "updatedAt": "2026-09-06T06:19:11.241Z",
+    "updatedAt": "2026-09-07T06:23:21.851Z",
     "verifiedAt": "2026-09-05T11:03:46.855Z",
     "rating": 0,
     "featured": false
