@@ -1,5 +1,41 @@
 [
   {
+    "title": "Verbi",
+    "url": "https://github.com/PromtEngineer/Verbi",
+    "description": "A modular voice assistant application for experimenting with state-of-the-art transcription, response generation, and text-to-speech models. Supports OpenAI, Groq, Elevanlabs, CartesiaAI, and Deepgram APIs, plus local models via Ollama. Ideal for research and development in voice technology.",
+    "source": "github-trending",
+    "tags": [
+      "python"
+    ],
+    "category": "ai",
+    "slug": "verbi",
+    "pricing": "free",
+    "id": "b2469b11-41ba-43fb-9475-528a90cb70d1",
+    "addedAt": "2026-09-08T06:20:52.964Z",
+    "updatedAt": "2026-09-08T06:20:52.964Z",
+    "verifiedAt": "2026-09-08T06:20:52.964Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
+    "title": "browsernode",
+    "url": "https://github.com/lennybase/browsernode",
+    "description": "🌐 Make websites accessible for AI agents. Automate tasks online with ease.",
+    "source": "github-trending",
+    "tags": [
+      "typescript"
+    ],
+    "category": "ai",
+    "slug": "browsernode",
+    "pricing": "free",
+    "id": "54cf06cd-cdd4-446c-b939-9b642b7f72c0",
+    "addedAt": "2026-09-08T06:20:52.964Z",
+    "updatedAt": "2026-09-08T06:20:52.964Z",
+    "verifiedAt": "2026-09-08T06:20:52.964Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
     "title": "tariff",
     "url": "https://github.com/hxu296/tariff",
     "description": "The official repository for tariff",
@@ -118,7 +154,7 @@
     "pricing": "free",
     "id": "37a3d735-177b-4263-9a39-26d0f92d071d",
     "addedAt": "2026-09-07T06:23:21.850Z",
-    "updatedAt": "2026-09-07T06:23:21.850Z",
+    "updatedAt": "2026-09-08T06:20:52.964Z",
     "verifiedAt": "2026-09-07T06:23:21.850Z",
     "rating": 0,
     "featured": false
@@ -154,7 +190,7 @@
     "pricing": "free",
     "id": "42ac079e-9aad-4844-8f7b-0ed0d3d3e16b",
     "addedAt": "2026-09-06T06:19:11.241Z",
-    "updatedAt": "2026-09-07T06:23:21.850Z",
+    "updatedAt": "2026-09-08T06:20:52.964Z",
     "verifiedAt": "2026-09-06T06:19:11.241Z",
     "rating": 0,
     "featured": false
@@ -172,7 +208,7 @@
     "pricing": "free",
     "id": "5f827e6b-cdb0-4c6c-bcbe-420daa1fcbce",
     "addedAt": "2026-09-06T06:19:11.241Z",
-    "updatedAt": "2026-09-06T06:19:11.241Z",
+    "updatedAt": "2026-09-08T06:20:52.964Z",
     "verifiedAt": "2026-09-06T06:19:11.241Z",
     "rating": 0,
     "featured": false
@@ -208,7 +244,7 @@
     "pricing": "free",
     "id": "022def7e-d46e-4981-b816-7b0a7d673fd7",
     "addedAt": "2026-09-06T06:19:11.241Z",
-    "updatedAt": "2026-09-06T06:19:11.241Z",
+    "updatedAt": "2026-09-08T06:20:52.964Z",
     "verifiedAt": "2026-09-06T06:19:11.241Z",
     "rating": 0,
     "featured": false
@@ -265,7 +301,7 @@
     "pricing": "free",
     "id": "4c1e0efe-734e-4252-8723-efd818e27794",
     "addedAt": "2026-09-06T06:19:11.241Z",
-    "updatedAt": "2026-09-07T06:23:21.851Z",
+    "updatedAt": "2026-09-08T06:20:52.964Z",
     "verifiedAt": "2026-09-06T06:19:11.241Z",
     "rating": 0,
     "featured": false
@@ -319,7 +355,7 @@
     "pricing": "free",
     "id": "66736e5f-94de-43b5-a062-477192f440a8",
     "addedAt": "2026-09-05T11:03:46.855Z",
-    "updatedAt": "2026-09-07T06:23:21.850Z",
+    "updatedAt": "2026-09-08T06:20:52.963Z",
     "verifiedAt": "2026-09-05T11:03:46.855Z",
     "rating": 0,
     "featured": false
@@ -337,7 +373,7 @@
     "pricing": "free",
     "id": "71a6eee0-a2bb-44ba-8506-d0646f5385f3",
     "addedAt": "2026-09-05T11:03:46.855Z",
-    "updatedAt": "2026-09-07T06:23:21.850Z",
+    "updatedAt": "2026-09-08T06:20:52.964Z",
     "verifiedAt": "2026-09-05T11:03:46.855Z",
     "rating": 0,
     "featured": false
@@ -355,7 +391,7 @@
     "pricing": "free",
     "id": "acfac36d-1b2a-45e9-ae3e-1d1cb680923b",
     "addedAt": "2026-09-05T11:03:46.855Z",
-    "updatedAt": "2026-09-07T06:23:21.850Z",
+    "updatedAt": "2026-09-08T06:20:52.964Z",
     "verifiedAt": "2026-09-05T11:03:46.855Z",
     "rating": 0,
     "featured": false
@@ -373,7 +409,7 @@
     "pricing": "free",
     "id": "8a10411f-934f-47b2-aef5-9aeb0188eb09",
     "addedAt": "2026-09-05T11:03:46.855Z",
-    "updatedAt": "2026-09-07T06:23:21.850Z",
+    "updatedAt": "2026-09-08T06:20:52.964Z",
     "verifiedAt": "2026-09-05T11:03:46.855Z",
     "rating": 0,
     "featured": false
@@ -391,7 +427,7 @@
     "pricing": "free",
     "id": "4a844861-5f11-4478-9952-e5537b497ebe",
     "addedAt": "2026-09-05T11:03:46.855Z",
-    "updatedAt": "2026-09-06T06:19:11.240Z",
+    "updatedAt": "2026-09-08T06:20:52.964Z",
     "verifiedAt": "2026-09-05T11:03:46.855Z",
     "rating": 0,
     "featured": false
@@ -409,7 +445,7 @@
     "pricing": "free",
     "id": "e9b5d3ca-8470-492c-a0f3-551381922c2a",
     "addedAt": "2026-09-05T11:03:46.855Z",
-    "updatedAt": "2026-09-07T06:23:21.850Z",
+    "updatedAt": "2026-09-08T06:20:52.964Z",
     "verifiedAt": "2026-09-05T11:03:46.855Z",
     "rating": 0,
     "featured": false
@@ -502,7 +538,7 @@
     "pricing": "free",
     "id": "e02d6653-948e-4e02-987c-05a597522214",
     "addedAt": "2026-09-05T11:03:46.855Z",
-    "updatedAt": "2026-09-07T06:23:21.850Z",
+    "updatedAt": "2026-09-08T06:20:52.964Z",
     "verifiedAt": "2026-09-05T11:03:46.855Z",
     "rating": 0,
     "featured": false
@@ -523,7 +559,7 @@
     "pricing": "free",
     "id": "9a864d0f-6fef-4353-9394-daec7304c719",
     "addedAt": "2026-09-05T11:03:46.855Z",
-    "updatedAt": "2026-09-07T06:23:21.851Z",
+    "updatedAt": "2026-09-08T06:20:52.964Z",
     "verifiedAt": "2026-09-05T11:03:46.855Z",
     "rating": 0,
     "featured": false
@@ -544,7 +580,7 @@
     "pricing": "free",
     "id": "be2dffe3-a160-47a5-a240-49fff4cfcf0e",
     "addedAt": "2026-09-05T11:03:46.855Z",
-    "updatedAt": "2026-09-07T06:23:21.851Z",
+    "updatedAt": "2026-09-08T06:20:52.964Z",
     "verifiedAt": "2026-09-05T11:03:46.855Z",
     "rating": 0,
     "featured": false
@@ -1045,24 +1081,6 @@
     "dateAdded": "2026-09-04",
     "lastVerified": "2026-09-04",
     "slug": "fontsource"
-  },
-  {
-    "id": "freesound",
-    "title": "Freesound",
-    "description": "Collaborative database of creative audio sounds. Over 600k samples, CC licensed.",
-    "url": "https://freesound.org",
-    "official": true,
-    "category": "music",
-    "tags": [
-      "audio",
-      "sounds",
-      "samples",
-      "creative-Commons"
-    ],
-    "pricing": "free",
-    "dateAdded": "2026-09-04",
-    "lastVerified": "2026-09-04",
-    "slug": "freesound"
   },
   {
     "id": "youtube-audio",
