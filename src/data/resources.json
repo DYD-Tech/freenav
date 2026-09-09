@@ -1,5 +1,149 @@
 [
   {
+    "title": "claude-prompt-generator",
+    "url": "https://github.com/aws-samples/claude-prompt-generator",
+    "description": "claude-prompt-generator — free resource",
+    "source": "github-trending",
+    "tags": [
+      "python"
+    ],
+    "category": "productivity",
+    "slug": "claude-prompt-generator",
+    "pricing": "free",
+    "id": "091b2eab-f021-456b-b56a-60e4fcb78a1a",
+    "addedAt": "2026-09-09T06:21:31.848Z",
+    "updatedAt": "2026-09-09T06:21:31.848Z",
+    "verifiedAt": "2026-09-09T06:21:31.848Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
+    "title": "ut",
+    "url": "https://github.com/ksdme/ut",
+    "description": "A Rust based utilty toolbox for developers. Inspired from https://it-tools.tech",
+    "source": "github-trending",
+    "tags": [
+      "rust"
+    ],
+    "category": "development",
+    "slug": "ut",
+    "pricing": "free",
+    "id": "46705f57-78e8-46e7-85c2-38c62b21de80",
+    "addedAt": "2026-09-09T06:21:31.848Z",
+    "updatedAt": "2026-09-09T06:21:31.848Z",
+    "verifiedAt": "2026-09-09T06:21:31.848Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
+    "title": "Pivo",
+    "url": "https://github.com/AgentsMesh/Pivo",
+    "description": "Task-focused programming environment designed for the right vibe.",
+    "source": "github-trending",
+    "tags": [
+      "typescript"
+    ],
+    "category": "design",
+    "slug": "pivo",
+    "pricing": "free",
+    "id": "6f8b01d0-9757-47ed-863f-1bdb7caa1350",
+    "addedAt": "2026-09-09T06:21:31.848Z",
+    "updatedAt": "2026-09-09T06:21:31.848Z",
+    "verifiedAt": "2026-09-09T06:21:31.848Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
+    "title": "Show HN: ZWPlayer 3.3.2, a free HTML5 video player with ads and music mode",
+    "url": "https://www.zwplayer.com/",
+    "description": "HN Show: Show HN: ZWPlayer 3.3.2, a free HTML5 video player with ads and music mode",
+    "source": "hacker-news",
+    "tags": [
+      "show-hn"
+    ],
+    "category": "video",
+    "slug": "show-hn-zwplayer-332-a-free-html5-video-player-with-ads-and-music-mode",
+    "pricing": "free",
+    "id": "4196e613-6f04-4fd9-b77a-d814b0184ccd",
+    "addedAt": "2026-09-09T06:21:31.848Z",
+    "updatedAt": "2026-09-09T06:21:31.848Z",
+    "verifiedAt": "2026-09-09T06:21:31.848Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
+    "title": "Show HN: AI-first open-source alternative to Microsoft and Google Office",
+    "url": "https://github.com/injectinglabs/injoffice",
+    "description": "HN Show: Show HN: AI-first open-source alternative to Microsoft and Google Office",
+    "source": "hacker-news",
+    "tags": [
+      "show-hn"
+    ],
+    "category": "ai",
+    "slug": "show-hn-ai-first-open-source-alternative-to-microsoft-and-google-office",
+    "pricing": "free",
+    "id": "3136f4ab-651f-4240-801e-3c94f32938d4",
+    "addedAt": "2026-09-09T06:21:31.848Z",
+    "updatedAt": "2026-09-09T06:21:31.848Z",
+    "verifiedAt": "2026-09-09T06:21:31.848Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
+    "title": "Show HN: Self-host open-source LLMs on AWS with scale-to-zero",
+    "url": "https://github.com/paguasmar/veloxml-deploy",
+    "description": "HN Show: Show HN: Self-host open-source LLMs on AWS with scale-to-zero",
+    "source": "hacker-news",
+    "tags": [
+      "show-hn"
+    ],
+    "category": "ai",
+    "slug": "show-hn-self-host-open-source-llms-on-aws-with-scale-to-zero",
+    "pricing": "free",
+    "id": "e680268d-9e0a-48ee-a660-ead76406e401",
+    "addedAt": "2026-09-09T06:21:31.848Z",
+    "updatedAt": "2026-09-09T06:21:31.848Z",
+    "verifiedAt": "2026-09-09T06:21:31.848Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
+    "title": "Show HN: VolAnti – Open-source acoustic detector for fibre-optic FPV drones",
+    "url": "https://github.com/agamrossen/VolAnti",
+    "description": "HN Show: Show HN: VolAnti – Open-source acoustic detector for fibre-optic FPV drones",
+    "source": "hacker-news",
+    "tags": [
+      "show-hn"
+    ],
+    "category": "open-source",
+    "slug": "show-hn-volanti-open-source-acoustic-detector-for-fibre-optic-fpv-drones",
+    "pricing": "free",
+    "id": "60994acc-e717-4de1-a5a6-05981c67a516",
+    "addedAt": "2026-09-09T06:21:31.848Z",
+    "updatedAt": "2026-09-09T06:21:31.848Z",
+    "verifiedAt": "2026-09-09T06:21:31.848Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
+    "title": "Show HN: Browser viz of OpenAI's \"spaghetti\" Navier–Stokes vortex (illustration)",
+    "url": "https://3d-retro.com/experiments/vortex",
+    "description": "HN Show: Show HN: Browser viz of OpenAI's \"spaghetti\" Navier–Stokes vortex (illustration)",
+    "source": "hacker-news",
+    "tags": [
+      "show-hn"
+    ],
+    "category": "ai",
+    "slug": "show-hn-browser-viz-of-openais-spaghetti-navierstokes-vortex-illustration",
+    "pricing": "free",
+    "id": "d6785c87-daf5-49bf-8cfb-4c66c16d67ae",
+    "addedAt": "2026-09-09T06:21:31.848Z",
+    "updatedAt": "2026-09-09T06:21:31.848Z",
+    "verifiedAt": "2026-09-09T06:21:31.848Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
     "title": "Verbi",
     "url": "https://github.com/PromtEngineer/Verbi",
     "description": "A modular voice assistant application for experimenting with state-of-the-art transcription, response generation, and text-to-speech models. Supports OpenAI, Groq, Elevanlabs, CartesiaAI, and Deepgram APIs, plus local models via Ollama. Ideal for research and development in voice technology.",
@@ -12,7 +156,7 @@
     "pricing": "free",
     "id": "b2469b11-41ba-43fb-9475-528a90cb70d1",
     "addedAt": "2026-09-08T06:20:52.964Z",
-    "updatedAt": "2026-09-08T06:20:52.964Z",
+    "updatedAt": "2026-09-09T06:21:31.848Z",
     "verifiedAt": "2026-09-08T06:20:52.964Z",
     "rating": 0,
     "featured": false
@@ -30,7 +174,7 @@
     "pricing": "free",
     "id": "54cf06cd-cdd4-446c-b939-9b642b7f72c0",
     "addedAt": "2026-09-08T06:20:52.964Z",
-    "updatedAt": "2026-09-08T06:20:52.964Z",
+    "updatedAt": "2026-09-09T06:21:31.848Z",
     "verifiedAt": "2026-09-08T06:20:52.964Z",
     "rating": 0,
     "featured": false
@@ -190,7 +334,7 @@
     "pricing": "free",
     "id": "42ac079e-9aad-4844-8f7b-0ed0d3d3e16b",
     "addedAt": "2026-09-06T06:19:11.241Z",
-    "updatedAt": "2026-09-08T06:20:52.964Z",
+    "updatedAt": "2026-09-09T06:21:31.848Z",
     "verifiedAt": "2026-09-06T06:19:11.241Z",
     "rating": 0,
     "featured": false
@@ -208,7 +352,7 @@
     "pricing": "free",
     "id": "5f827e6b-cdb0-4c6c-bcbe-420daa1fcbce",
     "addedAt": "2026-09-06T06:19:11.241Z",
-    "updatedAt": "2026-09-08T06:20:52.964Z",
+    "updatedAt": "2026-09-09T06:21:31.848Z",
     "verifiedAt": "2026-09-06T06:19:11.241Z",
     "rating": 0,
     "featured": false
@@ -244,7 +388,7 @@
     "pricing": "free",
     "id": "022def7e-d46e-4981-b816-7b0a7d673fd7",
     "addedAt": "2026-09-06T06:19:11.241Z",
-    "updatedAt": "2026-09-08T06:20:52.964Z",
+    "updatedAt": "2026-09-09T06:21:31.848Z",
     "verifiedAt": "2026-09-06T06:19:11.241Z",
     "rating": 0,
     "featured": false
@@ -301,7 +445,7 @@
     "pricing": "free",
     "id": "4c1e0efe-734e-4252-8723-efd818e27794",
     "addedAt": "2026-09-06T06:19:11.241Z",
-    "updatedAt": "2026-09-08T06:20:52.964Z",
+    "updatedAt": "2026-09-09T06:21:31.848Z",
     "verifiedAt": "2026-09-06T06:19:11.241Z",
     "rating": 0,
     "featured": false
@@ -355,7 +499,7 @@
     "pricing": "free",
     "id": "66736e5f-94de-43b5-a062-477192f440a8",
     "addedAt": "2026-09-05T11:03:46.855Z",
-    "updatedAt": "2026-09-08T06:20:52.963Z",
+    "updatedAt": "2026-09-09T06:21:31.847Z",
     "verifiedAt": "2026-09-05T11:03:46.855Z",
     "rating": 0,
     "featured": false
@@ -391,7 +535,7 @@
     "pricing": "free",
     "id": "acfac36d-1b2a-45e9-ae3e-1d1cb680923b",
     "addedAt": "2026-09-05T11:03:46.855Z",
-    "updatedAt": "2026-09-08T06:20:52.964Z",
+    "updatedAt": "2026-09-09T06:21:31.848Z",
     "verifiedAt": "2026-09-05T11:03:46.855Z",
     "rating": 0,
     "featured": false
@@ -409,7 +553,7 @@
     "pricing": "free",
     "id": "8a10411f-934f-47b2-aef5-9aeb0188eb09",
     "addedAt": "2026-09-05T11:03:46.855Z",
-    "updatedAt": "2026-09-08T06:20:52.964Z",
+    "updatedAt": "2026-09-09T06:21:31.848Z",
     "verifiedAt": "2026-09-05T11:03:46.855Z",
     "rating": 0,
     "featured": false
@@ -538,7 +682,7 @@
     "pricing": "free",
     "id": "e02d6653-948e-4e02-987c-05a597522214",
     "addedAt": "2026-09-05T11:03:46.855Z",
-    "updatedAt": "2026-09-08T06:20:52.964Z",
+    "updatedAt": "2026-09-09T06:21:31.848Z",
     "verifiedAt": "2026-09-05T11:03:46.855Z",
     "rating": 0,
     "featured": false
@@ -559,7 +703,7 @@
     "pricing": "free",
     "id": "9a864d0f-6fef-4353-9394-daec7304c719",
     "addedAt": "2026-09-05T11:03:46.855Z",
-    "updatedAt": "2026-09-08T06:20:52.964Z",
+    "updatedAt": "2026-09-09T06:21:31.848Z",
     "verifiedAt": "2026-09-05T11:03:46.855Z",
     "rating": 0,
     "featured": false
@@ -580,7 +724,7 @@
     "pricing": "free",
     "id": "be2dffe3-a160-47a5-a240-49fff4cfcf0e",
     "addedAt": "2026-09-05T11:03:46.855Z",
-    "updatedAt": "2026-09-08T06:20:52.964Z",
+    "updatedAt": "2026-09-09T06:21:31.848Z",
     "verifiedAt": "2026-09-05T11:03:46.855Z",
     "rating": 0,
     "featured": false
