@@ -1,5 +1,116 @@
 [
   {
+    "title": "Dive",
+    "url": "https://github.com/OpenAgentPlatform/Dive",
+    "description": "Dive is an open-source MCP Host Desktop Application that seamlessly integrates with any LLMs supporting function calling capabilities. ✨",
+    "source": "github-trending",
+    "tags": [
+      "typescript"
+    ],
+    "category": "ai",
+    "slug": "dive",
+    "pricing": "free",
+    "id": "1f1e2826-a83d-49b5-8c15-75c5ce5927e3",
+    "addedAt": "2026-09-11T06:20:16.005Z",
+    "updatedAt": "2026-09-11T06:20:16.005Z",
+    "verifiedAt": "2026-09-11T06:20:16.005Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
+    "title": "kubetail",
+    "url": "https://github.com/kubetail-org/kubetail",
+    "description": "Real-time logging dashboard for Kubernetes. View logs in a terminal or a browser. Run anywhere - desktop, cluster, docker.",
+    "source": "github-trending",
+    "tags": [
+      "go"
+    ],
+    "category": "ai",
+    "slug": "kubetail",
+    "pricing": "free",
+    "id": "7e824fce-d588-4739-8a65-2409162432ad",
+    "addedAt": "2026-09-11T06:20:16.005Z",
+    "updatedAt": "2026-09-11T06:20:16.005Z",
+    "verifiedAt": "2026-09-11T06:20:16.005Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
+    "title": "HealthGPT",
+    "url": "https://github.com/ZJU4HealthCare/HealthGPT",
+    "description": "【ICML 2025 Spotlight】 Official Repo for Paper ‘’HealthGPT : A Medical Large Vision-Language Model for Unifying Comprehension and Generation via Heterogeneous Knowledge Adaptation‘’",
+    "source": "github-trending",
+    "tags": [
+      "python"
+    ],
+    "category": "ai",
+    "slug": "healthgpt",
+    "pricing": "free",
+    "id": "447d9a11-ace1-4ed5-a6da-c64eebe0987d",
+    "addedAt": "2026-09-11T06:20:16.005Z",
+    "updatedAt": "2026-09-11T06:20:16.005Z",
+    "verifiedAt": "2026-09-11T06:20:16.005Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
+    "title": "Show HN: Open-source simulation testing infra for voice agents",
+    "url": "https://github.com/egma-ai/egma",
+    "description": "HN Show: Show HN: Open-source simulation testing infra for voice agents",
+    "source": "hacker-news",
+    "tags": [
+      "show-hn"
+    ],
+    "category": "open-source",
+    "slug": "show-hn-open-source-simulation-testing-infra-for-voice-agents",
+    "pricing": "free",
+    "id": "d1851a94-3c61-4d4d-b2bd-1f0f14b279ab",
+    "addedAt": "2026-09-11T06:20:16.005Z",
+    "updatedAt": "2026-09-11T06:20:16.005Z",
+    "verifiedAt": "2026-09-11T06:20:16.005Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
+    "title": "HuatuoGPT-Vision-7B-Qwen2.5VL",
+    "url": "https://huggingface.co/FreedomIntelligence/HuatuoGPT-Vision-7B-Qwen2.5VL",
+    "description": "AI model: FreedomIntelligence/HuatuoGPT-Vision-7B-Qwen2.5VL",
+    "source": "huggingface",
+    "tags": [
+      "ai",
+      "ml",
+      "huggingface",
+      "text-generation"
+    ],
+    "category": "ai",
+    "slug": "huatuogpt-vision-7b-qwen25vl",
+    "pricing": "free",
+    "id": "7fe3084c-99a8-46a3-a162-3de6279cfcdc",
+    "addedAt": "2026-09-11T06:20:16.005Z",
+    "updatedAt": "2026-09-11T06:20:16.005Z",
+    "verifiedAt": "2026-09-11T06:20:16.005Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
+    "title": "agentkit",
+    "url": "https://github.com/BCG-X-Official/agentkit",
+    "description": "Starter-kit to build constrained agents with Nextjs, FastAPI and Langchain",
+    "source": "github-trending",
+    "tags": [
+      "typescript"
+    ],
+    "category": "ai",
+    "slug": "agentkit",
+    "pricing": "free",
+    "id": "25b87db8-089e-4e26-b813-02b966c82cd4",
+    "addedAt": "2026-09-11T06:20:16.004Z",
+    "updatedAt": "2026-09-11T06:20:16.005Z",
+    "verifiedAt": "2026-09-11T06:20:16.005Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
     "title": "FlashRAG",
     "url": "https://github.com/RUC-NLPIR/FlashRAG",
     "description": "⚡FlashRAG: A Python Toolkit for Efficient RAG Research (WWW2025 Resource)",
@@ -408,7 +519,7 @@
     "pricing": "free",
     "id": "36ace858-b669-4fbd-b1a1-0840feb081b7",
     "addedAt": "2026-09-07T06:23:21.850Z",
-    "updatedAt": "2026-09-07T06:23:21.850Z",
+    "updatedAt": "2026-09-11T06:20:16.005Z",
     "verifiedAt": "2026-09-07T06:23:21.850Z",
     "rating": 0,
     "featured": false
@@ -426,7 +537,7 @@
     "pricing": "free",
     "id": "7eb80892-63ff-4985-ba84-282819b69ef6",
     "addedAt": "2026-09-07T06:23:21.850Z",
-    "updatedAt": "2026-09-07T06:23:21.850Z",
+    "updatedAt": "2026-09-11T06:20:16.005Z",
     "verifiedAt": "2026-09-07T06:23:21.850Z",
     "rating": 0,
     "featured": false
@@ -607,7 +718,7 @@
     "pricing": "free",
     "id": "4c1e0efe-734e-4252-8723-efd818e27794",
     "addedAt": "2026-09-06T06:19:11.241Z",
-    "updatedAt": "2026-09-10T06:21:39.463Z",
+    "updatedAt": "2026-09-11T06:20:16.005Z",
     "verifiedAt": "2026-09-06T06:19:11.241Z",
     "rating": 0,
     "featured": false
@@ -661,7 +772,7 @@
     "pricing": "free",
     "id": "66736e5f-94de-43b5-a062-477192f440a8",
     "addedAt": "2026-09-05T11:03:46.855Z",
-    "updatedAt": "2026-09-10T06:21:39.463Z",
+    "updatedAt": "2026-09-11T06:20:16.005Z",
     "verifiedAt": "2026-09-05T11:03:46.855Z",
     "rating": 0,
     "featured": false
@@ -697,7 +808,7 @@
     "pricing": "free",
     "id": "acfac36d-1b2a-45e9-ae3e-1d1cb680923b",
     "addedAt": "2026-09-05T11:03:46.855Z",
-    "updatedAt": "2026-09-09T06:21:31.848Z",
+    "updatedAt": "2026-09-11T06:20:16.005Z",
     "verifiedAt": "2026-09-05T11:03:46.855Z",
     "rating": 0,
     "featured": false
@@ -865,7 +976,7 @@
     "pricing": "free",
     "id": "9a864d0f-6fef-4353-9394-daec7304c719",
     "addedAt": "2026-09-05T11:03:46.855Z",
-    "updatedAt": "2026-09-10T06:21:39.463Z",
+    "updatedAt": "2026-09-11T06:20:16.005Z",
     "verifiedAt": "2026-09-05T11:03:46.855Z",
     "rating": 0,
     "featured": false
@@ -886,7 +997,7 @@
     "pricing": "free",
     "id": "be2dffe3-a160-47a5-a240-49fff4cfcf0e",
     "addedAt": "2026-09-05T11:03:46.855Z",
-    "updatedAt": "2026-09-10T06:21:39.463Z",
+    "updatedAt": "2026-09-11T06:20:16.005Z",
     "verifiedAt": "2026-09-05T11:03:46.855Z",
     "rating": 0,
     "featured": false
