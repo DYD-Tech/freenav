@@ -1,5 +1,149 @@
 [
   {
+    "title": "fulling",
+    "url": "https://github.com/FullAgent/fulling",
+    "description": "Fulling is an AI-powered Full-stack Engineer Agent. Built with Next.js, Claude, shadcn/ui, and PostgreSQL. Use kubernetes as infra.",
+    "source": "github-trending",
+    "tags": [
+      "typescript"
+    ],
+    "category": "ai",
+    "slug": "fulling",
+    "pricing": "free",
+    "id": "30c54641-676f-497f-bbe4-070de16cce9b",
+    "addedAt": "2026-09-12T06:19:20.558Z",
+    "updatedAt": "2026-09-12T06:19:20.558Z",
+    "verifiedAt": "2026-09-12T06:19:20.558Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
+    "title": "shadcn-multi-select-component",
+    "url": "https://github.com/sersavan/shadcn-multi-select-component",
+    "description": "A multi-select component designed with shadcn/ui",
+    "source": "github-trending",
+    "tags": [
+      "typescript"
+    ],
+    "category": "ai",
+    "slug": "shadcn-multi-select-component",
+    "pricing": "free",
+    "id": "a6f94647-4c21-404b-ac94-cedf4bde2ccb",
+    "addedAt": "2026-09-12T06:19:20.558Z",
+    "updatedAt": "2026-09-12T06:19:20.558Z",
+    "verifiedAt": "2026-09-12T06:19:20.558Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
+    "title": "InterviewOS",
+    "url": "https://github.com/Kail-Fu/InterviewOS",
+    "description": "Replace coding puzzles with real-work simulations.",
+    "source": "github-trending",
+    "tags": [
+      "python"
+    ],
+    "category": "productivity",
+    "slug": "interviewos",
+    "pricing": "free",
+    "id": "c71ac8ca-c94a-4498-a025-1e98572cc8cc",
+    "addedAt": "2026-09-12T06:19:20.558Z",
+    "updatedAt": "2026-09-12T06:19:20.558Z",
+    "verifiedAt": "2026-09-12T06:19:20.558Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
+    "title": "rl-swarm",
+    "url": "https://github.com/gensyn-ai/rl-swarm",
+    "description": "A fully open source framework for creating RL training swarms over the internet.",
+    "source": "github-trending",
+    "tags": [
+      "python"
+    ],
+    "category": "ai",
+    "slug": "rl-swarm",
+    "pricing": "free",
+    "id": "b04f30a6-4b3d-4651-a8f2-ca1db4bc060e",
+    "addedAt": "2026-09-12T06:19:20.558Z",
+    "updatedAt": "2026-09-12T06:19:20.558Z",
+    "verifiedAt": "2026-09-12T06:19:20.558Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
+    "title": "aisheets",
+    "url": "https://github.com/huggingface/aisheets",
+    "description": "Build, enrich, and transform datasets using AI models with no code",
+    "source": "github-trending",
+    "tags": [
+      "typescript"
+    ],
+    "category": "ai",
+    "slug": "aisheets",
+    "pricing": "free",
+    "id": "39ef1406-dee2-49c1-85b9-f87aeda7fe83",
+    "addedAt": "2026-09-12T06:19:20.558Z",
+    "updatedAt": "2026-09-12T06:19:20.558Z",
+    "verifiedAt": "2026-09-12T06:19:20.558Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
+    "title": "NeuralSVG",
+    "url": "https://github.com/SagiPolaczek/NeuralSVG",
+    "description": "Official implementation of NerualSVG",
+    "source": "github-trending",
+    "tags": [
+      "python"
+    ],
+    "category": "ai",
+    "slug": "neuralsvg",
+    "pricing": "free",
+    "id": "59d824ea-897a-47e8-83a7-f2c94c13008b",
+    "addedAt": "2026-09-12T06:19:20.558Z",
+    "updatedAt": "2026-09-12T06:19:20.558Z",
+    "verifiedAt": "2026-09-12T06:19:20.558Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
+    "title": "ControlFlow",
+    "url": "https://github.com/prefect-archive/ControlFlow",
+    "description": "🦾 Take control of your AI agents",
+    "source": "github-trending",
+    "tags": [
+      "python"
+    ],
+    "category": "ai",
+    "slug": "controlflow",
+    "pricing": "free",
+    "id": "300e21ea-0925-4827-a5d4-136bf0e5eca5",
+    "addedAt": "2026-09-12T06:19:20.558Z",
+    "updatedAt": "2026-09-12T06:19:20.558Z",
+    "verifiedAt": "2026-09-12T06:19:20.558Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
+    "title": "Show HN: HolaOS––An Opensourced workspace that alternative to Claude",
+    "url": "https://github.com/holaboss-ai/holaOS",
+    "description": "HN Show: Show HN: HolaOS––An Opensourced workspace that alternative to Claude",
+    "source": "hacker-news",
+    "tags": [
+      "show-hn"
+    ],
+    "category": "open-source",
+    "slug": "show-hn-holaosan-opensourced-workspace-that-alternative-to-claude",
+    "pricing": "free",
+    "id": "b4336dd5-08b8-42b9-a113-7d00a5309fc7",
+    "addedAt": "2026-09-12T06:19:20.558Z",
+    "updatedAt": "2026-09-12T06:19:20.558Z",
+    "verifiedAt": "2026-09-12T06:19:20.558Z",
+    "rating": 0,
+    "featured": false
+  },
+  {
     "title": "Dive",
     "url": "https://github.com/OpenAgentPlatform/Dive",
     "description": "Dive is an open-source MCP Host Desktop Application that seamlessly integrates with any LLMs supporting function calling capabilities. ✨",
@@ -87,7 +231,7 @@
     "pricing": "free",
     "id": "7fe3084c-99a8-46a3-a162-3de6279cfcdc",
     "addedAt": "2026-09-11T06:20:16.005Z",
-    "updatedAt": "2026-09-11T06:20:16.005Z",
+    "updatedAt": "2026-09-12T06:19:20.558Z",
     "verifiedAt": "2026-09-11T06:20:16.005Z",
     "rating": 0,
     "featured": false
@@ -195,7 +339,7 @@
     "pricing": "free",
     "id": "d01ad6a6-0062-4d37-a697-f01bd0382f53",
     "addedAt": "2026-09-10T06:21:39.463Z",
-    "updatedAt": "2026-09-10T06:21:39.463Z",
+    "updatedAt": "2026-09-12T06:19:20.558Z",
     "verifiedAt": "2026-09-10T06:21:39.463Z",
     "rating": 0,
     "featured": false
@@ -718,7 +862,7 @@
     "pricing": "free",
     "id": "4c1e0efe-734e-4252-8723-efd818e27794",
     "addedAt": "2026-09-06T06:19:11.241Z",
-    "updatedAt": "2026-09-11T06:20:16.005Z",
+    "updatedAt": "2026-09-12T06:19:20.558Z",
     "verifiedAt": "2026-09-06T06:19:11.241Z",
     "rating": 0,
     "featured": false
@@ -736,7 +880,7 @@
     "pricing": "free",
     "id": "05985fec-5dc1-4c4f-89af-c9c6ffa85ef2",
     "addedAt": "2026-09-05T11:03:46.855Z",
-    "updatedAt": "2026-09-05T11:03:46.855Z",
+    "updatedAt": "2026-09-12T06:19:20.558Z",
     "verifiedAt": "2026-09-05T11:03:46.855Z",
     "rating": 0,
     "featured": false
@@ -772,7 +916,7 @@
     "pricing": "free",
     "id": "66736e5f-94de-43b5-a062-477192f440a8",
     "addedAt": "2026-09-05T11:03:46.855Z",
-    "updatedAt": "2026-09-11T06:20:16.005Z",
+    "updatedAt": "2026-09-12T06:19:20.558Z",
     "verifiedAt": "2026-09-05T11:03:46.855Z",
     "rating": 0,
     "featured": false
@@ -976,7 +1120,7 @@
     "pricing": "free",
     "id": "9a864d0f-6fef-4353-9394-daec7304c719",
     "addedAt": "2026-09-05T11:03:46.855Z",
-    "updatedAt": "2026-09-11T06:20:16.005Z",
+    "updatedAt": "2026-09-12T06:19:20.558Z",
     "verifiedAt": "2026-09-05T11:03:46.855Z",
     "rating": 0,
     "featured": false
